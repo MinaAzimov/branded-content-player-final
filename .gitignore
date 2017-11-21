@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+node_modules
+build/assets/css/styles.css
+build/assets/js
+build/assets/fonts/icons*
+build
+*.orig
+*.map
+_icons.scss
+src/img/mrrobotrecording.mp4
+src/img/mrrobotrecording2.mp4

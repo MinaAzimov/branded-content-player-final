@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="root">
+			</div>
+		</div>
+		<script src="assets/js/main.js"></script>
+		
+		<script>
+			var options = {
+				playlist: [
+		{
+			videoSrc: "assets/img/mrrobotrecording.mp4",
+			coverImgSrc: "assets/img/mrrobotrecording.jpg",
+			title: "eps1.9_zer0-day.avi",
+			subtitle: "Mr Robot • S01 E10",
+			description: "One of Elliot's past hacks comes back to haunt him. Mr. Robot and Tyrell are missing in action."
+		}
+	],
+				initialPlaylistIndex: 0,
+				aspectRatio: 1280/692,
+				endCardShowTime: 12,
+				playNextDelay: 5,
+				controlBarHoverTimeout: 2,
+				playerMode: "vp-mode-vod",
+				endCardLinks: [
+					{
+						text: "Some link 1",
+						url: "http://blah.com"
+					},
+					{
+						text: "Some link 2",
+						url: "http://blah.com"
+					}
+				],
+				adRoll: false,
+				sharePlatforms: ["facebook", "twitter", "googleplus"],
+				allowEmbed: true,
+				allowShare: true,
+				theme: {
+					colorHighlight: "#55CEE2"
+				} 
+			}
+			window.mountPlayer(options, document.getElementById('root'));
+		</script>
+	</body>
+</html>
