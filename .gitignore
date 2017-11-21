@@ -10,3 +10,4 @@ build
 _icons.scss
 src/img/mrrobotrecording.mp4
 src/img/mrrobotrecording2.mp4
+package-lock.json
