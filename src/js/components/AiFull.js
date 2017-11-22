@@ -95,6 +95,7 @@ export default class AiFull extends Component {
 
 					/>
 					<AiFullPeople
+					isFullScreen={ isFullScreen }
 					show={ showing == 'people' }
 					click={ goToPage }
 					/>

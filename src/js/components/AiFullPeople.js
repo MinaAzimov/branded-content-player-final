@@ -6,7 +6,8 @@ export default class AiFullPeople extends Component {
 
 	static propTypes = {
 		show: PropTypes.bool,
-		click: PropTypes.func
+		click: PropTypes.func,
+		isFullScreen: PropTypes.bool
 	}
 
 	constructor(props) {
@@ -266,12 +267,16 @@ export default class AiFullPeople extends Component {
 
 	render() {
 
-		const { show, click } = this.props;
+		const { show, click, isFullScreen } = this.props;
+
+		const numPeople = this.state.peopleData.length;
+		const is5Column = isFullScreen || ((numPeople % 4 != 0) && ((numPeople % 4) < (numPeople % 5)));
 
 		const classnames = classNames({
 			'list-container': true,
 			'list-container--show': show,
-			'list-container--people': true
+			'list-container--people': true,
+			'list-container--people-5-column': is5Column
 		});
 
 		const people = this.state.peopleData.map((person, index) =>
@@ -284,14 +289,36 @@ export default class AiFullPeople extends Component {
 				/>
 				<div className="list-column-inner"></div>
 			</div>
-		);		
+		);	
+
+		let empties;
+ 		(is5Column) ? 
+ 		(
+			empties = (new Array(5 - (numPeople % 5)).fill('')).map((empty, index) =>
+				<div key={index} >
+					<div className="empty"></div>
+					<div className="list-column-inner"></div>
+				</div>
+			)
+ 		) : 
+ 		(
+ 			(numPeople % 4 != 0) ? (
+	 			empties = (new Array(4 - (numPeople % 4)).fill('')).map((empty, index) =>
+					<div key={index} className="empty">
+						<div className="empty"></div>
+						<div className="list-column-inner"></div>
+					</div>
+				)
+			) : null
+ 		);
  		
 		return (
 			<div>
 				<div className={classnames}>
 					<div className="list-column"></div>
 					<div className="list-scrolling">
-						{people}						
+						{people}
+						{empties}					
 					</div>
 					<div className="list-column"></div>
 				</div>
