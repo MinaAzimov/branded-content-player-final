@@ -819,7 +819,10 @@
             padding-right: 60px;
             letter-spacing: 0.012em;
             opacity: 0.8;
-
+            
+            > div {
+              padding-right: 0px;
+            }
             &.more {
               cursor: pointer;
               display: flex;
@@ -850,9 +853,9 @@
             flex: 1;
             padding-bottom: 32px;
 
-            // &:after {
-            //   display: none;
-            // }
+            &:after {
+              display: none;
+            }
           }
         }
       }
