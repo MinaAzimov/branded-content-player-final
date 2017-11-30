@@ -131,6 +131,7 @@ export default class App extends Component {
 			item20: false,
 			finalDataArray: [],
 			fullAiCardStarred: [],
+			starredForScrolling: [1, 2, 3, 4],
 			videoTrigger: 0,
 			window: {
 				width: 0,
@@ -754,7 +755,8 @@ export default class App extends Component {
 			fullAiCardPerson,
 			fullAiCardStarred,
 			showFullAiCard,
-			videoTrigger
+			videoTrigger,
+			starredForScrolling
 
 
 			
@@ -1063,6 +1065,7 @@ export default class App extends Component {
 				/>
 
 				<AiFull
+				    starredForScrolling={starredForScrolling}
 					fullAiCardShow={this.fullAiCardShow}
 					isFullScreen={isFullScreen}
 					show={showFullAiCard}

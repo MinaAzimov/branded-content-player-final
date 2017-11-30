@@ -22,7 +22,7 @@ export default class AiFullScenes extends Component {
 
 	render() {
 
-		const { show, currentTime, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred } = this.props;
+		const { show, currentTime, jumpToScene, addAiStarred, checkAiStarred, removeAiStarred, starredData, starredForScrolling } = this.props;
 
 	
 
@@ -32,7 +32,8 @@ export default class AiFullScenes extends Component {
 		const classnames = classNames({
 			'list-container': true,
 			'list-container--show': show,
-			'list-container--scenes': true
+			'list-container--scenes': true,
+			'list-container--needs-scroll': this.props.starredForScrolling.length > 2, 
 		});
  		
 		return (

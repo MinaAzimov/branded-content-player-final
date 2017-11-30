@@ -40,7 +40,7 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, personData, starredData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow } = this.props;
+		const { show, close, isFullScreen, showing, goToPage, personData, starredData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling } = this.props;
 
 
 
@@ -77,6 +77,8 @@ export default class AiFull extends Component {
 						</div>
 					</div>
 					<AiFullScenes 
+					starredForScrolling={starredForScrolling}
+					starredData={starredData}
 					show={ showing == 'scenes' }
 					currentTime={currentTime}
 					jumpToScene={this.props.jumpToScene}
@@ -106,6 +108,7 @@ export default class AiFull extends Component {
 					/>
 					) : null }
 					<AiFullMusic 
+					starredForScrolling={starredForScrolling}
 					show={ showing == 'music' }
 					jumpToScene={this.props.jumpToScene}
 					starredData={starredData}
@@ -126,6 +129,7 @@ export default class AiFull extends Component {
 				
 					/>
 					<AiFullTrivia 
+					starredForScrolling={starredForScrolling}
 					show={ showing == 'trivia' }
 					jumpToScene={this.props.jumpToScene}
 					starredData={starredData}
@@ -134,6 +138,7 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullProducts 
+					starredForScrolling={starredForScrolling}
 					show={ showing == 'products' }
 					currentTime={currentTime}
 					jumpToScene={this.props.jumpToScene}

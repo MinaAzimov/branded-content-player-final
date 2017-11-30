@@ -19,12 +19,13 @@ export default class AiFullProducts extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling } = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
 			'list-container--show': show,
-			'list-container--products': true
+			'list-container--products': true,
+			'list-container--needs-scroll': this.props.starredForScrolling.length > 2
 		});
  		
 		return (
