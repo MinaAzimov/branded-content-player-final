@@ -46,7 +46,7 @@ export default class AiFullScenes extends Component {
 						jumpToScene={this.props.jumpToScene}
 						type={"scene"}
 						image={"assets/img/scene-1.jpg"}
-						title={"Elliot Looks for a clue"}
+						title={"Elliot looks for a clue"}
 						subtitle={"00:00:02 — 00:00:54"}
 						ctas={[
 							[

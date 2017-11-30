@@ -48,7 +48,7 @@ export default class AiFullStarred extends Component {
 			starredList = (
 			<div className="empty-state">
 				<i className="iconcss icon-empty-state"></i>
-				<h2>You havn't starred anything yet. <br></br> Get to Starrin'</h2>
+				<h2>You haven't starred anything yet. <br></br> Get to starrin'!</h2>
 			</div>);
 		}
 
