@@ -1,83 +1,28 @@
 .container--fullscreen {
 	.ai-full {
-
-		// height: 90%;
-
-		&--show{
-			margin: 40px 0px 10px 0px;
-		}
-
 		.list-container {
-			
-			.list-column {
-				
-			}
-
 			&--people {
-				// margin-left: 8%;
-				// height: calc(100% - 80px);
-				// width: calc(99% + 4px);
-
-				.list-column:last-child {
-					// transform: translateX(-256px);  
-				}
-			}
-
-			&--trivia {
-				height: calc(98% - 80px);
-			}
-
-			&--starred {
-				.list-scrolling .ai-preview-list-item {
-					cursor: auto;
-					width: calc(100% - 37px);
-					display: flex;
-					-webkit-box-align: center;
-					align-items: center;
-					-webkit-box-pack: start;
-					justify-content: flex-start;
-					-webkit-box-orient: horizontal;
-					-webkit-box-direction: normal;
-					flex-direction: row;
-					margin-bottom: 12px;
-					background: rgba(25, 23, 24, 0.55);
-					padding: 35px 0px;
-					border-radius: $border-radius $border-radius $border-radius $border-radius;
+				.list-scrolling {
+					> div .empty {
+						width: 248px;
+					}
+					.ai-preview-list-item {
+						&--person {
+							.mask {
+								height: 316px;
+								width: 248px;
+								&:after {
+									transform: translateY(-316px);
+									height: 316px;
+									width: 248px;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 	}
-
-	.list-container {
-
-		&--show {
-
-		}
-
-		&--music {
-			margin: 0px 0px 10px 0px;
-			&:last-child {
-				padding: 5px 0;
-			}
-		}
-
-		&--scenes {
-
-			overflow-y: scroll;
-		}
-
-
-		&--person{
-			overflow-y: scroll; 
-		}
-
-		&--trivia {
-			margin: 0px 0px -20px 0px;
-			
-		}
-
-	}
-
 }
 
 
@@ -88,27 +33,17 @@
 @media only screen and (min-width: 1824px) {
 
 	.container--fullscreen {
+		.ai-preview {
+			.ai-preview-list .ai-preview-list-item--trivia .text h3 .more {
+				font-size: 13px;
+				margin-top: 12px;
 
-
-		.slider {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-			flex-direction: row;
-			-webkit-box-pack: start;
-			-ms-flex-pack: start;
-			justify-content: flex-start;
-			height: 246px;
-			overflow-x: scroll;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			overflow: hidden;
+				i {
+					font-size: 8px;
+					margin-right: 10px;
+				}
+			}
 		}
-
-
 		.ai-full {
 
 			&--show {
@@ -173,32 +108,31 @@
 							padding-bottom: 90px;
 						}
 						> div .empty {
-							width: 595px;
+							width: 424px;
 						}
 						.ai-preview-list-item {
 							&--person {
 								padding: 60px 0;
 								.mask {
-									height: 755px;
-									width: 595px;
+									height: 539px;
+									width: 424px;
 									&:after {
-										transform: translateY(-755px);
-										height: 755px;
-										width: 595px;
+										transform: translateY(-539px);
+										height: 539px;
+										width: 424px;
 									}
 								}
 								.text{
 									margin-top: 60px;
 									h2 {
-										font-size: 30px;
+										font-size: 26px;
 									}
 									h3 {
-										font-size: 26px;
+										font-size: 24px;
 									}
 								}
 							}
 						}
-
 					}
 				} 
 
@@ -210,7 +144,7 @@
 					.list-scrolling {
 						.ai-preview-list-item {
 							padding: 60px 0;
-							width: calc(100% - 130px);
+							width: calc(100% - 131px);
 							.mask {
 								width: 380px;
 								height: 322px;
@@ -261,7 +195,7 @@
 					.list-scrolling {
 						.ai-preview-list-item {
 							padding: 60px 0;
-							width: calc(100% - 130px);
+							width: calc(100% - 131px);
 							.mask {
 								width: 380px;
 								height: 226px;
@@ -316,7 +250,7 @@
 					.list-scrolling {
 						.ai-preview-list-item {
 							padding: 60px 0;
-							width: calc(100% - 130px);
+							width: calc(100% - 131px);
 							.mask {
 								width: 380px;
 								height: 226px;
@@ -388,7 +322,7 @@
 					.list-scrolling {
 						.ai-preview-list-item {
 							padding: 60px 0;
-							width: calc(100% - 130px);
+							width: calc(100% - 131px);
 							.mask {
 								width: 380px;
 								height: 380px;
@@ -433,26 +367,15 @@
 
 
 
-				
-
-
-
 				&--starred {
 					height: auto;
-					// width: calc(100% - 20px);
-
-					// margin-left: 1%;
-					.mask {
-						// margin-left: 50px;
-					}
-
-					.ctas {
-						// margin-right: 50px;
+					.list-column:last-child {
+						transform: translateX(-138px);
 					}
 
 					.empty-state {
 						width: 1550px;
-						height: 1550px;
+						height: 1325px;
 						transform: translate(-775px, 0);
 
 						i {
@@ -461,25 +384,97 @@
 						}
 
 						h2 {
-							font-size: 40px;
+							font-size: 36px;
 						}
 					}
+					.list-scrolling {
+						.ai-preview-list-item {
+							padding: 60px 0;
+							width: calc(100% - 131px);
+							.mask {
+								img {
+									height: 100%;
+								}
+							}
+							.text {
+								margin-left: 72px;
+								h2 {
+									font-size: 30px;
 
-					.list-scrolling .ai-preview-list-item {
-						cursor: auto;
-						width: calc(100% - 37px);
-						display: flex;
-						-webkit-box-align: center;
-						align-items: center;
-						-webkit-box-pack: start;
-						justify-content: flex-start;
-						-webkit-box-orient: horizontal;
-						-webkit-box-direction: normal;
-						flex-direction: row;
-						margin-bottom: 12px;
-						background: rgba(25, 23, 24, 0.55);
-						border-radius: $border-radius $border-radius $border-radius $border-radius;
+									i {
+										font-size: 26px;
+										margin-right: 12px;
+									}
+								}
+								h3 {
+									font-size: 26px;
+								}
+							}
+							.ctas {
+								a {
+									width: 272px;
+									font-size: 26px;
+									padding: 26px 30px;
+
+									i {
+										margin-right: 18px;
+									}
+								}
+							}
+							&--music {
+								.mask {
+									width: 350px;
+									height: 350px;
+
+									&:after {
+										width: 350px;
+										height: 350px;
+										transform: translateY(-350px);
+									}
+								}
+							}
+							&--person {
+								.mask {
+									width: 350px;
+									height: 446px;
+
+									&:after {
+										width: 350px;
+										height: 446px;
+										transform: translateY(-446px);
+									}
+								}
+							}
+							&--product {
+								.mask {
+									width: 350px;
+									height: 280px;
+
+									&:after {
+										width: 350px;
+										height: 280px;
+										transform: translateY(-280px);
+									}
+								}
+							}
+							&--scene {
+								.mask {
+									width: 350px;
+									height: 208px;
+
+									&:after {
+										width: 350px;
+										height: 208px;
+										transform: translateY(-208px);
+									}
+								}
+							}
+
+						}
 					}
+				}
+				&--needs-scroll {
+					height: calc(100% - 112px);
 				}
 
 				&--character {
@@ -525,6 +520,14 @@
 							div > div {
 								font-size: 28px;
 								padding-right: 33%;
+
+								.more {
+									font-size: 16px;
+
+									i {
+										font-size: 11px;
+									}
+								}
 								> div {
 									padding-right: 0;
 								}

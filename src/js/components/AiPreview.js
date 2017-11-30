@@ -74,8 +74,7 @@ export default class AiPreview extends Component {
 		let listHeight = 0;
 
         if (this.refs.list) {
-	      listHeight = this.refs.list.clientHeight;
-	      
+	      listHeight = this.refs.list.clientHeight;   
         }
 
 
@@ -86,7 +85,7 @@ export default class AiPreview extends Component {
  		const classnames = classNames({
  			'ai-preview': true,
  			'ai-preview--show': show || (isHovering && currentTime != 0 && !showFullAiCard && endCardShow),
- 			'ai-preview--needs-scrolling': listHeight >= 510
+ 			'ai-preview--needs-scrolling': (isFullScreen && window.innerWidth > 1824) ? listHeight >= 880 : listHeight >= 510
  		});
 
  		const itemCar = classNames({
@@ -206,9 +205,15 @@ export default class AiPreview extends Component {
 						<div className="ellipsis"></div>
 					</div>
 					<input id="toggleWikiPreview" type="checkbox" defaultChecked="true"/>
-					<label htmlFor="toggleWikiPreview">
-						<div className="circle"></div>
-						<span>v.ai</span>
+					<label htmlFor="toggleWikiPreview" className="">
+						<div className="circle">
+							{  /* <i className="iconcss icon-vai-sm"></i>  */}
+							{ /*  <img src='assets/img/vai.svg'></img> */ }
+							{ /* <svg viewBox="0 0 100 100">
+							   <use xlinkHref='assets/img/vai.svg'></use>
+							</svg> */ } 
+						</div>
+						<span>vai</span>
 					</label>
 					<div className="ai-preview-list">
 						<div className="ai-preview-list-column"></div>
