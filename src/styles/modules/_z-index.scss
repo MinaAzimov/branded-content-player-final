@@ -16,11 +16,11 @@
 }
 
 .control-bar {
-	@include z-index-fullscreen(10);
+	@include z-index-fullscreen(15);
 }
 
 .ai-preview {
-	@include z-index-fullscreen(15);
+	@include z-index-fullscreen(14);
 }
 
 .ai-full {
