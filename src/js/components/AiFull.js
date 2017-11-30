@@ -21,23 +21,7 @@ export default class AiFull extends Component {
 		starredData: PropTypes.array,
 		addAiStarred: PropTypes.func,
 		removeAiStarred: PropTypes.func,
-		jumpToSceneOne: PropTypes.func,
-		jumpToSceneTwo: PropTypes.func,
-		jumpToSceneThree: PropTypes.func,
-		jumpToSceneFour: PropTypes.func,
-		jumpToSceneFive: PropTypes.func,
-		jumpToSceneSix: PropTypes.func,
-		jumpToSceneSeven: PropTypes.func,
-		jumpToSceneEight: PropTypes.func,
-		jumpToSceneNine: PropTypes.func,
-		jumpToSceneTen: PropTypes.func,
-		jumpToSceneEleven: PropTypes.func,
-		jumpToSceneTwelve: PropTypes.func,
-		jumpToSceneThirteen: PropTypes.func,
-		jumpToSceneFourteen: PropTypes.func,
-		jumpToSceneFifteen: PropTypes.func,
-		jumpToSceneSixteen: PropTypes.func,
-		jumpToSceneSeventeen: PropTypes.func,
+		jumpToScene: PropTypes.func,
 		currentTime: PropTypes.number,
 	}
 
@@ -56,7 +40,8 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, personData, starredData, addAiStarred, removeAiStarred, currentTime, jumpToSceneOne, jumpToSceneTwo, jumpToSceneThree, jumpToSceneFour, jumpToSceneFive, jumpToSceneSix, jumpToSceneSeven, jumpToSceneEight, jumpToSceneNine, jumpToSceneTen, jumpToSceneEleven, jumpToSceneTwelve, jumpToSceneThirteen, jumpToSceneFourteen, jumpToSceneFifteen, jumpToSceneSixteen, jumpToSceneSeventeen } = this.props;
+		const { show, close, isFullScreen, showing, goToPage, personData, starredData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow } = this.props;
+
 
 
  		const classnames = classNames({
@@ -94,54 +79,68 @@ export default class AiFull extends Component {
 					<AiFullScenes 
 					show={ showing == 'scenes' }
 					currentTime={currentTime}
-					jumpToSceneOne={this.props.jumpToSceneOne}
-					jumpToSceneTwo={this.props.jumpToSceneTwo}
-					jumpToSceneThree={this.props.jumpToSceneThree}
-					jumpToSceneFour={this.props.jumpToSceneFour}
-
+					jumpToScene={this.props.jumpToScene}
+					starredData={starredData}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullPeople
 					isFullScreen={ isFullScreen }
 					show={ showing == 'people' }
 					click={ goToPage }
+					starredData={starredData}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
 					/>
 					{ personData != null ? (
 					<AiFullCharacter 
 					show={ showing == 'character' }
 					click={ () => goToPage('people') }
 					person={ personData }
+					starredData={starredData}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
 					/>
 					) : null }
 					<AiFullMusic 
 					show={ showing == 'music' }
-					jumpToSceneEight={this.props.jumpToSceneEight}
-					jumpToSceneNine={this.props.jumpToSceneNine}
-					jumpToSceneTen={this.props.jumpToSceneTen}
+					jumpToScene={this.props.jumpToScene}
+					starredData={starredData}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullStarred 
+					fullAiCardShow={fullAiCardShow}
 					isFullScreen={this.props.isFullScreen}
 					show={ showing == 'starred' }
 					data={ starredData }
 					addStar={ addAiStarred }
+					checkAiStarred={checkAiStarred}
 					removeStar={ removeAiStarred }
-					jumpToSceneFourteen={this.props.jumpToSceneFourteen}
-					jumpToSceneFifteen={this.props.jumpToSceneFifteen}
-					jumpToSceneSixteen={this.props.jumpToSceneSixteen}
-					jumpToSceneSeventeen={this.props.jumpToSceneSeventeen}
+					checkAiStarred={this.props.checkAiStarred}
+					jumpToScene={this.props.jumpToScene}
 				
 					/>
 					<AiFullTrivia 
 					show={ showing == 'trivia' }
-					jumpToSceneEleven={this.props.jumpToSceneEleven}
-					jumpToSceneTwelve={this.props.jumpToSceneTwelve}
-					jumpToSceneThirteen={this.props.jumpToSceneThirteen}
+					jumpToScene={this.props.jumpToScene}
+					starredData={starredData}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullProducts 
 					show={ showing == 'products' }
 					currentTime={currentTime}
-					jumpToSceneFive={this.props.jumpToSceneFive}
-					jumpToSceneSix={this.props.jumpToSceneSix}
-					jumpToSceneSeven={this.props.jumpToSceneSeven}
+					jumpToScene={this.props.jumpToScene}
+					starredData={starredData}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
 				
 					/>
 				</div>

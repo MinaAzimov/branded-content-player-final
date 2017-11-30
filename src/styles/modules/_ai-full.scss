@@ -187,6 +187,29 @@
         .starred {
           display: none;
         }
+           .starred-ai-list {
+             margin-left: 12px;
+             margin-top: 5px;
+             display: flex;
+             height: 55px;
+             align-self: center;
+             justify-content: flex-start;
+
+         .circles {
+           animation: none;
+        }
+         i {
+          font-size: 20px;
+
+           &.icon-star-fill {
+           color: rgba(darken($color-yellow, 10%), .55);
+           animation: none;
+           }
+           &:hover {
+           color: darken($color-yellow, 10%);              
+           }
+         }
+         }
 
         .text {
           margin-left: 50px;
@@ -310,6 +333,13 @@
           a {
             opacity: 0.72;
           }
+             .starred-ai-list {
+          .icon-star {
+            display: block;
+          }
+          .icon-star-fill {
+          }
+        }
         }
       }
     }
@@ -332,6 +362,10 @@
           opacity: 1;
           transform: translateY(0px);
           transition: all 0.6s $easing2;
+
+          .starred-ai-list{
+            display: none;
+          }
 
          .starred {
              margin-left: 12px;
@@ -433,6 +467,8 @@
           }
         }
         &--person {
+
+       
           .mask {
             height: 229px;
 
@@ -512,6 +548,11 @@
       }
     }
     &--scenes {
+
+       .starred-ai-list{
+           margin-top: 12px !important;
+          }
+
       .list-scrolling {
         .ai-preview-list-item {
           .mask {
@@ -570,6 +611,107 @@
                     content: ('' + $i);
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+     &--starred {
+
+       .starred{
+           margin-top: 5px !important;
+          }
+
+      .list-scrolling {
+        .ai-preview-list-item {
+          .mask {
+            width: 230px;
+
+            &:after {
+              width: 230px;
+            }
+          }
+          &--scene {
+            .mask {
+              height: 129px;
+
+              &:after {
+                transform: translateY(-129px);
+                height: 129px;
+              }
+            }
+            .text {
+              h2 {
+                align-items: baseline;
+                margin-bottom: 9px;
+              }
+              i {
+                // display: inline-flex;
+                margin-right: 12px;
+                font-size: 31px;
+
+                &:after {
+                  font-size: 24px;
+                  font-weight: 400;
+                  opacity: 0.8;
+                  line-height: 0;
+                  vertical-align: text-top;
+                  display: inline-block;
+                  margin-left: 2px;
+                  letter-spacing: 0.024em;
+                  transform: skew(-21deg) translateY(0px);
+                  font-family: "Lora";
+
+                  // font-style: italic;
+                }
+              }
+              h3 {
+                letter-spacing: 0.05em;
+                font-size: 19px;
+              }
+            }
+            @for $i from 1 through 20 {
+              &:nth-child(#{$i}) {
+                .text i:after {
+                  @if (#{$i} < 10) {
+                    content: ('0' + $i);
+                  }
+                  @else {
+                    content: ('' + $i);
+                  }
+                }
+              }
+            }
+          }
+           &--person {
+            .mask {
+             height: 270px;
+
+              &:after {
+                transform: translateY(270px);
+                height: 270px;
+              }
+            }
+          }
+           &--product{
+            .mask {
+             
+
+              &:after {
+                transform: translateY(144px);
+                height: 144px;
+              }
+            }
+          }
+
+             &--music{
+            .mask {
+             
+
+              &:after {
+                transform: translateY(180px);
+                height: 180px;
               }
             }
           }

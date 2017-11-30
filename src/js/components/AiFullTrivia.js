@@ -18,7 +18,7 @@ export default class AiFullTrivia extends Component {
 
 	render() {
 
-		const { show, jumpToSceneEleven, jumpToSceneTwelve, jumpToSceneThirteen} = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred} = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
@@ -32,7 +32,7 @@ export default class AiFullTrivia extends Component {
 				<div className="list-scrolling">
 					<AiFullListItem
 					type={"trivia"}
-					jumpToSceneEleven={this.props.jumpToSceneEleven}
+					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-1.jpg"}
 					title={"General Trivia"}
 					subtitle={"Scene 1 — 00:01:21"}
@@ -46,7 +46,7 @@ export default class AiFullTrivia extends Component {
 					/>
 					<AiFullListItem
 					type={"trivia"}
-					jumpToSceneTwelve={this.props.jumpToSceneTwelve}
+					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-2.jpg"}
 					title={"Fun Fact"}
 					subtitle={"Scene 1 — 00:03:46"}
@@ -60,7 +60,7 @@ export default class AiFullTrivia extends Component {
 					/>
 					<AiFullListItem
 					type={"trivia"}
-					jumpToSceneThirteen={this.props.jumpToSceneThirteen}
+					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-3.jpg"}
 					title={"Other Trivia"}
 					subtitle={"Scene 2 — 00:05:61"}

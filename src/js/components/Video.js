@@ -216,8 +216,10 @@ export default class Video extends Component {
 		}
 
 		if (isScrubbing) {
+
 			if (prevProps.currentTime !== currentTime) {
 				this.video.currentTime = currentTime;
+				this.onProgress();
 			}
 		} else if (prevProps.forceToTime !== forceToTime) {
 			this.video.currentTime = forceToTime;

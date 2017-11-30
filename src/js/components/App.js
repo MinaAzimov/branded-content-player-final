@@ -143,10 +143,7 @@ export default class App extends Component {
 	componentWillMount() {
 				
 			    var ref = base.database().ref("messages/-KxJ7vxikYxkKIX6iAKS");
-			    console.log(ref)
 			    ref.on("value", (snapshot)=>{
-
-			    	console.log()
 				var counterSet = snapshot.val();
 
 
@@ -388,175 +385,16 @@ export default class App extends Component {
 			this.setState(newState);
 		}
 
-	    jumpToSceneOne = () => {
+	    jumpToScene = (val) => {
 
 			var newState = {
 				isPlaying: true,
 				showFullAiCard: false,
-				videoTrigger: 1
+				videoTrigger: val
 			};
 			this.setState(newState);
 		}
 
-		jumpToSceneTwo = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 2
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneThree = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 3
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneFour = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 4
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneFive = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 5
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneSix = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 6
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneSeven = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 7
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneEight = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 8
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneNine = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 9
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneTen = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 10
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneEleven = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 11
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneTwelve = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 12
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneThirteen = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 13
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneFourteen = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 14
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneFifteen = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 15
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneSixteen = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 16
-			};
-			this.setState(newState);
-		}
-
-		jumpToSceneSeventeen = () => {
-
-			var newState = {
-				isPlaying: true,
-				showFullAiCard: false,
-				videoTrigger: 17
-			};
-			this.setState(newState);
-		};
 
 		resetScene = () => {
 
@@ -721,9 +559,19 @@ export default class App extends Component {
 			var starred = this.state.fullAiCardStarred;
 			starred = starred.filter(function (obj) {
 				return obj.key == key;
+					
 			});
 			return starred.length == 0;
+
 		}
+
+	resetStarredItemState = (val) => {
+			var starred = this.state.fullAiCardStarred;
+			starred.unshift(val);
+			this.setState({ fullAiCardStarred: starred });
+			console.log(this.state.fullAiCardStarred);
+		
+	}
 
 
 	onReplay = () => {
@@ -736,10 +584,18 @@ export default class App extends Component {
 
 	onMouseMove = (e) => {
 		clearTimeout(this.mouseMoveTimeout);
+		clearTimeout(this.mouseMoveTimeoutAiPreview);
 		this.mouseMoveTimeout = setTimeout(this.clearJustMouseMoved, this.props.controlBarHoverTimeout*1000);
+		this.mouseMoveTimeoutAiPreview = setTimeout(this.clearJustMouseMovedAiPreview, this.props.controlBarHoverTimeout*12000);
 		if (!this.state.isJustMouseMoved) {
 			this.setState({
 				isJustMouseMoved: true
+			})
+		}
+
+		if (!this.state.isJustMouseMovedAiPreview) {
+			this.setState({
+				isJustMouseMovedAiPreview: true
 			})
 		}
 	}
@@ -750,6 +606,11 @@ export default class App extends Component {
 			this.setState({
 				isJustMouseMoved: false
 			})
+		}	
+		if (this.state.isJustMouseMovedAiPreview) {
+			this.setState({
+				isJustMouseMovedAiPreview: false
+			})
 		}		
 	}
 
@@ -758,6 +619,13 @@ export default class App extends Component {
 			isJustMouseMoved: false,
 		})
 	}
+
+	clearJustMouseMovedAiPreview = () => {
+		this.setState({
+			isJustMouseMovedAiPreview: false,
+		})
+	}
+
 
 
 	goToNextPlaylistItem = () => {
@@ -845,6 +713,7 @@ export default class App extends Component {
 			isFullScreen,
 			isVideoEnd,
 			isJustMouseMoved,
+			isJustMouseMovedAiPreview,
 			showCCSettings,
 			isWaiting,
 			showShareCard,
@@ -910,7 +779,7 @@ export default class App extends Component {
 				endCardShow = (squeezeCardOpen || timeToEnd <= 0.2) && hasNextItem && !isWaiting && !isPlayingAdRoll;
 			}
 
-		const AiPreviewShow = (isJustMouseMoved || isScrubbing || isVolumeDragging || isFullScreen) && !(justClickedPlay || endCardShow || coverImgShow || showCCSettingsCalc || showShareCard || isVideoEnd) && !showFullAiCard;
+		const AiPreviewShow = (isJustMouseMovedAiPreview || isScrubbing || isVolumeDragging || isFullScreen) && !(justClickedPlay || endCardShow || coverImgShow || showCCSettingsCalc || showShareCard || isVideoEnd) && !showFullAiCard;
 
 		const controlBarShow = (isJustMouseMoved || isScrubbing || isVolumeDragging) && !(justClickedPlay || endCardShow || coverImgShow || showCCSettingsCalc || showShareCard || isVideoEnd) && !showFullAiCard;
 		const showShareTrigger = allowShare && (pauseCardShow || isJustMouseMoved && !showShareCard && !showCCSettings && !isPlayingAdRoll || isVideoEnd && !hasNextItem && !showShareCard) && !showFullAiCard;
@@ -1194,6 +1063,7 @@ export default class App extends Component {
 				/>
 
 				<AiFull
+					fullAiCardShow={this.fullAiCardShow}
 					isFullScreen={isFullScreen}
 					show={showFullAiCard}
 					close={this.fullAiCardHide}
@@ -1203,24 +1073,9 @@ export default class App extends Component {
 					starredData={fullAiCardStarred}
 					addAiStarred={this.addAiStarred}
 					removeAiStarred={this.removeAiStarred}
+					checkAiStarred ={this.checkAiStarred}
 					currentTime={currentTime}
-					jumpToSceneOne={this.jumpToSceneOne}
-					jumpToSceneTwo={this.jumpToSceneTwo}
-					jumpToSceneThree={this.jumpToSceneThree}
-					jumpToSceneFour={this.jumpToSceneFour}
-					jumpToSceneFive={this.jumpToSceneFive}
-					jumpToSceneSix={this.jumpToSceneSix}
-					jumpToSceneSeven={this.jumpToSceneSeven}
-					jumpToSceneEight={this.jumpToSceneEight}
-					jumpToSceneNine={this.jumpToSceneNine}
-					jumpToSceneTen={this.jumpToSceneTen}
-					jumpToSceneEleven={this.jumpToSceneEleven}
-					jumpToSceneTwelve={this.jumpToSceneTwelve}
-					jumpToSceneThirteen={this.jumpToSceneThirteen}
-					jumpToSceneFourteen={this.jumpToSceneFourteen}
-					jumpToSceneFifteen={this.jumpToSceneFifteen}
-					jumpToSceneSixteen={this.jumpToSceneSixteen}
-					jumpToSceneSeventeen={this.jumpToSceneSeventeen}
+					jumpToScene={this.jumpToScene}
 				/>
 			</div>
 		)

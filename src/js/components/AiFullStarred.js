@@ -21,15 +21,17 @@ export default class AiFullStarred extends Component {
 
 	render() {
 
-		const { show, isFullScreen, data, addStar, removeStar, jumpToSceneFourteen, jumpToSceneFifteen, jumpToSceneSixteen, jumpToSceneSeventeen } = this.props;
+		const { show, isFullScreen, data, addStar, removeStar, checkAiStarred, jumpToScene, fullAiCardShow } = this.props;
 
 		let starredList;
+
 	
 
 		if (this.props.data.length > 0) {
 			starredList = data.map((starredItem, index) =>
 				<div key={index}>
 					<AiFullListItem
+					fullAiCardShow={fullAiCardShow}
 					type={starredItem.type}
 					image={starredItem.image}
 					title={starredItem.title}
@@ -37,10 +39,8 @@ export default class AiFullStarred extends Component {
 					ctas={starredItem.ctas}
 					addS={() => addStar(starredItem)}
 					removeS={() => removeStar(starredItem.key)}
-					jumpToSceneFourteen={this.props.jumpToSceneFourteen}
-					jumpToSceneFifteen={this.props.jumpToSceneFifteen}
-					jumpToSceneSixteen={this.props.jumpToSceneSixteen}
-					jumpToSceneSeventeen={this.props.jumpToSceneSeventeen}
+					checkAiStarred={this.props.checkAiStarred}
+					jumpToScene={this.props.jumpToScene}
 					/>
 				</div>
 			);

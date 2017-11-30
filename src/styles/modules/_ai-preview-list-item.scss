@@ -80,8 +80,16 @@
       }
 
       &--person {
+        
+        
+           .starred-ai-list {
+              margin-left: 100% !important;
+              margin-top: -53px !important;
+              
+        }
 
         .mask {
+
           height: 107px;
           &:after {
             transform: translateY(-107px);

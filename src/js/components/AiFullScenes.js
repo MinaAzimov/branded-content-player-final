@@ -22,7 +22,7 @@ export default class AiFullScenes extends Component {
 
 	render() {
 
-		const { show, currentTime, jumpToSceneOne, jumpToSceneTwo, jumpToSceneThree, jumpToSceneFour } = this.props;
+		const { show, currentTime, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred } = this.props;
 
 	
 
@@ -42,7 +42,7 @@ export default class AiFullScenes extends Component {
 					<div className="list-scrolling">
 						<AiFullListItem
 						currentTime={currentTime}
-						jumpToSceneOne={this.props.jumpToSceneOne}
+						jumpToScene={this.props.jumpToScene}
 						type={"scene"}
 						image={"assets/img/scene-1.jpg"}
 						title={"Elliot Looks for a clue"}
@@ -53,10 +53,13 @@ export default class AiFullScenes extends Component {
 							"iconcss icon-play-outline"
 							]
 						]}
+						addAiStarred={()  => addAiStarred({key:5,type:"scene",image:"assets/img/scene-1.jpg",title:"Elliot Looks for a clue",subtitle:"00:00:02 — 00:00:54",ctas:[["Go To Scene", "iconcss icon-play-outline"]]})}
+						removeAiStarred={() => removeAiStarred(5)}
+						checkAiStarred={() => checkAiStarred(5)}
 						/>
 						<AiFullListItem
 						currentTime={currentTime}
-						jumpToSceneTwo={this.props.jumpToSceneTwo}
+						jumpToScene={this.props.jumpToScene}
 						type={"scene"}
 						image={"assets/img/scene-2.jpg"}
 						title={"Elliot learns more about what happened"}
@@ -67,10 +70,13 @@ export default class AiFullScenes extends Component {
 							"iconcss icon-play-outline"
 							]
 						]}
+						addAiStarred={()  => addAiStarred({key:6,type:"scene",image:"assets/img/scene-2.jpg",title:"Elliot learns more about what happened",subtitle:"00:00:55 — 00:02:05",ctas:[["Go To Scene ","iconcss icon-play-outline"]]})}
+						removeAiStarred={() => removeAiStarred(6)}
+						checkAiStarred={() => checkAiStarred(6)}
 						/>
 						<AiFullListItem
 						currentTime={currentTime}
-						jumpToSceneThree={this.props.jumpToSceneThree}
+						jumpToScene={this.props.jumpToScene}
 						type={"scene"}
 						image={"assets/img/scene-3.jpg"}
 						title={"Darlene and Fsociety take the final step"}
@@ -81,10 +87,13 @@ export default class AiFullScenes extends Component {
 							"iconcss icon-play-outline"
 							]
 						]}
+						addAiStarred={()  => addAiStarred({key:7,type:"scene",image:"assets/img/scene-3.jpg",title:"Darlene and Fsociety take the final step",subtitle:"00:02:06 — 00:03:19",ctas:[[" Go To Scene","iconcss icon-play-outline"]]})}
+						removeAiStarred={() => removeAiStarred(7)}
+						checkAiStarred={() => checkAiStarred(7)}
 						/>
 						<AiFullListItem
 						currentTime={currentTime}
-						jumpToSceneFour={this.props.jumpToSceneFour}
+						jumpToScene={this.props.jumpToScene}
 						type={"scene"}
 						image={"assets/img/scene-4.jpg"}
 						title={"What am I supposed to do"}
@@ -95,6 +104,9 @@ export default class AiFullScenes extends Component {
 							"iconcss icon-play-outline"
 							]
 						]}
+						addAiStarred={()  => addAiStarred({key:8,type:"scene",image:"assets/img/scene-4.jpg",title:"What am I supposed to do",subtitle:"00:03:20 — 00:03:34",ctas:[[" Go To Scene ","iconcss icon-play-outline"]]})}
+						removeAiStarred={() => removeAiStarred(8)}
+						checkAiStarred={() => checkAiStarred(8)}
 						/>
 					</div>
 					<div className="list-column"></div>

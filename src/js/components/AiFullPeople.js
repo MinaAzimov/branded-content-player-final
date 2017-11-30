@@ -14,7 +14,13 @@ export default class AiFullPeople extends Component {
 		super(props);
 		this.state = {
 			peopleData: [
-				{
+				{	
+					key:4,
+					type:"person",
+					image:"assets/img/elliot-alderson-lg.jpg",
+					title:"Elliot Alderson",
+					subtitle:"Rami Malek",
+					ctas:[["Go To Bio","iconcss icon-person"],["  Go To Scene  ","iconcss icon-play-outline"]],
 					characterName: 'Elliot Alderson',
 					actorName: 'Rami Malek',
 					characterImage: 'assets/img/elliot-alderson-lg.jpg',
@@ -44,7 +50,13 @@ export default class AiFullPeople extends Component {
 						}
 					]
 				},
-				{
+				{	
+					key:12,
+					type:"person",
+					image:"assets/img/christain-slater.jpg",
+					title:"Mr. Robot",
+					subtitle:"Christian Slater",
+					ctas:[["Go To Bio  ","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
 					characterName: 'Mr. Robot',
 					actorName: 'Christian Slater',
 					characterImage: 'assets/img/mr-robot.jpg',
@@ -75,7 +87,13 @@ export default class AiFullPeople extends Component {
 
 					]
 				},
-				{
+				{	
+					key:2,
+					type:"person",
+					image:"assets/img/darlene-alderson-lg.jpg",
+					title:"Darlene Alderson",
+					subtitle:"Carly Chaikin",
+					ctas:[["Go To Bio ","iconcss icon-person"], ["  Go To Scene ","iconcss icon-play-outline"]],
 					characterName: 'Darlene Alderson',
 					actorName: 'Carly Chaikin',
 					characterImage: 'assets/img/darlene-alderson-lg.jpg',
@@ -106,7 +124,13 @@ export default class AiFullPeople extends Component {
 
 					]
 				},
-				{
+				{	
+					key:13,
+					type:"person",
+					image:"assets/img/angela-moss.jpg",
+					title:"Angela Moss",
+					subtitle:"Portia Doubleday",
+					ctas:[["Go To Bio   ","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
 					characterName: 'Angela Moss',
 					actorName: 'Portia Doubleday',
 					characterImage: 'assets/img/angela-moss.jpg',
@@ -137,7 +161,13 @@ export default class AiFullPeople extends Component {
 
 					]
 				},
-				{
+				{	
+					key:14,
+					type:"person",
+					image:"assets/img/dominique-diperro.jpg",
+					title:"Dominique DiPerro",
+					subtitle:"Grace Gummer",
+					ctas:[["Go To Bio    ","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
 					characterName: 'Dominique DiPerro',
 					actorName: 'Grace Gummer',
 					characterImage: 'assets/img/dominique-diperro.jpg',
@@ -168,7 +198,13 @@ export default class AiFullPeople extends Component {
 
 					]
 				},
-				{
+				{	
+					key:15,
+					type:"person",
+					image:"assets/img/tyrell-wellick.jpg",
+					title:"Tyrell Wellick",
+					subtitle:"Martin Wallström",
+					ctas:[[" Go To Bio","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
 					characterName: 'Tyrell Wellick',
 					actorName: 'Martin Wallström',
 					characterImage: 'assets/img/tyrell-wellick.jpg',
@@ -199,7 +235,13 @@ export default class AiFullPeople extends Component {
 
 					]
 				},
-				{
+				{	
+				    key:16,
+					type:"person",
+					image:"assets/img/joanna-wellick.jpg",
+					title:"Joanna Wellick",
+					subtitle:"Stephanie Corneliussen",
+					ctas:[["  Go To Bio","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
 					characterName: 'Joanna Wellick',
 					actorName: 'Stephanie Corneliussen',
 					characterImage: 'assets/img/joanna-wellick.jpg',
@@ -230,7 +272,13 @@ export default class AiFullPeople extends Component {
 
 					]
 				},
-				{
+				{	
+				    key:17,
+					type:"person",
+					image:"assets/img/whiterose-2.jpg",
+					title:"Whiterose",
+					subtitle:"BD Wong",
+					ctas:[["   Go To Bio","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
 					characterName: 'Whiterose',
 					actorName: 'BD Wong',
 					characterImage: 'assets/img/whiterose-2.jpg',
@@ -267,7 +315,7 @@ export default class AiFullPeople extends Component {
 
 	render() {
 
-		const { show, click, isFullScreen } = this.props;
+		const { show, click, isFullScreen, addAiStarred, checkAiStarred, removeAiStarred  } = this.props;
 
 		const numPeople = this.state.peopleData.length;
 		const is5Column = isFullScreen || ((numPeople % 4 != 0) && ((numPeople % 4) < (numPeople % 5)));
@@ -279,13 +327,17 @@ export default class AiFullPeople extends Component {
 			'list-container--people-5-column': is5Column
 		});
 
-		const people = this.state.peopleData.map((person, index) =>
-			<div key={index} onClick={() => click('character', person)}>
+		const people = this.state.peopleData.map((person, index, key, type, image, title, subtitle, ctas) =>
+			<div key={index} >
 				<AiFullListItem
 				type={"person"}
+				click={() => click('character', person)}
 				image={person.characterImage}
 				title={person.characterName}
 				subtitle={person.actorName}
+				addAiStarred={()  => addAiStarred({key,type,image,title,subtitle,ctas} = {key: person.key, type: person.type, image: person.image, title: person.title, subtitle:person.subtitle, ctas:person.ctas})}
+				removeAiStarred={() => removeAiStarred(person.key)}
+				checkAiStarred={() => checkAiStarred(person.key)}
 				/>
 				<div className="list-column-inner"></div>
 			</div>

@@ -1,9 +1,14 @@
+
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="assets/css/styles.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -11,12 +16,33 @@
 			</div>
 		</div>
 		<script src="assets/js/main.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+ 
+</script>
 		
 		<script>
+
+		try {
+    var app1 = new Clarifai.App({
+     apiKey: 'ec167040197641ee8af2f6bf869dee6c'
+    });
+  }
+  catch(err) {
+    alert("Need a valid API Key!");
+    throw "Invalid API Key";
+  }
+  
+
+   validFile = (imageName) => {
+    var lowerImageName = imageName.toLowerCase();
+    return lowerImageName.search(/mp4|/gi) != -1;
+  }
 			var options = {
 				playlist: [
 		{
-			videoSrc: "assets/img/mrrobotrecording.mp4",
+			videoSrc: "assets/img/mrrobotrecording2.mp4",
 			coverImgSrc: "assets/img/mrrobotrecording.jpg",
 			title: "eps1.9_zer0-day.avi",
 			subtitle: "Mr Robot • S01 E10",
@@ -47,7 +73,9 @@
 					colorHighlight: "#55CEE2"
 				} 
 			}
+
 			window.mountPlayer(options, document.getElementById('root'));
+
 		</script>
 	</body>
 </html>

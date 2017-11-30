@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import AiFullCtas from './AiFullCtas';
 import AiFullStar from './AiFullStar';
+import AiListStar from './AiListStar';
 import AiFullExpandingText from './AiFullExpandingText';
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import classNames from "classnames";
@@ -18,23 +19,7 @@ export default class AiFullListItem extends Component {
 		addS: PropTypes.func,
 		removeS: PropTypes.func,
 		currentTime: PropTypes.number,
-		jumpToSceneOne: PropTypes.func,
-		jumpToSceneTwo: PropTypes.func,
-		jumpToSceneThree: PropTypes.func,
-		jumpToSceneFour: PropTypes.func,
-		jumpToSceneFive: PropTypes.func,
-		jumpToSceneSix: PropTypes.func,
-		jumpToSceneSeven: PropTypes.func,
-		jumpToSceneEight: PropTypes.func,
-		jumpToSceneNine: PropTypes.func,
-		jumpToSceneTen: PropTypes.func,
-		jumpToSceneEleven: PropTypes.func,
-		jumpToSceneTwelve: PropTypes.func,
-		jumpToSceneThirteen: PropTypes.func,
-		jumpToSceneFourteen: PropTypes.func,
-	    jumpToSceneFifteen: PropTypes.func,
-		jumpToSceneSixteen: PropTypes.func,
-		jumpToSceneSeventeen: PropTypes.func,
+		jumpToScene: PropTypes.func,
 	}
 
 	constructor(props) {
@@ -55,7 +40,7 @@ export default class AiFullListItem extends Component {
 
 	render() {
 
-		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToSceneOne, jumpToSceneTwo, jumpToSceneThree, jumpToSceneFour, jumpToSceneFive, jumpToSceneSix, jumpToSceneSeven, jumpToSceneEight, jumpToSceneNine, jumpToSceneTen, jumpToSceneEleven, jumpToSceneTwelve, jumpToSceneThirteen, jumpToSceneFourteen, jumpToSceneFifteen, jumpToSceneSixteen, jumpToSceneSeventeen,  currentTime } = this.props;
+		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow } = this.props;
 
 
 		const classnames = classNames({
@@ -80,10 +65,10 @@ export default class AiFullListItem extends Component {
 		return (
 			(type != 'trivia') ? (
 				<div className={classnames}>
-					<div className="mask">
+					<div className="mask" onClick={()=>click()}>
 						<img src={image}></img>
 					</div>
-					<div className="text">
+					<div className="text" onClick={()=>click()}>
 						<h2>
 							<i className={iconClassname}></i>
 							<span>{title}</span>
@@ -92,30 +77,21 @@ export default class AiFullListItem extends Component {
 							<span>{subtitle}</span>
 						</h3>
 					</div>
+
 					<AiFullStar
 					add={ addS }
 					remove={ removeS }
 					hideParent={ this.hideItem }
 					/>
+					<AiListStar
+					checkAiStarred={checkAiStarred}
+					addAiStarred={addAiStarred}
+					removeAiStarred={removeAiStarred }
+					/>
 					<AiFullCtas
 					currentTime={currentTime} 
-					jumpToSceneOne={this.props.jumpToSceneOne}
-					jumpToSceneTwo={this.props.jumpToSceneTwo}
-					jumpToSceneThree={this.props.jumpToSceneThree}
-					jumpToSceneFour={this.props.jumpToSceneFour}
-					jumpToSceneFive={this.props.jumpToSceneFive}
-					jumpToSceneSix={this.props.jumpToSceneSix}
-					jumpToSceneSeven={this.props.jumpToSceneSeven}
-					jumpToSceneEight={this.props.jumpToSceneEight}
-					jumpToSceneNine={this.props.jumpToSceneNine}
-					jumpToSceneTen={this.props.jumpToSceneTen}
-					jumpToSceneEleven={this.props.jumpToSceneEleven}
-					jumpToSceneTwelve={this.props.jumpToSceneTwelve}
-					jumpToSceneThirteen={this.props.jumpToSceneThirteen}
-					jumpToSceneFourteen={this.props.jumpToSceneFourteen}
-					jumpToSceneFifteen={this.props.jumpToSceneFifteen}
-					jumpToSceneSixteen={this.props.jumpToSceneSixteen}
-					jumpToSceneSeventeen={this.props.jumpToSceneSeventeen}
+					fullAiCardShow={fullAiCardShow}
+					jumpToScene={this.props.jumpToScene}
 					ctas={ctas}
 					/>
 				</div>
@@ -123,10 +99,10 @@ export default class AiFullListItem extends Component {
 			:
 			( 
 				<div className={classnames}>
-					<div className="mask">
+					<div className="mask" onClick={()=>click()}>
 						<img src={image}></img>
 					</div>
-					<div className="text">
+					<div className="text" onClick={()=>click()}>
 						<h2>
 							<i className={iconClassname}></i>
 							<span>{title}</span>
@@ -139,24 +115,9 @@ export default class AiFullListItem extends Component {
 					</div>
 					<AiFullCtas 
 					ctas={ctas}
-					currentTime={currentTime} 
-					jumpToSceneOne={this.props.jumpToSceneOne}
-					jumpToSceneTwo={this.props.jumpToSceneTwo}
-					jumpToSceneThree={this.props.jumpToSceneThree}
-					jumpToSceneFour={this.props.jumpToSceneFour}
-					jumpToSceneFive={this.props.jumpToSceneFive}
-					jumpToSceneSix={this.props.jumpToSceneSix}
-					jumpToSceneSeven={this.props.jumpToSceneSeven}
-					jumpToSceneEight={this.props.jumpToSceneEight}
-					jumpToSceneNine={this.props.jumpToSceneNine}
-					jumpToSceneTen={this.props.jumpToSceneTen}
-					jumpToSceneEleven={this.props.jumpToSceneEleven}
-					jumpToSceneTwelve={this.props.jumpToSceneTwelve}
-					jumpToSceneThirteen={this.props.jumpToSceneThirteen}
-					jumpToSceneFourteen={this.props.jumpToSceneFourteen}
-					jumpToSceneFifteen={this.props.jumpToSceneFifteen}
-					jumpToSceneSixteen={this.props.jumpToSceneSixteen}
-					jumpToSceneSeventeen={this.props.jumpToSceneSeventeen}
+					currentTime={currentTime}
+					fullAiCardShow={fullAiCardShow}
+					jumpToScene={this.props.jumpToScene}
 					/>
 				</div>
 			)
