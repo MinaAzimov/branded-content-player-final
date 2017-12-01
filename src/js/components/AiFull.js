@@ -55,11 +55,11 @@ export default class AiFull extends Component {
 					<div className="navigation">
 						<nav>
 							<span>
-								<i className="iconcss icon-vai"></i> 
+								{ /* <i className="iconcss icon-vai"></i> */ }
 								{ /* <svg viewBox="0 0 100 100">
 								   <use xlinkHref='assets/img/vai.svg'></use>
 								</svg> */ }
-								{ /* <img src='assets/img/vai.svg'></img> */ }
+								{  <img src='assets/img/vai.svg'></img> }
 							</span>
 							<a className={(showing == 'scenes') ? 'active' : null } onClick={ () => goToPage('scenes')}>Scenes</a>
 							<a className={(showing == 'people' || showing == 'character') ? 'active' : null } onClick={() => goToPage('people')}>People</a>

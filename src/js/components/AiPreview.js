@@ -206,14 +206,10 @@ export default class AiPreview extends Component {
 					</div>
 					<input id="toggleWikiPreview" type="checkbox" defaultChecked="true"/>
 					<label htmlFor="toggleWikiPreview" className="">
-						<div className="circle">
-							{  /* <i className="iconcss icon-vai-sm"></i>  */}
-							{ /*  <img src='assets/img/vai.svg'></img> */ }
-							{ /* <svg viewBox="0 0 100 100">
-							   <use xlinkHref='assets/img/vai.svg'></use>
-							</svg> */ } 
+						<div className="circle"></div>
+						<div className="slit">
+							<span>Vai</span>
 						</div>
-						<span>vai</span>
 					</label>
 					<div className="ai-preview-list">
 						<div className="ai-preview-list-column"></div>
