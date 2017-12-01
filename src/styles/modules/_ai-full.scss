@@ -498,22 +498,22 @@
 
           .mask {
             cursor: default;
-            height: 144px;
+            height: 184px;
 
             &:after {
-              transform: translateY(-144px);
-              height: 144px;
+              transform: translateY(-184px);
+              height: 184px;
             }
           }
         }
         &--music {
           
           .mask {
-            height: 180px;
+            height: 230px;
 
             &:after {
-              transform: translateY(-180px);
-              height: 180px;
+              transform: translateY(-230px);
+              height: 230px;
             }
           }
         }
