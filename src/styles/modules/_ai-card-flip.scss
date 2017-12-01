@@ -24,6 +24,7 @@
     left: 0;
 
     .mask {
+      cursor: pointer;
       border-radius: $border-radius;
       height: 451px;
       overflow: hidden;
@@ -43,7 +44,6 @@
         width: 320px;
         height: 60px;
         align-items: center;
-        cursor: pointer;
         z-index: 2;
         position: absolute;
         display: flex;

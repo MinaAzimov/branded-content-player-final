@@ -28,18 +28,18 @@ export default class AiCardFlip extends Component {
 			<div className={classnames} >
 				<div className="flipper">
 					<div className="front">
-						<div className="mask">
+						<div className="mask" onClick={flip}>
 							<img src={frontImg}></img>
-							<a onClick={flip}>
+							<a>
 								<i className="iconcss icon-swap"></i>
 								<span>View Actor</span>
 							</a>
 						</div>
 					</div>
 					<div className="back">
-						<div className="mask">
+						<div className="mask" onClick={flip}>
 							<img src={backImg}></img>
-							<a onClick={flip}>
+							<a>
 								<i className="iconcss icon-swap"></i>
 								<span>View Character</span>
 							</a>

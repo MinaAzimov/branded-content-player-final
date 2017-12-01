@@ -206,10 +206,10 @@ export default class AiPreview extends Component {
 					</div>
 					<input id="toggleWikiPreview" type="checkbox" defaultChecked="true"/>
 					<label htmlFor="toggleWikiPreview" className="">
-						<div className="circle"></div>
 						<div className="slit">
 							<span>Vai</span>
 						</div>
+						<div className="circle"></div>
 					</label>
 					<div className="ai-preview-list">
 						<div className="ai-preview-list-column"></div>
