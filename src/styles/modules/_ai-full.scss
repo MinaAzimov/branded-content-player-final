@@ -283,6 +283,7 @@
             align-self: flex-start;
           }
           .mask {
+            cursor: default;
             width: 230px;
             display: block;
             height: 129px;
@@ -294,6 +295,7 @@
             }
           }
           .text {
+             cursor: default;
             i {
               font-size: 19px;
             }
@@ -459,7 +461,12 @@
       .ai-preview-list-item {
         // margin-bottom: 0px;
 
+        .text{
+           cursor: default;
+        }
+
         .mask {
+          cursor: default;
           width: 180px;
 
           &:after {
@@ -470,6 +477,7 @@
 
        
           .mask {
+
             height: 229px;
 
             &:after {
@@ -479,7 +487,13 @@
           }
         }
         &--product {
+
+          .text{
+            cursor: default;
+          }
+
           .mask {
+            cursor: default;
             height: 144px;
 
             &:after {
@@ -489,6 +503,7 @@
           }
         }
         &--music {
+          
           .mask {
             height: 180px;
 
@@ -502,7 +517,11 @@
     }
     &--music {
       .ai-preview-list-item {
+        .text{
+           cursor: default;
+        }
         .mask {
+          cursor: default;
           width: 160px;
 
           &:after {
@@ -523,7 +542,12 @@
     }
     &--products {
       .ai-preview-list-item {
+
+        .text{
+           cursor: default;
+        }
         .mask {
+          cursor: default;
           width: 240px;
 
           &:after {
@@ -555,7 +579,11 @@
 
       .list-scrolling {
         .ai-preview-list-item {
+          .text{
+             cursor: default;
+          }
           .mask {
+            cursor: default;
             width: 230px;
 
             &:after {

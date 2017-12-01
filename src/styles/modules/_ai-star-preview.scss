@@ -102,7 +102,7 @@
 	}
 }
 
-@keyframes star {
+@keyframes starlist {
 	0%, 18% {
 		color: darken($color-yellow, 10%);
 		transform: scale3d(0, 0, 0);
@@ -121,7 +121,7 @@
 	}
 }
 
-@keyframes circles {
+@keyframes circleslist {
 	0%, 18% {
 		box-shadow: 0em 0em 0 -0.33333em #8ce8c3, 0em 0em 0 -0.33333em #8be7c2, 0em 0em 0 -0.33333em #90d2fa, 0em 0em 0 -0.33333em #91d1f9, 0em 0em 0 -0.33333em #90d2fa, 0em 0em 0 -0.33333em #91d1f9, 0em 0em 0 -0.33333em #90d2fa, 0em 0em 0 -0.33333em #91d1f9, 0em 0em 0 -0.33333em #90d2fa, 0em 0em 0 -0.33333em #91d1f9, 0em 0em 0 -0.33333em #90d2fa, 0em 0em 0 -0.33333em #91d1f9, 0em 0em 0 -0.33333em #90d2fa, 0em 0em 0 -0.33333em #91d1f9;
 	}
@@ -149,7 +149,7 @@
 
 		~label {
 			cursor: pointer;
-			.circles {
+			.circles-list {
 				border-radius: 50%;
 				display: block;
 				height: 0.66667em;
@@ -180,7 +180,7 @@
 			~label {
 				.icon-star-fill {
 					display: block;
-					animation-name: star;
+					animation-name: starlist;
 					animation-duration: 0.8s;
 					animation-timing-function: ease-in;
 					animation-iteration-count: 1;
@@ -190,8 +190,8 @@
 				.icon-star {
 					display: none !important;
 				}
-				.circles {
-					animation-name: circles;
+				.circles-list {
+					animation-name: circleslist;
 					animation-duration: 0.8s;
 					animation-timing-function: ease-in;
 					animation-iteration-count: 1;

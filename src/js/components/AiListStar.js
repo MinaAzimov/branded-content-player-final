@@ -37,7 +37,7 @@ export default class AiListStar extends Component {
 				<label htmlFor={this.id} onClick={ this.handleClick }>
 					<i className="iconcss icon-star"></i>
 					<i className="iconcss icon-star-fill"></i>
-				    <div className="circles"></div>
+				    <div className="circles-list"></div>
 				</label>
 			</div>
 		)
