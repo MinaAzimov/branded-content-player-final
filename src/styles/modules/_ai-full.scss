@@ -582,13 +582,53 @@
           }
 
       .list-scrolling {
+        min-width: auto;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        
+        > div {
+          display: flex;
+          // width: 50%;
+          .list-column-inner {
+            min-width: 20px; 
+            background: rgba(darken($color-black, 10%), .55);
+          }
+          &:nth-child(2n + 2) {
+            .list-column-inner {
+              min-width: 0px; 
+            }
+          }
+          &:nth-last-child(-n + 2) {
+            .ai-preview-list-item {
+              margin-bottom: 0;
+              padding-bottom: 48px; 
+            }
+          }
+          @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+              .text i:after {
+                @if (#{$i} < 10) {
+                  content: ('0' + $i);
+                }
+                @else {
+                  content: ('' + $i);
+                }
+              }
+            }
+          }
+        }
         .ai-preview-list-item {
+          margin-right: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 532px;
           .text{
              cursor: default;
           }
           .mask {
             cursor: default;
-            width: 230px;
+            width: 100%;
 
             &:after {
               width: 230px;
@@ -596,14 +636,18 @@
           }
           &--scene {
             .mask {
-              height: 129px;
+              height: 0;
+              padding-bottom: 56.25%;
 
               &:after {
-                transform: translateY(-129px);
-                height: 129px;
+                height: 0;
+                width: 100%;
+                padding-bottom: 56.25%;
+                transform: translateY(-100%);
               }
             }
             .text {
+              margin-left: 0;
               h2 {
                 align-items: baseline;
                 margin-bottom: 9px;
@@ -631,18 +675,6 @@
               h3 {
                 letter-spacing: 0.05em;
                 font-size: 19px;
-              }
-            }
-            @for $i from 1 through 20 {
-              &:nth-child(#{$i}) {
-                .text i:after {
-                  @if (#{$i} < 10) {
-                    content: ('0' + $i);
-                  }
-                  @else {
-                    content: ('' + $i);
-                  }
-                }
               }
             }
           }
