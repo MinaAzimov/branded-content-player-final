@@ -345,7 +345,7 @@
         width: 36px;
         height: 36px;
         border-radius: 36px;
-        box-shadow: 0px 0px 5px 5px rgba(darken($color-black, 10%), 0.24); 
+        box-shadow: -6px 0px 6px 0px rgba(darken($color-black, 10%), 0.24); 
         background: rgba($color-black, 0.12);
         border: solid 2px $color-white;
         position: absolute;
@@ -356,7 +356,7 @@
     &:checked {
       ~label {        
         .slit {
-          background: rgba($color-blue, 0.12);
+          background: linear-gradient(90deg, rgba($color-blue, 0.12), rgba($color-blue, 0.06) 60%, rgba($color-blue, 0) 0);
           border-color: $color-blue;
           clip-path: polygon(0% 0%, 0% 100%, 48px 100%, 48px 0, 100% 0, 100% 100%, 100% 100%, 100% 0%);
           // transition: all 0.6s $easing4;

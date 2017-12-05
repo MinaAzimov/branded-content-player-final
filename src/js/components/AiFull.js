@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import AiFullScenes from './AiFullScenes';
+import AiFullInScene from './AiFullInScene';
 import AiFullPeople from './AiFullPeople';
 import AiFullCharacter from './AiFullCharacter';
 import AiFullMusic from './AiFullMusic';
@@ -17,8 +18,10 @@ export default class AiFull extends Component {
 		close: PropTypes.func,
 		showing: PropTypes.string,
 		goToPage: PropTypes.func,
+		showInScene: PropTypes.func,
 		personData: PropTypes.object,
 		starredData: PropTypes.array,
+		inSceneData: PropTypes.array,
 		addAiStarred: PropTypes.func,
 		removeAiStarred: PropTypes.func,
 		jumpToScene: PropTypes.func,
@@ -40,7 +43,7 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, personData, starredData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling } = this.props;
+		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling } = this.props;
 
 
 
@@ -61,7 +64,7 @@ export default class AiFull extends Component {
 								</svg> */ }
 								{  <img src='assets/img/vai.svg'></img> }
 							</span>
-							<a className={(showing == 'scenes') ? 'active' : null } onClick={ () => goToPage('scenes')}>Scenes</a>
+							<a className={(showing == 'scenes' || showing == 'in-scene') ? 'active' : null } onClick={ () => goToPage('scenes')}>Scenes</a>
 							<a className={(showing == 'people' || showing == 'character') ? 'active' : null } onClick={() => goToPage('people')}>People</a>
 							<a className={(showing == 'products') ? 'active' : null } onClick={() => goToPage('products')}>Products</a>
 							<a className={(showing == 'music') ? 'active' : null } onClick={() => goToPage('music')}>Music</a>
@@ -80,6 +83,7 @@ export default class AiFull extends Component {
 					starredForScrolling={starredForScrolling}
 					starredData={starredData}
 					show={ showing == 'scenes' }
+					showInScene={showInScene}
 					currentTime={currentTime}
 					jumpToScene={this.props.jumpToScene}
 					starredData={starredData}
@@ -87,6 +91,22 @@ export default class AiFull extends Component {
 					checkAiStarred={checkAiStarred}
 					removeAiStarred={removeAiStarred}
 					/>
+					{
+					<AiFullInScene 
+					fullAiCardShow={fullAiCardShow}
+					starredForScrolling={starredForScrolling}
+					starredData={starredData}
+					click={ () => goToPage('scenes') }
+					show={ showing == 'in-scene' }
+					data={inSceneData}
+					currentTime={currentTime}
+					jumpToScene={this.props.jumpToScene}
+					starredData={starredData}
+					addStar={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeStar={removeAiStarred}
+					/>
+					}
 					<AiFullPeople
 					isFullScreen={ isFullScreen }
 					show={ showing == 'people' }

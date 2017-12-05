@@ -29,7 +29,7 @@ export default class AiListStar extends Component {
     }
 
 	render() {
-		const { addAiStarred, checkAiStarred, removeAiStarred  } = this.props;
+		const { addAiStarred, checkAiStarred, removeAiStarred } = this.props;
 
 		return (
 			<div className="starred-ai-list">
