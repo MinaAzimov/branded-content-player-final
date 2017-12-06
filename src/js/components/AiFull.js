@@ -80,6 +80,7 @@ export default class AiFull extends Component {
 						</div>
 					</div>
 					<AiFullScenes 
+					isFullScreen={ isFullScreen }
 					starredForScrolling={starredForScrolling}
 					starredData={starredData}
 					show={ showing == 'scenes' }

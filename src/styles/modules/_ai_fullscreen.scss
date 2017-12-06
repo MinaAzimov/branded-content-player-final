@@ -188,53 +188,109 @@
 				}
 
 				&--scenes {
-					height: auto;
-					.list-column:last-child {
-						transform: translateX(-138px);
-					}
-					.list-scrolling {
-						.ai-preview-list-item {
-							padding: 60px 0;
-							width: calc(100% - 131px);
-							.mask {
-								width: 380px;
-								height: 226px;
 
-								&:after {
-									width: 380px;
-									height: 226px;
-									transform: translateY(-226px);
-								}
-								img {
-									height: 100%;
+					.list-scrolling {
+						> div {
+							.list-column-inner, &:nth-child(2n + 2) .list-column-inner {
+								min-width: 28px; 
+							}
+							&:nth-last-child(-n + 2) {
+								.ai-preview-list-item {
+									margin-bottom: 12;
+									padding-bottom: auto; 
 								}
 							}
-							.text {
-								margin-left: 72px;
-								h2 {
-									font-size: 30px;
-
-									i {
-										font-size: 38px;
-										margin-right: 12px;
-
-										&:after {
-											font-size: 30px;
+							&:nth-child(3n + 3) {
+								.list-column-inner {
+									min-width: 0px; 
+								}
+							}
+							&:nth-last-child(-n + 3) {
+								.ai-preview-list-item {
+									margin-bottom: 0;
+									padding-bottom: 60px; 
+								}
+							}
+							@for $i from 1 through 20 {
+								&:nth-child(#{$i}) {
+									.scene-top i:after {
+										@if (#{$i} < 10) {
+											content: ('0' + $i);
+										}
+										@else {
+											content: ('' + $i);
 										}
 									}
 								}
-								h3 {
-									font-size: 26px;
+							}
+						}
+						.ai-preview-list-item, .empty {
+							width: 768px;
+						}
+						.ai-preview-list-item {
+							justify-content: center;
+							.text {
+								 cursor: default;
+							}
+							.mask {
+								cursor: default;
+								width: 100%;
+
+								.scene-card {
+									position: relative;
+									display: flex;
+									flex-direction: column;
+									height: 0;
+									z-index: 2;
+									padding-bottom: 56.25%;
+									transform: translateY(-100%);
 								}
 							}
-							.ctas {
-								a {
-									width: 272px;
-									font-size: 26px;
-									padding: 26px 30px;
+							&--scene {
+								.mask {
+									&:after {
+									}
+								}
+								.scene-top, .scene-bottom {
+									padding: 0 24px;
+								}
+								.scene-bottom {
+									min-height: 100px;
+									.ctas {
+										a {
+											font-size: 17px;
+											width: 180px;
+											min-height: 48px;
+										}
+									}
+								}
+								.scene-top {
+									padding-bottom: calc(56.25% - 100px);
 
 									i {
-										margin-right: 18px;
+										margin-top: 40px;
+										margin-right: 12px;
+										font-size: 36px;
+									}
+
+								}
+								.text {
+									cursor: pointer;
+									margin-left: 0;
+									h2, h3 {
+										span {
+											overflow: hidden;
+											text-overflow: ellipsis;
+											max-width: 450px;
+											white-space: nowrap;
+										}
+									}
+									h2 {
+										margin-bottom: 12px;
+										font-size: 24px;
+									}
+									h3 {
+										font-size: 21px;
 									}
 								}
 							}
@@ -365,7 +421,116 @@
 					}
 				}
 
+				&--in-scene {
+					height: auto;
+					.list-column:last-child {
+						transform: translateX(-138px);
+					}
 
+					.list-scrolling, .list-column {
+						mask-image: none;
+					}
+
+					.list-scrolling {
+						.ai-preview-list-item, .in-scene-header {
+							width: calc(100% - 131px);
+						}
+						.in-scene-header {
+							h3 {
+								font-size: 36px;
+								margin-top: 30px;
+							}
+							a {
+								font-size: 19px;
+								i {
+									font-size: 17px;
+								}
+							}
+						}
+						.ai-preview-list-item {
+							padding: 60px 0;
+							.mask {
+								img {
+									height: 100%;
+								}
+							}
+							.text {
+								margin-left: 72px;
+								h2 {
+									font-size: 30px;
+
+									i {
+										font-size: 26px;
+										margin-right: 12px;
+									}
+								}
+								h3 {
+									font-size: 26px;
+								}
+							}
+							.ctas {
+								a {
+									width: 272px;
+									font-size: 26px;
+									padding: 26px 30px;
+
+									i {
+										margin-right: 18px;
+									}
+								}
+							}
+							&--music {
+								.mask {
+									width: 350px;
+									height: 350px;
+
+									&:after {
+										width: 350px;
+										height: 350px;
+										transform: translateY(-350px);
+									}
+								}
+							}
+							&--person {
+								.mask {
+									width: 350px;
+									height: 446px;
+
+									&:after {
+										width: 350px;
+										height: 446px;
+										transform: translateY(-446px);
+									}
+								}
+							}
+							&--product {
+								.mask {
+									width: 350px;
+									height: 280px;
+
+									&:after {
+										width: 350px;
+										height: 280px;
+										transform: translateY(-280px);
+									}
+								}
+							}
+							&--scene {
+								.mask {
+									width: 350px;
+									height: 208px;
+
+									&:after {
+										width: 350px;
+										height: 208px;
+										transform: translateY(-208px);
+									}
+								}
+							}
+
+						}
+					}
+				}
 
 				&--starred {
 					height: auto;
@@ -475,6 +640,10 @@
 				}
 				&--needs-scroll {
 					height: calc(100% - 112px);
+
+					.list-scrolling, .list-column {
+						mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(darken($color-black, 10%),1)), to(rgba(darken($color-black, 10%),0)));
+					}
 				}
 
 				&--character {
@@ -649,7 +818,7 @@
 		}
 
 		.ai-more {
-			margin-left: 115px !important;
+			margin-left: 124px !important;
 		}
 
 		.ai-preview .ai-more span {
@@ -658,21 +827,37 @@
 
 		}
 
-		.ai-preview #toggleWikiPreview ~ label span {
-			font-size: 17px;
-
-
-		}
-
-		.ai-preview #toggleWikiPreview ~ label {
-			cursor: pointer;
-			width: 80px;
-			height: 36px;
-			border-radius: 36px;
-			position: fixed;
-			top: 20px;
-			border: solid 2px #FBF9F9;
-			transition: border-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+		.ai-preview #toggleWikiPreview {
+			~ label {
+				width: 86px;
+				.circle {
+					transform: translateX(0px);
+					width: 38px;
+					height: 38px;
+				}
+				.slit {
+					clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 34px 100%, 34px 0);
+					height: 21px;
+					border-radius: 9px;
+					span {
+						transform: translateX(42px);
+						font-size: 11px;
+					}
+				}
+			}
+			&:checked {
+				~ label {
+					.circle {
+						transform: translateX(46px);
+					}
+					.slit {
+						clip-path: polygon(0% 0%, 0% 100%, 49px 100%, 49px 0, 100% 0, 100% 100%, 100% 100%, 100% 0%);
+						span {
+							transform: translateX(12px);
+						}
+					}
+				}
+			}
 		}
 
 

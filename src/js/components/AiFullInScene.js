@@ -29,7 +29,7 @@ export default class AiFullScenes extends Component {
 			'list-container': true,
 			'list-container--show': show,
 			'list-container--in-scene': true,
-			'list-container--needs-scroll': this.props.starredForScrolling.length > 2, 
+			'list-container--needs-scroll': data.length > 2, 
 		});
 
 		// console.log(addAiStarred);
@@ -60,11 +60,7 @@ export default class AiFullScenes extends Component {
 					<div className="list-scrolling">
 						<div className="in-scene-header">
 							<a onClick={() => click()}><i className="iconcss icon-caret-left"></i><span>All Scenes</span></a>
-							<div>
-								{/*<i className="iconcss icon-scene"></i>
-																<h3>Elliot looks for a clue</h3>*/}
-							</div>
-							<div></div>
+							{/*<div><h3>People</h3></div>*/}
 						</div>
 						{inSceneList}
 					</div>

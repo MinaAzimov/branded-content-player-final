@@ -8,7 +8,8 @@ export default class AiFullScenes extends Component {
 	static propTypes = {
 		show: PropTypes.bool,
 		currentTime: PropTypes.number,
-		showInScene: PropTypes.func
+		showInScene: PropTypes.func,
+		isFullScreen: PropTypes.bool
 	}
 
 	constructor(props) {
@@ -212,7 +213,7 @@ export default class AiFullScenes extends Component {
 
 	render() {
 
-		const { show, showInScene, currentTime, jumpToScene, addAiStarred, checkAiStarred, removeAiStarred, starredData, starredForScrolling } = this.props;
+		const { show, isFullScreen, showInScene, currentTime, jumpToScene, addAiStarred, checkAiStarred, removeAiStarred, starredData, starredForScrolling } = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
@@ -220,6 +221,19 @@ export default class AiFullScenes extends Component {
 			'list-container--scenes': true,
 			'list-container--needs-scroll': this.props.starredForScrolling.length > 2, 
 		});
+
+		const numScenes = this.state.sceneData.length;
+
+ 		let empties;
+ 		(isFullScreen) ? 
+ 		(
+			empties = (new Array(3 - (numScenes % 3)).fill('')).map((empty, index) =>
+				<div key={index} >
+					<div className="empty"></div>
+					<div className="list-column-inner"></div>
+				</div>
+			)
+ 		) : ( null );
  		
 		return (
 			<div>
@@ -310,6 +324,7 @@ export default class AiFullScenes extends Component {
 							/>
 							<div className="list-column-inner"></div>
 						</div>
+						{ empties }
 					</div>
 					<div className="list-column"></div>
 				</div>
