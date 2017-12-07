@@ -164,16 +164,16 @@ export default class AiFullPeople extends Component {
 				{	
 					key:14,
 					type:"person",
-					image:"assets/img/dominique-diperro.jpg",
-					title:"Dominique DiPerro",
-					subtitle:"Grace Gummer",
+					image:"assets/img/trenton-lg.jpg",
+					title:"Trenton",
+					subtitle:"Sunita Mani",
 					ctas:[["Go To Bio    ","iconcss icon-person"], ["Go To Scene","iconcss icon-play-outline"]],
-					characterName: 'Dominique DiPerro',
-					actorName: 'Grace Gummer',
-					characterImage: 'assets/img/dominique-diperro.jpg',
-					actorImage: 'assets/img/grace-gummer.jpg',
-					characterBio: 'Dominique "Dom" DiPierro is a FBI agent investigating the Five/Nine Hack. Though highly assertive and persuasive at work, DiPierro has no close friends, relationships, or personal life. She only finds companionship in anonymous sex chats and conversation with Alexa, her Amazon Echo smart speaker.',
-					actorBio: 'Grace Gummer was born on May 9, 1986 in New York City, New York, USA as Grace Jane Gummer. She is an actress, known for Frances Ha (2012), The Homesman (2014) and Margin Call (2011).',
+					characterName: 'Trenton',
+					actorName: 'Sunita Mani',
+					characterImage: 'assets/img/trenton-lg.jpg',
+					actorImage: 'assets/img/sunita-mani-lg.jpg',
+					characterBio: 'Trenton, known only by her hacker name, is a member of fsociety. Her parents are Iranian immigrants who came to America for freedom. Her father works 60-hour weeks to find tax loopholes for a millionaire art dealer. Her mother ran up a five-figure debt earning an online degree. She has a young brother named Mohammed. The family lives together in Brooklyn and she is a student at a nearby university. In her first face-to-face meeting with the other members of fsociety Trenton uses a Stagefright exploit to own Mobley\'s Android phone.',
+					actorBio: 'Sunita Mani is an actress, dancer, and comedian most commonly recognized for her gyrations in the viral music video \"Turn Down for What\" (dir. The Daniels) and as part of the Cocoon Central Dance Team. She also appears in \"Don\'t Think Twice\" as Amy, \"Mr. Robot\" as Trenton, and in the Netflix original series, G.L.O.W as Arthie. Sunita has also guest starred on network television shows including \"Broad City\" on Comedy Central, Search Party on TBS, and The Good Place on NBC.',
 					otherWorks: [
 						{
 							image: "assets/img/busters-mal-heart.jpg",
@@ -201,16 +201,16 @@ export default class AiFullPeople extends Component {
 				{	
 					key:15,
 					type:"person",
-					image:"assets/img/tyrell-wellick.jpg",
-					title:"Tyrell Wellick",
-					subtitle:"Martin Wallström",
+					image:"assets/img/mobley-lg.jpg",
+					title:"Mobley",
+					subtitle:"Azhar Khan",
 					ctas:[[" Go To Bio","iconcss icon-person"], ["Go To Scene","iconcss icon-play-outline"]],
-					characterName: 'Tyrell Wellick',
-					actorName: 'Martin Wallström',
-					characterImage: 'assets/img/tyrell-wellick.jpg',
-					actorImage: 'assets/img/martin-wallstrom.jpg',
-					characterBio: 'After the Terry Colby hacking scandal, Wellick was appointed Interim Chief Technology Officer at Evil Corp. As CTO, Wellick relays the Evil Corps technology strategy to investors, supervises software development processes, and identifies platforms for delivering services. A visionary, he has also laid the foundations for new security protocols and measures. The Evil Corp job is a position he intends to make permanent, no matter who he has to impress or suppress to achieve this goal. His partner in social climbing and career mobility is his wife, Joanna, who goads him to more aggressive action and darker schemes. While Tyrell depends on their partnership, he also struggles to find his own path. When his interest in Elliot collides with his professional mission, Tyrell must choose whether to follow Joannas plan or take matters into his own hands.',
-					actorBio: 'Martin Wallström was born on July 7, 1983 in Uddevalla, Västra Götalands län, Sweden as Carl Martin Gunnar Wallström Milkéwitz. He is an actor, known for Mr. Robot (2015), Simple Simon (2010) and Ego (2013). He is married to Lisa Linnertorp.',
+					characterName: 'Mobley',
+					actorName: 'Azhar Khan',
+					characterImage: 'assets/img/mobley-lg.jpg',
+					actorImage: 'assets/img/azhar-khan-lg.jpg',
+					characterBio: 'Mobley, known only by his hacker name, is a member of fsociety. Mobley was born on January 2, 1984. He lives in Brooklyn. He is a fan of an obscure DJ from whom he took his hacker name. He even created an Angelfire page in DJ Mobley\'s honor. He secures the abandoned Fun Society Arcade as Fsociety\'s base, while also recruiting experienced hacker, Leslie Romero. He meets Elliot some time in between these events. He works at Bank of E and often visits Romero at his home.',
+					actorBio: 'Azhar Khan was born on January 7th, 1984 in Mumbai, India and raised in New York City. He is an actor, writer, visual artist, legerdemain enthusiast, and frustrated inventor. A peculiar blend of training and influences have led to him working in an assortment of venues and across various media platforms, from radio plays and video installations to live comedy and primetime television.',
 					otherWorks: [
 						{
 							image: "assets/img/busters-mal-heart.jpg",
@@ -238,53 +238,16 @@ export default class AiFullPeople extends Component {
 				{	
 				    key:16,
 					type:"person",
-					image:"assets/img/joanna-wellick.jpg",
-					title:"Joanna Wellick",
-					subtitle:"Stephanie Corneliussen",
+					image:"assets/img/romero-lg.jpg",
+					title:"Romero",
+					subtitle:"Ron Cephas Jones",
 					ctas:[["  Go To Bio","iconcss icon-person"], ["Go To Scene","iconcss icon-play-outline"]],
-					characterName: 'Joanna Wellick',
-					actorName: 'Stephanie Corneliussen',
-					characterImage: 'assets/img/joanna-wellick.jpg',
-					actorImage: 'assets/img/stephanie-corneliussen.jpg',
-					characterBio: 'She is willing to do whatever it takes to put her family in a position of wealth and power. Smart and ambitious, she knows that initiating chaos can sometimes be a path to the top.',
-					actorBio: 'Stephanie Corneliussen was born on April 28, 1987 in Copenhagen, Denmark. She is an actress, known for Mr. Robot (2015), Hansel & Gretel: Witch Hunters (2013) and Legends of Tomorrow (2016).',
-					otherWorks: [
-						{
-							image: "assets/img/busters-mal-heart.jpg",
-							link: "https://www.rottentomatoes.com/m/busters_mal_heart/"
-						},
-						{
-							image: "assets/img/short-term-12.jpg",
-							link: "https://www.rottentomatoes.com/m/short_term_12_2013"
-						},
-						{
-							image: "assets/img/aint-them-bodies-saints.jpg",
-							link: "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
-						},
-						{
-							image: "assets/img/da-sweet-blood-of-jesus.jpg",
-							link: "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
-						},
-						{
-							image: "assets/img/mr-robot-extra.jpg",
-							link: "https://www.rottentomatoes.com/tv/mr_robot"
-						}
-
-					]
-				},
-				{	
-				    key:17,
-					type:"person",
-					image:"assets/img/whiterose-2.jpg",
-					title:"Whiterose",
-					subtitle:"BD Wong",
-					ctas:[["   Go To Bio","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],
-					characterName: 'Whiterose',
-					actorName: 'BD Wong',
-					characterImage: 'assets/img/whiterose-2.jpg',
-					actorImage: 'assets/img/bd-wong.jpg',
-					characterBio: 'Whiterose is the leader of the Dark Army, a Chinese hacker group. She is a transgender woman masquerading as the male Minister Zhi Zhang, the Chinese Minister of State Security.',
-					actorBio: 'Bradley Darryl Wong, is an American actor. Wong appeared in Dr. George Huong for eleven seasons on Law and Order: SVU. He has acted in T.V. series, videogames, movies, and theatrical plays. Some of his works were playing Professor Hugo Strange in the series Gotham, Henry Wu in Jurassic Park, Kiki in And the Band Played On for HBO, and Captain Li Shang in the animated film Mulan, a role he reprised in the video game Kingdom Hearts: II. He is an activist in the LGBT+ community, and often dedicates time and money for the cause.',
+					characterName: 'Romero',
+					actorName: 'Ron Cephas Jones',
+					characterImage: 'assets/img/romero-lg.jpg',
+					actorImage: 'assets/img/ron-cephas-jones-lg.jpg',
+					characterBio: 'Leslie Romero is a computer criminal, engineer, and biologist, specializing in phone phreaking and marijuana husbandry. He lives with his elderly mother, Nell Romero, and has a history with Mobley. Though Romero is highly knowledgeable, his thirst for fame and lack of commitment leads to conflict with other members of fsociety.',
+					actorBio: 'Ron Cephas Jones is an actor, known for Half Nelson (2006), Sweet and Lowdown (1999) and This Is Us (2016). Jones has also performed in several theatrical productions with the Steppenwolf Theatre Company in Chicago, Illinois; appeared as the title character of Shakespeare\'s Richard III with The Public Theater in New York City, New York, as well as other Off Broadway productions. Jones has served as an understudy or standby in several Broadway theatre productions.',
 					otherWorks: [
 						{
 							image: "assets/img/busters-mal-heart.jpg",
@@ -356,7 +319,7 @@ export default class AiFullPeople extends Component {
  		(
  			(numPeople % 4 != 0) ? (
 	 			empties = (new Array(4 - (numPeople % 4)).fill('')).map((empty, index) =>
-					<div key={index} className="empty">
+					<div key={index}>
 						<div className="empty"></div>
 						<div className="list-column-inner"></div>
 					</div>
