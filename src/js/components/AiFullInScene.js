@@ -17,41 +17,143 @@ export default class AiFullScenes extends Component {
 
 	constructor(props) {
 		super(props);
+		this.state = {
+			collapsePeople: false,
+			collapseProducts: false,
+			collapseMusic: false,
+			collapseTrivia: false	
+		}
 	}
 
-	
+	handleCollapsePeople = () => {
+		this.setState({
+			collapsePeople: !this.state.collapsePeople
+		})
+	}
+
+	handleCollapseProducts = () => {
+		this.setState({
+			collapseProducts: !this.state.collapseProducts
+		})
+	}
+
+	handleCollapseMusic = () => {
+		this.setState({
+			collapseMusic: !this.state.collapseMusic
+		})
+	}
+
+	handleCollapseTrivia = () => {
+		this.setState({
+			collapseTrivia: !this.state.collapseTrivia
+		})
+	}
 
 	render() {
 
 		const { show, currentTime, fullAiCardShow, data, click, jumpToScene, addStar, removeStar, checkAiStarred, starredData, starredForScrolling } = this.props;
 
+		const products = data
+			.filter((obj) =>
+				obj.type == 'product'
+			)
+			.map((sceneItem, index) =>
+				<div key={index}>
+					<AiFullListItem
+					fullAiCardShow={fullAiCardShow}
+					type={sceneItem.type}
+					image={sceneItem.image}
+					title={sceneItem.title}
+					subtitle={sceneItem.subtitle}
+					ctas={sceneItem.ctas}
+					addS={() => addStar(sceneItem)}
+					removeS={() => removeStar(sceneItem.key)}
+					addAiStarred={() => addStar(sceneItem)}
+					removeAiStarred={() => removeStar(sceneItem)}
+					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					jumpToScene={this.props.jumpToScene}
+					/>
+				</div>
+		);
+
+		const people = 
+			data
+			.filter((obj) =>
+				 obj.type == 'person'
+			)
+			.map((sceneItem, index) =>
+				<div key={index}>
+					<AiFullListItem
+					fullAiCardShow={fullAiCardShow}
+					type={sceneItem.type}
+					image={sceneItem.image}
+					title={sceneItem.title}
+					subtitle={sceneItem.subtitle}
+					ctas={sceneItem.ctas}
+					addS={() => addStar(sceneItem)}
+					removeS={() => removeStar(sceneItem.key)}
+					addAiStarred={() => addStar(sceneItem)}
+					removeAiStarred={() => removeStar(sceneItem)}
+					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					jumpToScene={this.props.jumpToScene}
+					/>
+				</div>
+		);
+
+		const music = 
+			data
+			.filter((obj) =>
+				obj.type == 'music'
+			)
+			.map((sceneItem, index) =>
+				<div key={index}>
+					<AiFullListItem
+					fullAiCardShow={fullAiCardShow}
+					type={sceneItem.type}
+					image={sceneItem.image}
+					title={sceneItem.title}
+					subtitle={sceneItem.subtitle}
+					ctas={sceneItem.ctas}
+					addS={() => addStar(sceneItem)}
+					removeS={() => removeStar(sceneItem.key)}
+					addAiStarred={() => addStar(sceneItem)}
+					removeAiStarred={() => removeStar(sceneItem)}
+					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					jumpToScene={this.props.jumpToScene}
+					/>
+				</div>
+		);
+
+		const trivia = 
+			data
+			.filter((obj) =>
+				obj.type == 'trivia'
+			)
+			.map((sceneItem, index) =>
+				<div key={index}>
+					<AiFullListItem
+					fullAiCardShow={fullAiCardShow}
+					type={sceneItem.type}
+					image={sceneItem.image}
+					title={sceneItem.title}
+					subtitle={sceneItem.subtitle}
+					ctas={sceneItem.ctas}
+					addS={() => addStar(sceneItem)}
+					removeS={() => removeStar(sceneItem.key)}
+					addAiStarred={() => addStar(sceneItem)}
+					removeAiStarred={() => removeStar(sceneItem)}
+					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					jumpToScene={this.props.jumpToScene}
+					/>
+				</div>
+		);
+
 		const classnames = classNames({
 			'list-container': true,
 			'list-container--show': show,
 			'list-container--in-scene': true,
-			'list-container--needs-scroll': data.length > 2, 
+			'list-container--needs-scroll': !this.state.collapsePeople || !this.state.collapseProducts || (music.length != 0 && !this.state.collapseMusic) || (trivia.length != 0 && !this.state.collapseTrivia)
 		});
-
-		// console.log(addAiStarred);
-
-		const inSceneList = data.map((sceneItem, index) =>
-			<div key={index}>
-				<AiFullListItem
-				fullAiCardShow={fullAiCardShow}
-				type={sceneItem.type}
-				image={sceneItem.image}
-				title={sceneItem.title}
-				subtitle={sceneItem.subtitle}
-				ctas={sceneItem.ctas}
-				addS={() => addStar(sceneItem)}
-				removeS={() => removeStar(sceneItem.key)}
-				addAiStarred={() => addStar(sceneItem)}
-				removeAiStarred={() => removeStar(sceneItem)}
-				checkAiStarred={() => checkAiStarred(sceneItem.key)}
-				jumpToScene={this.props.jumpToScene}
-				/>
-			</div>
-		);
 
 		return (
 			<div>
@@ -60,9 +162,32 @@ export default class AiFullScenes extends Component {
 					<div className="list-scrolling">
 						<div className="in-scene-header">
 							<a onClick={() => click()}><i className="iconcss icon-caret-left"></i><span>All Scenes</span></a>
-							{/*<div><h3>People</h3></div>*/}
 						</div>
-						{inSceneList}
+
+						<div className="in-scene-header">
+							<h3>People<span>({people.length})</span></h3>
+							<i className={ this.state.collapsePeople ? 'iconcss icon-caret-up-thin' : 'iconcss icon-caret-down-thin'} onClick={ this.handleCollapsePeople }></i>
+						</div>
+						{ this.state.collapsePeople ? null : people }
+
+						<div className="in-scene-header">
+							<h3>Products<span>({products.length})</span></h3>
+							<i className={ this.state.collapseProducts ? 'iconcss icon-caret-up-thin' : 'iconcss icon-caret-down-thin'} onClick={ this.handleCollapseProducts }></i>
+						</div>
+						{ this.state.collapseProducts ? null : products }
+
+						<div className="in-scene-header" style={ trivia.length > 0 ? null : {display: 'none'} }>
+							<h3>Music<span>({music.length})</span></h3>
+							<i className={ this.state.collapseMusic ? 'iconcss icon-caret-up-thin' : 'iconcss icon-caret-down-thin'} onClick={ this.handleCollapseMusic }></i>
+						</div>
+						{ this.state.collapseMusic ? null : music }
+
+						<div className="in-scene-header" style={ trivia.length > 0 ? null : {display: 'none'} }>
+							<h3>Trivia<span>({trivia.length})</span></h3>
+							<i className={ this.state.collapseTrivia ? 'iconcss icon-caret-up-thin' : 'iconcss icon-caret-down-thin'} onClick={ this.handleCollapseTrivia }></i>
+						</div>
+						{ this.state.collapseTrivia ? null : trivia }
+
 					</div>
 					<div className="list-column"></div>
 				</div>

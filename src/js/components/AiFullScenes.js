@@ -60,6 +60,14 @@ export default class AiFullScenes extends Component {
 						title: "2017 Cadillac Escalade SUV",
 						subtitle: "Cadillac", 
 						ctas: [["View Product ", "iconcss icon-product", "http://www.cadillac.com/preceding-year/escalade-suv.html"], ["Go To Scene", "iconcss icon-play-outline"]]
+					},
+					{
+						key: 3,
+						type: "product",
+						image: "assets/img/cadillac-escalade-lg.jpg", 
+						title: "2017 Cadillac Escalade SUV",
+						subtitle: "Cadillac", 
+						ctas: [["View Product ", "iconcss icon-product", "http://www.cadillac.com/preceding-year/escalade-suv.html"], ["Go To Scene", "iconcss icon-play-outline"]]
 					}
 				]
 				, [
