@@ -157,12 +157,12 @@ export default class Video extends Component {
 					}
 
 					if (this.props.videoTrigger == 9) {
-						this.video.currentTime = 62.00;
+						this.video.currentTime = 55.00;
 						this.props.resetScene();
 					}
 
 					if (this.props.videoTrigger == 10) {
-						this.video.currentTime = 205.00;
+						this.video.currentTime = 200.00;
 						this.props.resetScene();
 					}
 
@@ -177,7 +177,7 @@ export default class Video extends Component {
 					}
 
 					if (this.props.videoTrigger == 13) {
-						this.video.currentTime = 212.00;
+						this.video.currentTime = 200.00;
 						this.props.resetScene();
 					}
 
@@ -187,7 +187,7 @@ export default class Video extends Component {
 					}
 
 					if (this.props.videoTrigger == 15) {
-						this.video.currentTime = 144.00;
+						this.video.currentTime = 130.00;
 						this.props.resetScene();
 					}
 
@@ -200,6 +200,23 @@ export default class Video extends Component {
 						this.video.currentTime = 10.00;
 						this.props.resetScene();
 					}
+					if (this.props.videoTrigger == 18) {
+						this.video.currentTime = 0.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 19) {
+						this.video.currentTime = 126.00;
+						this.props.resetScene();
+					}
+
+					if (this.props.videoTrigger == 20) {
+						this.video.currentTime = 130.00;
+						this.props.resetScene();
+					}
+
+
+
 				} else {
 					this.pause();
 				}
@@ -331,176 +348,393 @@ export default class Video extends Component {
 				}).join(":");
 			};
 
-			if ((this.props.currentItem.indexOf(this.props.data[0].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[0].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[0].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[0].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[0].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[0].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[0].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[0].startTime && toHHMMSS(currentTime) <= this.props.data[0].endTime) {
-				val = true;
-				this.props.changeSelectedSrcGlasses(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcGlasses(val);
-			}
 
-			if ((this.props.currentItem.indexOf(this.props.data[1].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[1].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[1].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[1].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[1].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[1].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[1].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[1].startTime && toHHMMSS(currentTime) <= this.props.data[1].endTime) {
-				var val = true;
-				this.props.changeSelectedSrcActor(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcActor(val);
-			}
+switch (true) {
+	case this.props.currentItem.indexOf(this.props.data[0].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[0].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[0].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[0].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[0].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[0].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[0].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[0].startTime && toHHMMSS(currentTime) <= this.props.data[0].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcGlasses(val);
+    break;
 
-			if ((this.props.currentItem.indexOf(this.props.data[2].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[2].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[2].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[2].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[2].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[2].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[2].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[2].startTime && toHHMMSS(currentTime) <= this.props.data[2].endTime) {
-				val = true;
-				this.props.changeSelectedSrc(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrc(val);
-			}
+}
+    case this.props.currentItem.indexOf(this.props.data[0].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[0].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[0].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[0].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[0].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[0].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[0].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcGlasses(val);
+    break;
+}
 
-			if ((this.props.currentItem.indexOf(this.props.data[3].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[3].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[3].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[3].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[3].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[3].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[3].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[3].startTime && toHHMMSS(currentTime) <= this.props.data[3].endTime) {
-				val = true;
-				this.props.changeSelectedSrcActress(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcActress(val);
-			}
 
-			if ((this.props.currentItem.indexOf(this.props.data[4].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[4].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[4].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[4].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[4].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[4].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[4].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[4].startTime && toHHMMSS(currentTime) <= this.props.data[4].endTime) {
-				val = true;
-				this.props.changeSelectedSrcSound(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcSound(val);
-			}
+if ((this.video.currentTime > 2.00 && this.video.currentTime <= 126.00) ||  (this.video.currentTime > 197.00) &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[1].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[1].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[1].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[1].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[1].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[1].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[1].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[1].startTime && toHHMMSS(currentTime) <= this.props.data[1].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcActor(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[1].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[1].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[1].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[1].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[1].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[1].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[1].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcActor(val);
+    break;
 
-			if ((this.props.currentItem.indexOf(this.props.data[5].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[5].startTime && toHHMMSS(currentTime) <= this.props.data[5].endTime) {
-				val = true;
-				this.props.changeSelectedSrcTriviaGeneral(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcTriviaGeneral(val);
-			}
+     default:
+   var val = false;
+   break;
+}
 
-			if ((this.props.currentItem.indexOf(this.props.data[6].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[6].startTime && toHHMMSS(currentTime) <= this.props.data[6].endTime) {
-				val = true;
-				this.props.changeSelectedSrcTrivia(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcTrivia(val);
-			}
+}
 
-			if ((this.props.currentItem.indexOf(this.props.data[7].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[7].startTime && toHHMMSS(currentTime) <= this.props.data[7].endTime) {
-				val = true;
-				this.props.changeSelectedSrcTriviaFun(val);
-			} else {
-				val = false;
-				this.props.changeSelectedSrcTriviaFun(val);
-			}
+if ((this.video.currentTime > 2.00 && this.video.currentTime <= 126.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[2].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[2].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[2].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[2].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[2].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[2].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[2].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[2].startTime && toHHMMSS(currentTime) <= this.props.data[2].endTime) {
+    var val = true;
+	this.props.changeSelectedSrc(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[2].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[2].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[2].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[2].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[2].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[2].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[2].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrc(val);
+    break;
 
-			{/*
-           if((((this.props.currentItem.indexOf(this.props.data[8].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[8].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[8].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[8].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[8].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[8].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[8].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[8].startTime && toHHMMSS(currentTime) <= this.props.data[8].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem8(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem8(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[9].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[9].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[9].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[9].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[9].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[9].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[9].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[9].startTime && toHHMMSS(currentTime) <= this.props.data[9].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem9(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem9(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[10].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[10].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[10].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[10].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[10].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[10].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[10].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[10].startTime && toHHMMSS(currentTime) <= this.props.data[10].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem10(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem10(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[11].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[11].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[11].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[11].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[11].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[11].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[11].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[11].startTime && toHHMMSS(currentTime) <= this.props.data[11].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem11(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem11(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[12].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[12].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[12].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[12].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[12].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[12].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[12].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[12].startTime && toHHMMSS(currentTime) <= this.props.data[12].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem12(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem12(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[13].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[13].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[13].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[13].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[13].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[13].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[13].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[13].startTime && toHHMMSS(currentTime) <= this.props.data[13].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem13(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem13(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[14].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[14].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[14].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[14].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[14].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[14].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[14].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[14].startTime && toHHMMSS(currentTime) <= this.props.data[14].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem14(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem14(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[15].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[15].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[15].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[15].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[15].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[15].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[15].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[15].startTime && toHHMMSS(currentTime) <= this.props.data[15].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem15(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem15(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[16].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[16].startTime && toHHMMSS(currentTime) <= this.props.data[16].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem16(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem16(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[17].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[17].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[17].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[17].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[17].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[17].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[17].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[17].startTime && toHHMMSS(currentTime) <= this.props.data[17].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem17(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem17(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[18].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[18].startTime && toHHMMSS(currentTime) <= this.props.data[18].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem18(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem18(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[19].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[19].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[19].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[19].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[19].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[19].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[19].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[19].startTime && toHHMMSS(currentTime) <= this.props.data[19].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem19(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem19(val);
-           }
-            if((((this.props.currentItem.indexOf(this.props.data[20].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[20].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[20].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[20].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[20].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[20].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[20].key7) !== -1))) &&  (toHHMMSS(currentTime) >= this.props.data[20].startTime && toHHMMSS(currentTime) <= this.props.data[20].endTime)){
-           val = true;
-           this.props.changeSelectedSrcitem20(val);
-            }
-           else {
-           val = false;
-           this.props.changeSelectedSrcitem20(val);
-           }
-    */}
+}
+}
+
+if ((this.video.currentTime > 126.00 && this.video.currentTime < 197.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[3].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[3].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[3].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[3].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[3].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[3].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[3].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[3].startTime && toHHMMSS(currentTime) <= this.props.data[3].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcActress(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[3].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[3].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[3].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[3].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[3].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[3].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[3].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcActress(val);
+    break;
+}
+}
+
+if ((this.video.currentTime > 126.00 && this.video.currentTime < 197.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[4].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[4].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[4].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[4].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[4].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[4].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[4].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[4].startTime && toHHMMSS(currentTime) <= this.props.data[4].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcSound(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[4].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[4].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[4].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[4].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[4].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[4].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[4].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcSound(val);
+    break;
+}
+}
+
+if ((this.video.currentTime > 198.00 && this.video.currentTime < 223.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[6].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[6].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[6].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[6].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[6].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[6].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[6].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[6].startTime && toHHMMSS(currentTime) <= this.props.data[6].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcTrivia(val);
+    break;
+}
+
+    case this.props.currentItem.indexOf(this.props.data[6].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[6].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[6].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[6].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[6].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[6].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[6].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcTrivia(val);
+    break;
+}
+}
+
+if ((this.video.currentTime > 55.00 && this.video.currentTime < 126.00) || !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[7].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[7].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[7].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[7].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[7].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[7].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[7].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[7].startTime && toHHMMSS(currentTime) <= this.props.data[7].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcTriviaFun(val);
+    break;
+}
+
+    case this.props.currentItem.indexOf(this.props.data[7].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[7].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[7].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[7].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[7].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[7].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[7].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcTriviaFun(val);
+    break;
+}
+}
+
+if ((this.video.currentTime > 0.00 && this.video.currentTime < 5.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[8].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[8].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[8].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[8].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[8].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[8].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[8].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[8].startTime && toHHMMSS(currentTime) <= this.props.data[8].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem8(val);
+    break;
+}
+
+    case this.props.currentItem.indexOf(this.props.data[8].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[8].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[8].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[8].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[8].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[8].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[8].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcitem8(val);
+    break;
+}
+}
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[9].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[9].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[9].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[9].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[9].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[9].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[9].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[9].startTime && toHHMMSS(currentTime) <= this.props.data[9].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem9(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[9].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[9].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[9].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[9].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[9].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[9].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[9].key7) <= 0: 
+ 	var val = false;
+	this.props.changeSelectedSrcitem9(val);
+    break;
+}
+
+
+
+if ((this.video.currentTime > 55.00 && this.video.currentTime < 126.00)  ||  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[10].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[10].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[10].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[10].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[10].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[10].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[10].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[10].startTime && toHHMMSS(currentTime) <= this.props.data[10].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem10(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[10].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[10].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[10].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[10].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[10].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[10].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[10].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcitem10(val);
+    break;
+}
+}
+
+if ((this.video.currentTime > 198.00 && this.video.currentTime < 223.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[11].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[11].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[11].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[11].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[11].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[11].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[11].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[11].startTime && toHHMMSS(currentTime) <= this.props.data[11].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem11(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[11].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[11].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[11].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[11].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[11].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[11].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[11].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcitem11(val);
+    break;
+
+}
+}
+
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[12].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[12].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[12].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[12].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[12].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[12].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[12].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[12].startTime && toHHMMSS(currentTime) <= this.props.data[12].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem12(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[12].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[12].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[12].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[12].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[12].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[12].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[12].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcitem12(val);
+    break;
+}
+
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[13].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[13].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[13].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[13].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[13].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[13].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[13].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[13].startTime && toHHMMSS(currentTime) <= this.props.data[13].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem13(val);
+    break;
+}
+
+    case this.props.currentItem.indexOf(this.props.data[13].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[13].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[13].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[13].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[13].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[13].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[13].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcitem13(val);
+    break;
+}
+
+
+
+if ((this.video.currentTime > 130.00 && this.video.currentTime < 210.00)  &&  !this.props.isScrubbing || this.props.isScrubbing) {
+	switch (true) {
+    case this.props.currentItem.indexOf(this.props.data[14].key1) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[14].key2) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[14].key3) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[14].key4) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[14].key5) !== -1:
+	case this.props.currentItem.indexOf(this.props.data[14].key6) !== -1: 
+	case this.props.currentItem.indexOf(this.props.data[14].key7) !== -1: 
+	if (toHHMMSS(currentTime) >= this.props.data[14].startTime && toHHMMSS(currentTime) <= this.props.data[14].endTime) {
+    var val = true;
+	this.props.changeSelectedSrcitem14(val);
+    break;
+}
+    case this.props.currentItem.indexOf(this.props.data[14].key1) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[14].key2) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[14].key3) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[14].key4) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[14].key5) <= 0:
+	case this.props.currentItem.indexOf(this.props.data[14].key6) <= 0: 
+	case this.props.currentItem.indexOf(this.props.data[14].key7) <= 0: 
+    var val = false;
+	this.props.changeSelectedSrcitem14(val);
+    break;
+
+}
+}
 		}
 
 

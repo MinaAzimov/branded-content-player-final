@@ -36,7 +36,7 @@ export default class AiFullTrivia extends Component {
 					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-1.jpg"}
 					title={"General Trivia"}
-					subtitle={"Scene 1 — 00:01:21"}
+					subtitle={"Scene 2 — 00:01:03"}
 					quote={'Throughout the episode, Elliot references "IRC." Standing for Internet Relay Chat, IRC is an application protocol that allows for plaintext communication via a client/server model. A server hosts a "channel" where users can join to discuss various topics. However, "robots" are prevalent on servers. These allow users to communicate with the server itself, and request file transfers. There is a major presence of illegal file transfers facilitated by the use of these robots.'}
 					ctas={[
 						[
@@ -50,7 +50,7 @@ export default class AiFullTrivia extends Component {
 					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-2.jpg"}
 					title={"Fun Fact"}
-					subtitle={"Scene 1 — 00:03:46"}
+					subtitle={"Scene 2 — 00:01:11"}
 					quote={"Elliot's signature black hoodie is from Rami Malek's own personal wardrobe."}	
 					ctas={[
 						[
@@ -64,7 +64,7 @@ export default class AiFullTrivia extends Component {
 					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-3.jpg"}
 					title={"Other Trivia"}
-					subtitle={"Scene 2 — 00:05:61"}
+					subtitle={"Scene 4 — 00:03:23"}
 					quote={'In this episode, the security company has to thwart a DDoS attack. "DDoS" stands for "distributed denial of service." It\'s a tactic used to prevent a company\'s servers from functioning by using all their bandwidth. Real or virtual computers all send and receive data to all servers on a network, stopping legitimate users from exercising real transactions. This effectively stops business from taking place, causing a loss in revenue and consumer trust.'}
 					ctas={[
 						[

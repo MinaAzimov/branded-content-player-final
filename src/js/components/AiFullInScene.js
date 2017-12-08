@@ -57,7 +57,7 @@ export default class AiFullScenes extends Component {
 			.filter((obj) =>
 				obj.type == 'product'
 			)
-			.map((sceneItem, index) =>
+			.map((sceneItem, index, key,type,image,title,subtitle,ctas) =>
 				<div key={index}>
 					<AiFullListItem
 					fullAiCardShow={fullAiCardShow}
@@ -68,9 +68,9 @@ export default class AiFullScenes extends Component {
 					ctas={sceneItem.ctas}
 					addS={() => addStar(sceneItem)}
 					removeS={() => removeStar(sceneItem.key)}
-					addAiStarred={() => addStar(sceneItem)}
-					removeAiStarred={() => removeStar(sceneItem)}
-					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					addAiStarred={()  => addStar({key,type,image,title,subtitle,ctas} = {key: sceneItem.key, type: sceneItem.type, image: sceneItem.image, title: sceneItem.title, subtitle:sceneItem.subtitle, ctas:sceneItem.ctas})}
+			        removeAiStarred={() => removeStar(sceneItem.key)}
+			        checkAiStarred={() => checkAiStarred(sceneItem.key)}
 					jumpToScene={this.props.jumpToScene}
 					/>
 				</div>
@@ -81,7 +81,7 @@ export default class AiFullScenes extends Component {
 			.filter((obj) =>
 				 obj.type == 'person'
 			)
-			.map((sceneItem, index) =>
+			.map((sceneItem, index, key,type,image,title,subtitle,ctas) =>
 				<div key={index}>
 					<AiFullListItem
 					fullAiCardShow={fullAiCardShow}
@@ -92,9 +92,9 @@ export default class AiFullScenes extends Component {
 					ctas={sceneItem.ctas}
 					addS={() => addStar(sceneItem)}
 					removeS={() => removeStar(sceneItem.key)}
-					addAiStarred={() => addStar(sceneItem)}
-					removeAiStarred={() => removeStar(sceneItem)}
-					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					addAiStarred={()  => addStar({key,type,image,title,subtitle,ctas} = {key: sceneItem.key, type: sceneItem.type, image: sceneItem.image, title: sceneItem.title, subtitle:sceneItem.subtitle, ctas:sceneItem.ctas})}
+			        removeAiStarred={() => removeStar(sceneItem.key)}
+			        checkAiStarred={() => checkAiStarred(sceneItem.key)}
 					jumpToScene={this.props.jumpToScene}
 					/>
 				</div>
@@ -105,7 +105,7 @@ export default class AiFullScenes extends Component {
 			.filter((obj) =>
 				obj.type == 'music'
 			)
-			.map((sceneItem, index) =>
+			.map((sceneItem, index, key,type,image,title,subtitle,ctas) =>
 				<div key={index}>
 					<AiFullListItem
 					fullAiCardShow={fullAiCardShow}
@@ -116,37 +116,38 @@ export default class AiFullScenes extends Component {
 					ctas={sceneItem.ctas}
 					addS={() => addStar(sceneItem)}
 					removeS={() => removeStar(sceneItem.key)}
-					addAiStarred={() => addStar(sceneItem)}
-					removeAiStarred={() => removeStar(sceneItem)}
-					checkAiStarred={() => checkAiStarred(sceneItem.key)}
+					addAiStarred={()  => addStar({key,type,image,title,subtitle,ctas} = {key: sceneItem.key, type: sceneItem.type, image: sceneItem.image, title: sceneItem.title, subtitle:sceneItem.subtitle, ctas:sceneItem.ctas})}
+			        removeAiStarred={() => removeStar(sceneItem.key)}
+			        checkAiStarred={() => checkAiStarred(sceneItem.key)}
 					jumpToScene={this.props.jumpToScene}
 					/>
 				</div>
 		);
 
-		const trivia = 
-			data
-			.filter((obj) =>
-				obj.type == 'trivia'
-			)
-			.map((sceneItem, index) =>
-				<div key={index}>
-					<AiFullListItem
-					fullAiCardShow={fullAiCardShow}
-					type={sceneItem.type}
-					image={sceneItem.image}
-					title={sceneItem.title}
-					subtitle={sceneItem.subtitle}
-					ctas={sceneItem.ctas}
-					addS={() => addStar(sceneItem)}
+	const trivia = 
+	data
+	.filter((obj) =>
+		obj.type == 'trivia'
+	)
+	.map((sceneItem, index, key,type,image,title,subtitle,ctas) =>
+		<div key={index}>
+			<AiFullListItem
+			fullAiCardShow={fullAiCardShow}
+			type={sceneItem.type}
+			image={sceneItem.image}
+			title={sceneItem.title}
+			subtitle={sceneItem.subtitle}
+			quote={sceneItem.quote}
+			ctas={sceneItem.ctas}
+		addS={() => addStar(sceneItem)}
 					removeS={() => removeStar(sceneItem.key)}
-					addAiStarred={() => addStar(sceneItem)}
-					removeAiStarred={() => removeStar(sceneItem)}
-					checkAiStarred={() => checkAiStarred(sceneItem.key)}
-					jumpToScene={this.props.jumpToScene}
-					/>
-				</div>
-		);
+					addAiStarred={()  => addStar({key,type,image,title,subtitle,ctas} = {key: sceneItem.key, type: sceneItem.type, image: sceneItem.image, title: sceneItem.title, subtitle:sceneItem.subtitle, ctas:sceneItem.ctas})}
+			        removeAiStarred={() => removeStar(sceneItem.key)}
+			        checkAiStarred={() => checkAiStarred(sceneItem.key)}
+			jumpToScene={this.props.jumpToScene}
+			/>
+		</div>
+);
 
 		const classnames = classNames({
 			'list-container': true,

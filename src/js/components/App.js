@@ -327,12 +327,14 @@ export default class App extends Component {
 		}
 
 		changeSelectedSrcitem12 = (val) => {
-			setState({ item12: val });
+			this.setState({ item12: val });
 		}
 
+		
 		changeSelectedSrcitem13 = (val) => {
 			this.setState({ item13: val });
 		}
+
 
 		changeSelectedSrcitem14 = (val) => {
 			this.setState({ item14: val });
