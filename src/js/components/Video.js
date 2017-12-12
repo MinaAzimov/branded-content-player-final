@@ -375,16 +375,16 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
 			val = true;
 			this.props.changeSelectedSrcTriviaGeneral(val);
 			}
-			if((currentTime < 0.000000 || currentTime > 124.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 0.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcTriviaGeneral(val);
 			}
 
-			if ((this.props.currentItem.indexOf(this.props.data[1].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key7) !== -1)) {
+			if ((this.props.currentItem.indexOf(this.props.data[1].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[1].startTime && toHHMMSS(currentTime) <= this.props.data[1].endTime) {
 			var val = true;
 			this.props.changeSelectedSrcActor(val);
 			} 
-			if((currentTime < 2.000000 || currentTime > 124.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 2.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcActor(val);
 			}
@@ -394,7 +394,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
 			val = true;
 			this.props.changeSelectedSrc(val);
 			} 
-			if((currentTime < 2.000000 || currentTime > 124.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 2.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrc(val);
 			}
@@ -405,7 +405,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
 			this.props.changeSelectedSrcTriviaFun(val);
 			} 
 
-			if((currentTime < 2.000000 || currentTime > 124.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 2.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcTriviaFun(val);
 			}
@@ -416,7 +416,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
            this.props.changeSelectedSrcitem9(val); //flash
             }
 
-           if((currentTime < 2.000000 || currentTime > 98.900000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           if((currentTime < 2.000000 || currentTime > 98.900000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem9(val);
            }
@@ -426,7 +426,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
            this.props.changeSelectedSrcitem10(val); //music scene1
             }
 
-           if((currentTime < 2.000000 || currentTime > 124.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           if((currentTime < 2.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem10(val);
            }
@@ -440,7 +440,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
 			this.props.changeSelectedSrcGlasses(val);
 			}  
 
-			if((currentTime < 125.000000 || currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 125.000000 || currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcGlasses(val);
 			}
@@ -449,7 +449,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
 			val = true;
 			this.props.changeSelectedSrcActress(val);
 			}
-		    if((currentTime < 125.000000  || currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+		    if((currentTime < 125.000000  || currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcActress(val);
 			}
@@ -458,7 +458,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
 			val = true;
 			this.props.changeSelectedSrcSound(val);
 			} 
-			if((currentTime < 125.000000 ||  currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 125.000000 ||  currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcSound(val);
 			}
@@ -468,7 +468,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem12(val); //trenton
             }
 
-            if((currentTime < 125.000000 ||  currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)   {
+            if((currentTime < 125.000000 ||  currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)   {
             val = false;
             this.props.changeSelectedSrcitem12(val);
             }
@@ -478,7 +478,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem13(val); //mobley
             }
 
-            if((currentTime < 125.000000 ||  currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)   {
+            if((currentTime < 125.000000 ||  currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)   {
             val = false;
             this.props.changeSelectedSrcitem13(val);
             }
@@ -488,7 +488,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem14(val); //romero
             }
 
-            if((currentTime < 125.000000 ||  currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+            if((currentTime < 125.000000 ||  currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
             val = false;
             this.props.changeSelectedSrcitem14(val);
            }
@@ -497,7 +497,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
 			val = true;
 			this.props.changeSelectedSrcTrivia(val);
 			} 
-			if((currentTime < 125.000000 ||  currentTime > 193.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 125.000000 ||  currentTime > 193.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcTrivia(val); //trivia scene 3
 			}
@@ -515,7 +515,7 @@ if((currentTime > 195.00 && currentTime < 300.00) && !this.props.isScrubbing || 
            this.props.changeSelectedSrcitem15(val); //shoes
            }
 
-           if((currentTime < 195.000000 ||  currentTime > 299.900000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           if((currentTime < 195.000000 ||  currentTime > 299.900000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem15(val);
            }
@@ -525,7 +525,7 @@ if((currentTime > 195.00 && currentTime < 300.00) && !this.props.isScrubbing || 
            this.props.changeSelectedSrcitem8(val); //angela
             }
 
-            if((currentTime < 195.000000 ||  currentTime > 299.900000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+            if((currentTime < 195.000000 ||  currentTime > 299.900000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem8(val);
            }
@@ -534,7 +534,7 @@ if((currentTime > 195.00 && currentTime < 300.00) && !this.props.isScrubbing || 
            val = true;
            this.props.changeSelectedSrcitem11(val); //trivia scene 4
             }
-           if((currentTime < 195.000000 ||  currentTime > 299.900000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           if((currentTime < 195.000000 ||  currentTime > 299.900000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem11(val);
            }
@@ -542,15 +542,7 @@ if((currentTime > 195.00 && currentTime < 300.00) && !this.props.isScrubbing || 
 
 
 if((currentTime > 302.000000 && currentTime < 408.000000)  && !this.props.isScrubbing || this.props.isScrubbing)  {
-			if((this.props.currentItem.indexOf(this.props.data[1].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[1].key7) !== -1)) {
-			var val = true;
-			this.props.changeSelectedSrcActor(val);
-			} 
-
-			if((currentTime < 302.000000 || currentTime > 407.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
-			val = false;
-			this.props.changeSelectedSrcActor(val);
-			}
+		
           
          
 			if ((this.props.currentItem.indexOf(this.props.data[16].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[16].key7) !== -1)) {
@@ -558,7 +550,7 @@ if((currentTime > 302.000000 && currentTime < 408.000000)  && !this.props.isScru
             this.props.changeSelectedSrcitem16(val); //robot
             }
 
-           	if((currentTime < 302.000000 || currentTime > 407.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           	if((currentTime < 302.000000 || currentTime > 407.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
             val = false;
             this.props.changeSelectedSrcitem16(val);
             }
@@ -568,9 +560,19 @@ if((currentTime > 302.000000 && currentTime < 408.000000)  && !this.props.isScru
             this.props.changeSelectedSrcitem17(val); //trivia scene 5
             }
 
-           	if((currentTime < 302.000000 || currentTime > 407.800000) && !this.props.isScrubbing || this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           	if((currentTime < 302.000000 || currentTime > 407.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
             val = false;
             this.props.changeSelectedSrcitem17(val);
+            }
+
+             if ((this.props.currentItem.indexOf(this.props.data[18].key1) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key2) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key3) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key4) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key5) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key6) !== -1) || (this.props.currentItem.indexOf(this.props.data[18].key7) !== -1)) {
+            val = true;
+            this.props.changeSelectedSrcitem18(val); //trivia scene 5
+            }
+
+           	if((currentTime < 302.000000 || currentTime > 407.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
+            val = false;
+            this.props.changeSelectedSrcitem18(val);
             }
 
           
