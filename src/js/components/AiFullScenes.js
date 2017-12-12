@@ -526,7 +526,16 @@ export default class AiFullScenes extends Component {
 					<div className="list-column-inner"></div>
 				</div>
 			)
- 		) : ( null );
+ 		) : ( 
+ 			(numScenes % 2 != 0) ? (
+	 			empties = (new Array(2 - (numScenes % 2)).fill('')).map((empty, index) =>
+					<div key={index} >
+						<div className="empty"></div>
+						<div className="list-column-inner"></div>
+					</div>
+				)
+			) : null
+ 		);
  		
 		return (
 			<div>

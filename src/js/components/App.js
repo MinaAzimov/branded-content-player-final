@@ -101,7 +101,7 @@ export default class App extends Component {
 			isTouch: false,
 			justClickedPlay: false,
 			forceToTime: 0,
-			inputValue: 'assets/img/mrrobotvideo4 _larger.mp4',
+			inputValue: 'assets/img/mrrobotvideo4\ _larger.mp4',
 			counter: [],
 			messages: [],
 			currentObject: '',
