@@ -187,7 +187,8 @@ export default class AiFullCtas extends Component {
 			this.props.jumpToScene(val);
 		}
 
-		if(e.currentTarget.firstChild.nextSibling.innerHTML == "    Go To Scene") {
+
+		if(e.currentTarget.firstChild.nextSibling.innerHTML == "       Go To Scene ") {
 
 	        val = 13;
 			this.props.jumpToScene(val);
@@ -243,6 +244,11 @@ export default class AiFullCtas extends Component {
 
 		if(e.currentTarget.firstChild.nextSibling.innerHTML == "    Go To Scene") {
             val = 23;
+			this.props.jumpToScene(val);
+		}
+
+		if(e.currentTarget.firstChild.nextSibling.innerHTML == "     Go To Scene  ") {
+            val = 24;
 			this.props.jumpToScene(val);
 		}
 

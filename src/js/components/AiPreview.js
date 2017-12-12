@@ -120,7 +120,7 @@ export default class AiPreview extends Component {
 
  		const itemTriviaGeneral = classNames({
  			'ai-list-item': true,
- 			'ai-list-item--show': true,
+ 			'ai-list-item--show': triviaGeneral,
  		});
 
  		const itemTriviaFun = classNames({
