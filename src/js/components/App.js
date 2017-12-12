@@ -101,7 +101,7 @@ export default class App extends Component {
 			isTouch: false,
 			justClickedPlay: false,
 			forceToTime: 0,
-			inputValue: 'assets/img/mrrobotrecording2.mp4',
+			inputValue: 'assets/img/mrrobotvideo4 _larger.mp4',
 			counter: [],
 			messages: [],
 			currentObject: '',
@@ -144,7 +144,11 @@ export default class App extends Component {
 
 	componentWillMount() {
 
-		var ref = base.database().ref("messages/-KxJ7vxikYxkKIX6iAKS");
+
+
+		
+			
+		var ref = base.database().ref("messages/-L06Cv1Q_nFtkzQ-VBoz");
 		ref.on("value", (snapshot)=>{
 			var counterSet = snapshot.val();
 
@@ -190,9 +194,11 @@ export default class App extends Component {
 
 	
 	componentDidMount() {
-
-		console.log(this.state.data);
+	//this.doPredict(this.state.inputValue)
 	}
+
+	
+		
 
 	
 	componentWillUnmount() {
@@ -200,8 +206,7 @@ export default class App extends Component {
 	}
 
 
-	componentDidMount() {
-	}
+
 
 
 
@@ -270,12 +275,13 @@ export default class App extends Component {
 
 	doPredict = (value) => {
 
-			//app1.models.predict(Clarifai.GENERAL_MODEL, this.state.inputValue, {video: true}).then(response => {
-			//this.setState({ counter: response.rawData.outputs[0].data.frames });
-			//fire.database().ref('messages').push( this.state.counter );
-			//console.log(this.state.counter);
-			//}
-			//)
+			app1.models.predict(Clarifai.GENERAL_MODEL, this.state.inputValue, {video: true}).then(response => {
+			this.setState({ counter: response.rawData.outputs[0].data.frames });
+			console.log(this.state.counter)
+			fire.database().ref('messages').push( this.state.counter );
+			console.log(fire.database().ref('messages'));
+			}
+			)
 		}
 
 		changeSelectedSrc = (val) => {
@@ -702,6 +708,8 @@ export default class App extends Component {
 
 		render() {
 
+
+
 			const { 
 				aspectRatio, 
 				endCardShowTime,
@@ -867,6 +875,7 @@ export default class App extends Component {
 				</div>
 				:
 				<Video 
+				doPredict={this.doPredict}
 				key={videoSrc}
 				videoSrc={videoSrc} 
 				currentTime={currentTime}
@@ -1023,6 +1032,7 @@ export default class App extends Component {
 			checkAiStarred={this.checkAiStarred}
 			endCardShow={endCardShow}
 			isFullScreen={isFullScreen}
+			
 
 			/>
 			<CCCard

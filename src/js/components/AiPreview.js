@@ -214,18 +214,29 @@ export default class AiPreview extends Component {
 					<div className="ai-preview-list">
 						<div className="ai-preview-list-column"></div>
 						<div className="ai-preview-list-scrolling" ref="list">
-						<div className={itemActor}>
-							<AiPreviewListItem
-							type={data[1].type}
-							image={data[1].src}
-							title={data[1].title}
-							subtitle={data[1].subtitle}
-							onclick={() => fullAiCardShow('character', {characterName:"Elliot Alderson",actorName:"Rami Malek",characterImage:"assets/img/elliot-alderson-lg.jpg",actorImage:"assets/img/rami-malek.jpg",characterBio:"As a senior network technician for cyber security firm Allsafe, Elliot protects corporate clients including the ubiquitous Evil Corp from security breaches and data theft. As a vigilante hacker, he monitors the people in his daily life and protects those hes close to from their own flaws, sometimes with unpredictable results. Originally from Washington Township, New Jersey, Elliot now lives alone on the Lower East Side. He suffers from crippling anxiety, which stems from memories of his difficult childhood. His father died when Elliot was young, and his now-estranged mother was brutally cruel. Elliot has spent most of his adult life isolated from the world around him. After being arrested for financial hacking, he has been attending court-ordered therapy for almost a year. Elliot, however, prefers self-medication by morphine, an addiction he mediates with suboxone. He obtains both from his next door neighbor, Shayla. With the arrival of Mr. Robot, Elliots world changes entirely. Fsocietys members and mission offer him a renewed purpose -- though accompanied by a risk of heightened paranoia -- leaving him faced with the question of whether to numbly continue the life he knows or risk everything and participate in Mr. Robots revolution.",actorBio:"Rami Malek was born on May 12, 1981 in Los Angeles, California, USA as Rami Said Malek. He is an actor and producer, known for Mr. Robot (2015), Short Term 12 (2013) and Need for Speed (2014). His parents are Egyptian-his late father was a tour guide in Cairo and sold insurance. His mother is an accountant. His family moved to Los Angeles and Rami attended Notre Dame High School in Sherman Oaks, Los Angeles. Two of his classmates were Rachel Bilson and Taylor Fry. Kirsten Dunst graduated from the same school a year later, and Katharine McPhee graduated three years after Rami.",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }
-							addStar={() => addAiStarred({key:4,type:"person",image:"assets/img/elliot-alderson-lg.jpg",title:"Elliot Alderson",subtitle:"Rami Malek",ctas:[["Go To Bio","iconcss icon-person","#",() => fullAiCardShow('character', {characterName:"Elliot Alderson",actorName:"Rami Malek",characterImage:"assets/img/elliot-alderson-lg.jpg",actorImage:"assets/img/rami-malek.jpg",characterBio:"As a senior network technician for cyber security firm Allsafe, Elliot protects corporate clients including the ubiquitous Evil Corp from security breaches and data theft. As a vigilante hacker, he monitors the people in his daily life and protects those hes close to from their own flaws, sometimes with unpredictable results. Originally from Washington Township, New Jersey, Elliot now lives alone on the Lower East Side. He suffers from crippling anxiety, which stems from memories of his difficult childhood. His father died when Elliot was young, and his now-estranged mother was brutally cruel. Elliot has spent most of his adult life isolated from the world around him. After being arrested for financial hacking, he has been attending court-ordered therapy for almost a year. Elliot, however, prefers self-medication by morphine, an addiction he mediates with suboxone. He obtains both from his next door neighbor, Shayla. With the arrival of Mr. Robot, Elliots world changes entirely. Fsocietys members and mission offer him a renewed purpose -- though accompanied by a risk of heightened paranoia -- leaving him faced with the question of whether to numbly continue the life he knows or risk everything and participate in Mr. Robots revolution.",actorBio:"Rami Malek was born on May 12, 1981 in Los Angeles, California, USA as Rami Said Malek. He is an actor and producer, known for Mr. Robot (2015), Short Term 12 (2013) and Need for Speed (2014). His parents are Egyptian-his late father was a tour guide in Cairo and sold insurance. His mother is an accountant. His family moved to Los Angeles and Rami attended Notre Dame High School in Sherman Oaks, Los Angeles. Two of his classmates were Rachel Bilson and Taylor Fry. Kirsten Dunst graduated from the same school a year later, and Katharine McPhee graduated three years after Rami.",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene  ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(4)}
-							isStarred={() => checkAiStarred(4)}
+						
+
+						<div className={item16ClassName}>
+						   <AiPreviewListItem
+							type={data[16].type}
+							image={data[16].src}
+							title={data[16].title}
+							subtitle={data[16].subtitle}
+							onclick={() => fullAiCardShow('character', {characterName:"Mr. Robot",actorName:"Christian Slater",
+							characterImage:"assets/img/mr-robot.jpg",actorImage:"assets/img/christain-slater.jpg",
+					        characterBio: 'A mysterious figure who approaches Elliot with the opportunity to contribute to a worldwide revolution, Mr. Robot has a murky history but huge plans for the future. He recruits the members of fsociety to come together at the abandoned arcade – and is relentless in his leadership of the team.',
+					        actorBio: 'Christian Michael Leonard Slater was born on August 18, 1969 in New York City, to Michael Hawkins, a well-known soap actor, and Mary Jo Slater (née Lawton), a casting agent. Christian started in show business early, appearing on the soap opera The Edge of Night (1956) in 1976 at the age of 7. He went on to star in many Broadway shows in the early-1980s. He rose to fame in Hollywood after landing the role of Binx Davey in The Legend of Billie Jean (1985). He moved to Los Angeles in 1987 to pursue a further acting career after dropping out of high school. After having a starring role in the cult classic Heathers (1988), he became somewhat known as the Hollywood bad-boy, having many run-ins with the law. He is also well-known for having dated stars such as Winona Ryder, Christina Applegate, Samantha Mathis and was at one time engaged to actress/model Nina Huang. In 2000, he married Ryan Haddon, the daughter of 1970s model Dayle Haddon. The couple have two children, Jaden Christopher (b. 1999) and Eliana Sophia (b. 2001). As of early 2005, they separated and later divorced, but remain dedicated to bring up their children.',
+							otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }
+							addStar={() => addAiStarred({key:12,type:"person",image:"assets/img/mr-robot.jpg",title:"Mr. Robot",subtitle:"Christian Slater",ctas:[["Go To Bio  ","iconcss icon-person","",() => fullAiCardShow('character', {characterName:"Mr. Robot",actorName:"Christian Slater",characterImage:"assets/img/mr-robot.jpg",actorImage:"assets/img/christain-slater.jpg",
+					        actorBio: 'Christian Michael Leonard Slater was born on August 18, 1969 in New York City, to Michael Hawkins, a well-known soap actor, and Mary Jo Slater (née Lawton), a casting agent. Christian started in show business early, appearing on the soap opera The Edge of Night (1956) in 1976 at the age of 7. He went on to star in many Broadway shows in the early-1980s. He rose to fame in Hollywood after landing the role of Binx Davey in The Legend of Billie Jean (1985). He moved to Los Angeles in 1987 to pursue a further acting career after dropping out of high school. After having a starring role in the cult classic Heathers (1988), he became somewhat known as the Hollywood bad-boy, having many run-ins with the law. He is also well-known for having dated stars such as Winona Ryder, Christina Applegate, Samantha Mathis and was at one time engaged to actress/model Nina Huang. In 2000, he married Ryan Haddon, the daughter of 1970s model Dayle Haddon. The couple have two children, Jaden Christopher (b. 1999) and Eliana Sophia (b. 2001). As of early 2005, they separated and later divorced, but remain dedicated to bring up their children.',
+						    otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene        ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(12)}
+							isStarred={() => checkAiStarred(12)}
+
 							/>
 						</div>
+					
+					
 						<div className={item8ClassName}>
 						   <AiPreviewListItem
 							type={data[8].type}
@@ -239,30 +250,30 @@ export default class AiPreview extends Component {
 
 							/>
 						</div>
-						<div className={itemCar}>
+
+						<div className={item15ClassName}>
 							<AiPreviewListItem
-							type={data[2].type}
-							image={data[2].src}
-							title={data[2].title}
-							subtitle={data[2].subtitle}
+							type={data[15].type}
+							image={data[15].src}
+							title={data[15].title}
+							subtitle={data[15].subtitle}
 							onclick={() => fullAiCardShow('products')}
-							addStar={() => addAiStarred({key:3,type:"product",image:"assets/img/cadillac-escalade-lg.jpg",title:"2017 Cadillac Escalade SUV",subtitle:"Cadillac",ctas:[["View Product","iconcss icon-product","http://www.cadillac.com/preceding-year/escalade-suv.html"],[" Go To Scene   ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(3)}
-							isStarred={() => checkAiStarred(3)}
+							addStar={() => addAiStarred({key:24,type:"product",image:"assets/img/shoes-sm.jpg",title:"Floret Patent Leather Pump",subtitle:"L.K. Bennett",ctas:[["View Product   ","iconcss icon-product","https://us.lkbennett.com/product/CONTSCFLORETEPATENTLEATHERBlackBlack~Floret-Patent-Leather-Heel-Black"],["    Go To Scene    ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(24)}
+							isStarred={() => checkAiStarred(24)}
 							/>
 						</div>
-						<div className={item10ClassName}>
+						
+						<div className={itemTrivia}>
 							<AiPreviewListItem
-							type={data[10].type}
-							image={data[10].src}
-							title={data[10].title}
-							subtitle={data[10].subtitle}
-							onclick={() => fullAiCardShow('music')}
-							addStar={() => addAiStarred({key:9,type:"music",image:"assets/img/world-destruction.jpg",title:"World Destruction (feat. John Lydon)",subtitle:"Time Zone feat. John Lydon",ctas:[["View Song ","iconcss icon-music","https://open.spotify.com/track/3yA4Rwh8tA3jyVkdWXyzCg"],["Go To Scene      ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(9)}
-							isStarred={() => checkAiStarred(9)}
+							type={data[6].type}
+							title={data[6].title}
+							subtitle={data[6].subtitle}
+							onclick={() => fullAiCardShow('trivia')}
 							/>
 						</div>
+
+
 						<div className={item11ClassName}>
 							<AiPreviewListItem
 							type={data[11].type}
@@ -275,45 +286,20 @@ export default class AiPreview extends Component {
 							isStarred={() => checkAiStarred(10)}
 							/>
 						</div>
-						<div className={item9ClassName}>
+
+						<div className={itemGlasses}>
 							<AiPreviewListItem
-							type={data[9].type}
-							image={data[9].src}
-							title={data[9].title}
-							subtitle={data[9].subtitle}
+							type={data[0].type}
+							image={data[0].src}
+							title={data[0].title}
+							subtitle={data[0].subtitle}
 							onclick={() => fullAiCardShow('products')}
-							addStar={() => addAiStarred({key:11,type:"product",image:"assets/img/flash-drive-lg.jpg",title:"DUO 32GB Micro USB Flash Drive",subtitle:"Samsung at BestBuy",ctas:[["View Product  ","iconcss icon-product","https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"],["Go To Scene    ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(11)}
-							isStarred={() => checkAiStarred(11)}
+							addStar={() => addAiStarred({key:0,type:"product",image:"assets/img/floral-heart-sunglasses-lg.jpg",title:"Floral Heart Glasses",subtitle:"Torrid Fashion",ctas:[["View Product","iconcss icon-product","http://www.torrid.com/product/floral-heart-sunglasses/10265338.html"],["  Go To Scene ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(0)}
+							isStarred={() => checkAiStarred(0)}
 							/>
 						</div>
-						<div className={itemActress}>
-							<AiPreviewListItem
-							type={data[3].type}
-							image={data[3].src}
-							title={data[3].title}
-							subtitle={data[3].subtitle}
-							onclick={() => fullAiCardShow('character', {characterName:"Darlene Alderson",actorName:"Carly Chaikin",characterImage:"assets/img/darlene-alderson-lg.jpg",actorImage:"assets/img/carly-chaikin.jpg",characterBio:"Darlene is a malware coder whose skills are fundamental to fsocietys master plan. Though biting and jaded, she becomes Elliots confidante. He relies on her resilience and creativity for quick problem solving and fast hacks. She is an excellent lock picker, a crass jokester and a jobless transient. She obtains money from hacking ATMs. Like most fsociety members, she is reluctant to reveal too many details of her history, and she is paranoid about communication. However, Darlenes loyalty trumps all, and in the end, her big heart overrides her sharp tongue.",actorBio:"Carly Chaikin was born on March 26, 1990 in Santa Monica, California, USA as Carly Hannah Chaikin. She is an actress and producer, known for Mr. Robot (2015), Suburgatory (2011) and The Last Song (2010).",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }							
-							addStar={() => addAiStarred({key:2,type:"person",image:"assets/img/darlene-alderson-lg.jpg",title:"Darlene Alderson",subtitle:"Carly Chaikin",ctas:[["Go To Bio ","iconcss icon-person","#",() => fullAiCardShow('character', {characterName:"Darlene Alderson",actorName:"Carly Chaikin",characterImage:"assets/img/darlene-alderson-lg.jpg",actorImage:"assets/img/carly-chaikin.jpg",characterBio:"Darlene is a malware coder whose skills are fundamental to fsocietys master plan. Though biting and jaded, she becomes Elliots confidante. He relies on her resilience and creativity for quick problem solving and fast hacks. She is an excellent lock picker, a crass jokester and a jobless transient. She obtains money from hacking ATMs. Like most fsociety members, she is reluctant to reveal too many details of her history, and she is paranoid about communication. However, Darlenes loyalty trumps all, and in the end, her big heart overrides her sharp tongue.",actorBio:"Carly Chaikin was born on March 26, 1990 in Santa Monica, California, USA as Carly Hannah Chaikin. She is an actress and producer, known for Mr. Robot (2015), Suburgatory (2011) and The Last Song (2010).",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(2)}
-							isStarred={() => checkAiStarred(2)}
-							/>
-						</div>
-						<div className={item12ClassName}>
-							<AiPreviewListItem
-							type={data[12].type}
-							image={data[12].src}
-							title={data[12].title}
-							subtitle={data[12].subtitle}
-							onclick={() => fullAiCardShow('character', {characterName:"Trenton",actorName:"Sunita Mani",characterImage:"assets/img/trenton-lg.jpg",actorImage:"assets/img/sunita-mani-lg.jpg",
-							characterBio: 'Trenton, known only by her hacker name, is a member of fsociety. Her parents are Iranian immigrants who came to America for freedom. Her father works 60-hour weeks to find tax loopholes for a millionaire art dealer. Her mother ran up a five-figure debt earning an online degree. She has a young brother named Mohammed. The family lives together in Brooklyn and she is a student at a nearby university. In her first face-to-face meeting with the other members of fsociety Trenton uses a Stagefright exploit to own Mobley\'s Android phone.',
-					        actorBio: 'Sunita Mani is an actress, dancer, and comedian most commonly recognized for her gyrations in the viral music video \"Turn Down for What\" (dir. The Daniels) and as part of the Cocoon Central Dance Team. She also appears in \"Don\'t Think Twice\" as Amy, \"Mr. Robot\" as Trenton, and in the Netflix original series, G.L.O.W as Arthie. Sunita has also guest starred on network television shows including \"Broad City\" on Comedy Central, Search Party on TBS, and The Good Place on NBC.',
-                            otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }							
-							addStar={() => addAiStarred({key:14,type:"person",image:"assets/img/sunita-mani-lg.jpg",title:"Trenton",subtitle:"Sunita Mani",ctas:[["Go To Bio    ","iconcss icon-person","#",() => fullAiCardShow('character', {characterName:"Trenton",actorName:"Sunita Mani",characterImage:"assets/img/trenton-lg.jpg",actorImage:"assets/img/sunita-mani-lg.jpg",characterBio:"Trenton, known only by her hacker name, is a member of fsociety. Her parents are Iranian immigrants who came to America for freedom. Her father works 60-hour weeks to find tax loopholes for a millionaire art dealer. Her mother ran up a five-figure debt earning an online degree. She has a young brother named Mohammed. The family lives together in Brooklyn and she is a student at a nearby university. In her first face-to-face meeting with the other members of fsociety Trenton uses a Stagefright exploit to own Mobley\'s Android phone.",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene    ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(14)}
-							isStarred={() => checkAiStarred(14)}
-							/>
-						</div>
+
 						<div className={item13ClassName}>
 							<AiPreviewListItem
 							type={data[13].type}
@@ -350,18 +336,36 @@ export default class AiPreview extends Component {
 							isStarred={() => checkAiStarred(16)}
 							/>
 						</div>
-						<div className={itemGlasses}>
+
+						<div className={item12ClassName}>
 							<AiPreviewListItem
-							type={data[0].type}
-							image={data[0].src}
-							title={data[0].title}
-							subtitle={data[0].subtitle}
-							onclick={() => fullAiCardShow('products')}
-							addStar={() => addAiStarred({key:0,type:"product",image:"assets/img/floral-heart-sunglasses-lg.jpg",title:"Floral Heart Glasses",subtitle:"Torrid Fashion",ctas:[["View Product","iconcss icon-product","http://www.torrid.com/product/floral-heart-sunglasses/10265338.html"],["  Go To Scene ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(0)}
-							isStarred={() => checkAiStarred(0)}
+							type={data[12].type}
+							image={data[12].src}
+							title={data[12].title}
+							subtitle={data[12].subtitle}
+							onclick={() => fullAiCardShow('character', {characterName:"Trenton",actorName:"Sunita Mani",characterImage:"assets/img/trenton-lg.jpg",actorImage:"assets/img/sunita-mani-lg.jpg",
+							characterBio: 'Trenton, known only by her hacker name, is a member of fsociety. Her parents are Iranian immigrants who came to America for freedom. Her father works 60-hour weeks to find tax loopholes for a millionaire art dealer. Her mother ran up a five-figure debt earning an online degree. She has a young brother named Mohammed. The family lives together in Brooklyn and she is a student at a nearby university. In her first face-to-face meeting with the other members of fsociety Trenton uses a Stagefright exploit to own Mobley\'s Android phone.',
+					        actorBio: 'Sunita Mani is an actress, dancer, and comedian most commonly recognized for her gyrations in the viral music video \"Turn Down for What\" (dir. The Daniels) and as part of the Cocoon Central Dance Team. She also appears in \"Don\'t Think Twice\" as Amy, \"Mr. Robot\" as Trenton, and in the Netflix original series, G.L.O.W as Arthie. Sunita has also guest starred on network television shows including \"Broad City\" on Comedy Central, Search Party on TBS, and The Good Place on NBC.',
+                            otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }							
+							addStar={() => addAiStarred({key:14,type:"person",image:"assets/img/sunita-mani-lg.jpg",title:"Trenton",subtitle:"Sunita Mani",ctas:[["Go To Bio    ","iconcss icon-person","#",() => fullAiCardShow('character', {characterName:"Trenton",actorName:"Sunita Mani",characterImage:"assets/img/trenton-lg.jpg",actorImage:"assets/img/sunita-mani-lg.jpg",characterBio:"Trenton, known only by her hacker name, is a member of fsociety. Her parents are Iranian immigrants who came to America for freedom. Her father works 60-hour weeks to find tax loopholes for a millionaire art dealer. Her mother ran up a five-figure debt earning an online degree. She has a young brother named Mohammed. The family lives together in Brooklyn and she is a student at a nearby university. In her first face-to-face meeting with the other members of fsociety Trenton uses a Stagefright exploit to own Mobley\'s Android phone.",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene    ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(14)}
+							isStarred={() => checkAiStarred(14)}
 							/>
 						</div>
+
+						<div className={itemActress}>
+							<AiPreviewListItem
+							type={data[3].type}
+							image={data[3].src}
+							title={data[3].title}
+							subtitle={data[3].subtitle}
+							onclick={() => fullAiCardShow('character', {characterName:"Darlene Alderson",actorName:"Carly Chaikin",characterImage:"assets/img/darlene-alderson-lg.jpg",actorImage:"assets/img/carly-chaikin.jpg",characterBio:"Darlene is a malware coder whose skills are fundamental to fsocietys master plan. Though biting and jaded, she becomes Elliots confidante. He relies on her resilience and creativity for quick problem solving and fast hacks. She is an excellent lock picker, a crass jokester and a jobless transient. She obtains money from hacking ATMs. Like most fsociety members, she is reluctant to reveal too many details of her history, and she is paranoid about communication. However, Darlenes loyalty trumps all, and in the end, her big heart overrides her sharp tongue.",actorBio:"Carly Chaikin was born on March 26, 1990 in Santa Monica, California, USA as Carly Hannah Chaikin. She is an actress and producer, known for Mr. Robot (2015), Suburgatory (2011) and The Last Song (2010).",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }							
+							addStar={() => addAiStarred({key:2,type:"person",image:"assets/img/darlene-alderson-lg.jpg",title:"Darlene Alderson",subtitle:"Carly Chaikin",ctas:[["Go To Bio ","iconcss icon-person","#",() => fullAiCardShow('character', {characterName:"Darlene Alderson",actorName:"Carly Chaikin",characterImage:"assets/img/darlene-alderson-lg.jpg",actorImage:"assets/img/carly-chaikin.jpg",characterBio:"Darlene is a malware coder whose skills are fundamental to fsocietys master plan. Though biting and jaded, she becomes Elliots confidante. He relies on her resilience and creativity for quick problem solving and fast hacks. She is an excellent lock picker, a crass jokester and a jobless transient. She obtains money from hacking ATMs. Like most fsociety members, she is reluctant to reveal too many details of her history, and she is paranoid about communication. However, Darlenes loyalty trumps all, and in the end, her big heart overrides her sharp tongue.",actorBio:"Carly Chaikin was born on March 26, 1990 in Santa Monica, California, USA as Carly Hannah Chaikin. She is an actress and producer, known for Mr. Robot (2015), Suburgatory (2011) and The Last Song (2010).",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(2)}
+							isStarred={() => checkAiStarred(2)}
+							/>
+						</div>
+				
 
 						<div className={itemSound}>
 							<AiPreviewListItem
@@ -375,6 +379,20 @@ export default class AiPreview extends Component {
 							isStarred={() => checkAiStarred(1)}
 							/>
 						</div>
+
+						<div className={item9ClassName}>
+							<AiPreviewListItem
+							type={data[9].type}
+							image={data[9].src}
+							title={data[9].title}
+							subtitle={data[9].subtitle}
+							onclick={() => fullAiCardShow('products')}
+							addStar={() => addAiStarred({key:11,type:"product",image:"assets/img/flash-drive-lg.jpg",title:"DUO 32GB Micro USB Flash Drive",subtitle:"Samsung at BestBuy",ctas:[["View Product  ","iconcss icon-product","https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"],["Go To Scene    ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(11)}
+							isStarred={() => checkAiStarred(11)}
+							/>
+						</div>
+
 						<div className={itemTriviaFun}>
 							<AiPreviewListItem
 							type={data[7].type}
@@ -383,15 +401,50 @@ export default class AiPreview extends Component {
 							onclick={() => fullAiCardShow('trivia')}
 							/>
 						</div>
+
 						
-						<div className={itemTrivia}>
+
+						<div className={item10ClassName}>
 							<AiPreviewListItem
-							type={data[6].type}
-							title={data[6].title}
-							subtitle={data[6].subtitle}
-							onclick={() => fullAiCardShow('trivia')}
+							type={data[10].type}
+							image={data[10].src}
+							title={data[10].title}
+							subtitle={data[10].subtitle}
+							onclick={() => fullAiCardShow('music')}
+							addStar={() => addAiStarred({key:9,type:"music",image:"assets/img/world-destruction.jpg",title:"World Destruction (feat. John Lydon)",subtitle:"Time Zone feat. John Lydon",ctas:[["View Song ","iconcss icon-music","https://open.spotify.com/track/3yA4Rwh8tA3jyVkdWXyzCg"],["Go To Scene      ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(9)}
+							isStarred={() => checkAiStarred(9)}
 							/>
 						</div>
+
+						<div className={itemCar}>
+							<AiPreviewListItem
+							type={data[2].type}
+							image={data[2].src}
+							title={data[2].title}
+							subtitle={data[2].subtitle}
+							onclick={() => fullAiCardShow('products')}
+							addStar={() => addAiStarred({key:3,type:"product",image:"assets/img/cadillac-escalade-lg.jpg",title:"2017 Cadillac Escalade SUV",subtitle:"Cadillac",ctas:[["View Product","iconcss icon-product","http://www.cadillac.com/preceding-year/escalade-suv.html"],[" Go To Scene   ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(3)}
+							isStarred={() => checkAiStarred(3)}
+							/>
+						</div>
+
+						<div className={itemActor}>
+							<AiPreviewListItem
+							type={data[1].type}
+							image={data[1].src}
+							title={data[1].title}
+							subtitle={data[1].subtitle}
+							onclick={() => fullAiCardShow('character', {characterName:"Elliot Alderson",actorName:"Rami Malek",characterImage:"assets/img/elliot-alderson-lg.jpg",actorImage:"assets/img/rami-malek.jpg",characterBio:"As a senior network technician for cyber security firm Allsafe, Elliot protects corporate clients including the ubiquitous Evil Corp from security breaches and data theft. As a vigilante hacker, he monitors the people in his daily life and protects those hes close to from their own flaws, sometimes with unpredictable results. Originally from Washington Township, New Jersey, Elliot now lives alone on the Lower East Side. He suffers from crippling anxiety, which stems from memories of his difficult childhood. His father died when Elliot was young, and his now-estranged mother was brutally cruel. Elliot has spent most of his adult life isolated from the world around him. After being arrested for financial hacking, he has been attending court-ordered therapy for almost a year. Elliot, however, prefers self-medication by morphine, an addiction he mediates with suboxone. He obtains both from his next door neighbor, Shayla. With the arrival of Mr. Robot, Elliots world changes entirely. Fsocietys members and mission offer him a renewed purpose -- though accompanied by a risk of heightened paranoia -- leaving him faced with the question of whether to numbly continue the life he knows or risk everything and participate in Mr. Robots revolution.",actorBio:"Rami Malek was born on May 12, 1981 in Los Angeles, California, USA as Rami Said Malek. He is an actor and producer, known for Mr. Robot (2015), Short Term 12 (2013) and Need for Speed (2014). His parents are Egyptian-his late father was a tour guide in Cairo and sold insurance. His mother is an accountant. His family moved to Los Angeles and Rami attended Notre Dame High School in Sherman Oaks, Los Angeles. Two of his classmates were Rachel Bilson and Taylor Fry. Kirsten Dunst graduated from the same school a year later, and Katharine McPhee graduated three years after Rami.",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]}) }
+							addStar={() => addAiStarred({key:4,type:"person",image:"assets/img/elliot-alderson-lg.jpg",title:"Elliot Alderson",subtitle:"Rami Malek",ctas:[["Go To Bio","iconcss icon-person","#",() => fullAiCardShow('character', {characterName:"Elliot Alderson",actorName:"Rami Malek",characterImage:"assets/img/elliot-alderson-lg.jpg",actorImage:"assets/img/rami-malek.jpg",characterBio:"As a senior network technician for cyber security firm Allsafe, Elliot protects corporate clients including the ubiquitous Evil Corp from security breaches and data theft. As a vigilante hacker, he monitors the people in his daily life and protects those hes close to from their own flaws, sometimes with unpredictable results. Originally from Washington Township, New Jersey, Elliot now lives alone on the Lower East Side. He suffers from crippling anxiety, which stems from memories of his difficult childhood. His father died when Elliot was young, and his now-estranged mother was brutally cruel. Elliot has spent most of his adult life isolated from the world around him. After being arrested for financial hacking, he has been attending court-ordered therapy for almost a year. Elliot, however, prefers self-medication by morphine, an addiction he mediates with suboxone. He obtains both from his next door neighbor, Shayla. With the arrival of Mr. Robot, Elliots world changes entirely. Fsocietys members and mission offer him a renewed purpose -- though accompanied by a risk of heightened paranoia -- leaving him faced with the question of whether to numbly continue the life he knows or risk everything and participate in Mr. Robots revolution.",actorBio:"Rami Malek was born on May 12, 1981 in Los Angeles, California, USA as Rami Said Malek. He is an actor and producer, known for Mr. Robot (2015), Short Term 12 (2013) and Need for Speed (2014). His parents are Egyptian-his late father was a tour guide in Cairo and sold insurance. His mother is an accountant. His family moved to Los Angeles and Rami attended Notre Dame High School in Sherman Oaks, Los Angeles. Two of his classmates were Rachel Bilson and Taylor Fry. Kirsten Dunst graduated from the same school a year later, and Katharine McPhee graduated three years after Rami.",otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]})],["  Go To Scene  ","iconcss icon-play-outline"]]})}
+							removeStar={() => removeAiStarred(4)}
+							isStarred={() => checkAiStarred(4)}
+							/>
+						</div>
+
+
+				
 				
 						<div className={itemTriviaGeneral}>
 						    <AiPreviewListItem

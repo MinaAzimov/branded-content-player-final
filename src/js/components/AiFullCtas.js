@@ -35,6 +35,11 @@ export default class AiFullCtas extends Component {
 
 		}
 
+		if (e.currentTarget.firstChild.nextSibling.innerHTML == "View Product   ") {
+			window.open("https://us.lkbennett.com/product/CONTSCFLORETEPATENTLEATHERBlackBlack~Floret-Patent-Leather-Heel-Black");
+
+		}
+
 		if (e.currentTarget.firstChild.nextSibling.innerHTML == "View Song") {
 			window.open("https://open.spotify.com/track/65wx71brAmEQz66GXXF8gI");
 
@@ -225,6 +230,25 @@ export default class AiFullCtas extends Component {
             val = 20;
 			this.props.jumpToScene(val);
 		}
+
+		if(e.currentTarget.firstChild.nextSibling.innerHTML == "    Go To Scene    ") {
+            val = 21;
+			this.props.jumpToScene(val);
+		}
+
+		if(e.currentTarget.firstChild.nextSibling.innerHTML == "  Go To Scene        ") {
+            val = 22;
+			this.props.jumpToScene(val);
+		}
+
+		if(e.currentTarget.firstChild.nextSibling.innerHTML == "    Go To Scene") {
+            val = 23;
+			this.props.jumpToScene(val);
+		}
+
+		
+
+		
 
 		else {
 			console.log("no target")

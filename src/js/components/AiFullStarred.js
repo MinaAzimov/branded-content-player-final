@@ -61,7 +61,7 @@ export default class AiFullStarred extends Component {
 			'list-container': true,
 			'list-container--show': show,
 			'list-container--starred': true,
-			'list-container--needs-scroll': this.props.data.length > 2, 
+			'list-container--needs-scroll': this.props.data.length > 1, 
 			'list-container--fullscreen': (this.props.data.length > 5 && isFullScreen)
 		});
  		
