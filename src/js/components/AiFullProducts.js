@@ -110,7 +110,7 @@ export default class AiFullProducts extends Component {
 							"iconcss icon-play-outline"
 							]
 						]}
-						addAiStarred={()  => addAiStarred({key:24,type:"product",image:"assets/img/shoes-lg.jpg",title:"Floret Patent Leather Pump",subtitle:"L.K. Bennett",ctas:[["View Product   ","iconcss icon-product","https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"],["    Go To Scene    ","iconcss icon-play-outline"]]})}
+						addAiStarred={() => addAiStarred({key:24,type:"product",image:"assets/img/shoes-lg.jpg",title:"Floret Patent Leather Pump",subtitle:"L.K. Bennett",ctas:[["View Product   ","iconcss icon-product","https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"],["    Go To Scene    ","iconcss icon-play-outline"]]})}
 						removeAiStarred={() => removeAiStarred(24)}
 						checkAiStarred={() => checkAiStarred(24)}
 						/>

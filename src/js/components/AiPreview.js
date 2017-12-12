@@ -258,32 +258,19 @@ export default class AiPreview extends Component {
 							title={data[15].title}
 							subtitle={data[15].subtitle}
 							onclick={() => fullAiCardShow('products')}
-							addStar={() => addAiStarred({key:24,type:"product",image:"assets/img/shoes-sm.jpg",title:"Floret Patent Leather Pump",subtitle:"L.K. Bennett",ctas:[["View Product   ","iconcss icon-product","https://us.lkbennett.com/product/CONTSCFLORETEPATENTLEATHERBlackBlack~Floret-Patent-Leather-Heel-Black"],["    Go To Scene    ","iconcss icon-play-outline"]]})}
+							addStar={() => addAiStarred({key:24,type:"product",image:"assets/img/shoes-lg.jpg",title:"Floret Patent Leather Pump",subtitle:"L.K. Bennett",ctas:[["View Product   ","iconcss icon-product","https://us.lkbennett.com/product/CONTSCFLORETEPATENTLEATHERBlackBlack~Floret-Patent-Leather-Heel-Black"],["    Go To Scene    ","iconcss icon-play-outline"]]})}
 							removeStar={() => removeAiStarred(24)}
 							isStarred={() => checkAiStarred(24)}
 							/>
 						</div>
 						
-						<div className={itemTrivia}>
-							<AiPreviewListItem
-							type={data[6].type}
-							title={data[6].title}
-							subtitle={data[6].subtitle}
-							onclick={() => fullAiCardShow('trivia')}
-							/>
-						</div>
-
 
 						<div className={item11ClassName}>
 							<AiPreviewListItem
 							type={data[11].type}
-							image={data[11].src}
 							title={data[11].title}
 							subtitle={data[11].subtitle}
-							onclick={() => fullAiCardShow('music')}
-							addStar={() => addAiStarred({key:10,type:"music",image:"assets/img/people-who-died.jpg",title:"People Who Died",subtitle:"The Jim Caroll Band",ctas:[["View Song  ","iconcss icon-music","https://open.spotify.com/track/6taFIgW5YE94x1icBh5vTg"],["Go To Scene       ","iconcss icon-play-outline"]]})}
-							removeStar={() => removeAiStarred(10)}
-							isStarred={() => checkAiStarred(10)}
+							onclick={() => fullAiCardShow('trivia')}
 							/>
 						</div>
 
@@ -380,6 +367,16 @@ export default class AiPreview extends Component {
 							/>
 						</div>
 
+						<div className={itemTrivia}>
+							<AiPreviewListItem
+							type={data[6].type}
+							title={data[6].title}
+							subtitle={data[6].subtitle}
+							onclick={() => fullAiCardShow('trivia')}
+							/>
+						</div>
+
+
 						<div className={item9ClassName}>
 							<AiPreviewListItem
 							type={data[9].type}
@@ -443,9 +440,15 @@ export default class AiPreview extends Component {
 							/>
 						</div>
 
+					    <div className={item17ClassName}>
+							<AiPreviewListItem
+							type={data[17].type}
+							title={data[17].title}
+							subtitle={data[17].subtitle}
+							onclick={() => fullAiCardShow('trivia')}
+							/>
+						</div>
 
-				
-				
 						<div className={itemTriviaGeneral}>
 						    <AiPreviewListItem
 							type={data[5].type}

@@ -63,9 +63,9 @@ export default class AiFullTrivia extends Component {
 					type={"trivia"}
 					jumpToScene={this.props.jumpToScene}
 					image={"assets/img/trivia-3.jpg"}
-					title={"Other Trivia"}
+					title={"Fun Fact"}
 					subtitle={"Scene 3 — 00:02:05"}
-					quote={'In this episode, the security company has to thwart a DDoS attack. "DDoS" stands for "distributed denial of service." It\'s a tactic used to prevent a company\'s servers from functioning by using all their bandwidth. Real or virtual computers all send and receive data to all servers on a network, stopping legitimate users from exercising real transactions. This effectively stops business from taking place, causing a loss in revenue and consumer trust.'}
+					quote={'Carly Chaikin auditioned for the roles of both Angela and Darlene.'}
 					ctas={[
 						[
                         "       Go To Scene ",
@@ -79,7 +79,7 @@ export default class AiFullTrivia extends Component {
 					image={"assets/img/trivia-4.jpg"}
 					title={"Other Trivia"}
 					subtitle={"Scene 4 — 00:03:14"}
-					quote={'In this episode, the security company has to thwart a DDoS attack. "DDoS" stands for "distributed denial of service." It\'s a tactic used to prevent a company\'s servers from functioning by using all their bandwidth. Real or virtual computers all send and receive data to all servers on a network, stopping legitimate users from exercising real transactions. This effectively stops business from taking place, causing a loss in revenue and consumer trust.'}
+					quote={'Portia Doubleday has been hacked many times in real life. Once, hackers got hold of her travel plans and found that she would be unreachable during a flight to Los Angeles. They called her grandmother and pretended to have kidnapped her, demanding a ransom in exchange for Doubleday\'s safe return.'}
 					ctas={[
 						[
 						"     Go To Scene  ",
@@ -90,8 +90,8 @@ export default class AiFullTrivia extends Component {
 					<AiFullListItem
 					type={"trivia"}
 					jumpToScene={this.props.jumpToScene}
-					image={"assets/img/trivia-4.jpg"}
-					title={"Other Trivia"}
+					image={"assets/img/trivia-5.jpg"}
+					title={"General Trivia"}
 					subtitle={"Scene 5 — 00:05:00"}
 					quote={'This episode, entitled ‘zer0-day’ was originally scheduled to air 26 August, 2015, but was delayed by the network concerns about backlash. Some scenes have similarities to an actual tragic shooting occurring earlier that same day in Roanoke, VA. Thus, the delayed airing was itself due to a zer0-day event.'}
 					ctas={[
