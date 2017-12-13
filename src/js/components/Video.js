@@ -440,7 +440,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
 			this.props.changeSelectedSrcGlasses(val);
 			}  
 
-           if((currentTime < 125.000000 || currentTime > 193.800000 && this.props.isScrubbing) || (currentTime < 125.000000 || currentTime > 193.800000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
+           if((currentTime < 139.000000 || currentTime > 145.000000 && this.props.isScrubbing) || (currentTime < 139.000000 || currentTime > 145.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcGlasses(val);
 			}
@@ -468,7 +468,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem12(val); //trenton
             }
 
-            if((currentTime < 125.000000 || currentTime > 193.800000 && this.props.isScrubbing) || (currentTime < 125.000000 || currentTime > 193.800000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
+            if((currentTime < 126.000000 || currentTime > 138.00000 && this.props.isScrubbing) || (currentTime < 126.000000 || currentTime > 138.00000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
             val = false;
             this.props.changeSelectedSrcitem12(val);
             }
@@ -478,7 +478,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem13(val); //mobley
             }
 
-            if((currentTime < 125.000000 || currentTime > 193.800000 && this.props.isScrubbing) || (currentTime < 125.000000 || currentTime > 193.800000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
+            if((currentTime < 130.000000 || currentTime > 175.000000 && this.props.isScrubbing) || (currentTime < 130.000000 || currentTime > 175.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
             val = false;
             this.props.changeSelectedSrcitem13(val);
             }
@@ -488,7 +488,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem14(val); //romero
             }
 
-            if((currentTime < 125.000000 || currentTime > 193.800000 && this.props.isScrubbing) || (currentTime < 125.000000 || currentTime > 193.800000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
+            if((currentTime < 130.000000 || currentTime > 190.000000 && this.props.isScrubbing) || (currentTime < 130.000000 || currentTime > 190.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
             val = false;
             this.props.changeSelectedSrcitem14(val);
            }
