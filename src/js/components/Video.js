@@ -405,7 +405,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
 			this.props.changeSelectedSrcTriviaFun(val);
 			} 
 
-			if((currentTime < 2.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
+			if((currentTime < 71.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcTriviaFun(val);
 			}
@@ -416,7 +416,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
            this.props.changeSelectedSrcitem9(val); //flash
             }
 
-           if((currentTime < 2.000000 || currentTime > 98.900000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           if((currentTime < 87.000000 || currentTime > 98.900000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem9(val);
            }
@@ -426,7 +426,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) && !this.props.isScrubbi
            this.props.changeSelectedSrcitem10(val); //music scene1
             }
 
-           if((currentTime < 2.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
+           if((currentTime < 55.000000 || currentTime > 124.800000) && this.props.isScrubbing || this.props.videoTrigger > 0)  {
            val = false;
            this.props.changeSelectedSrcitem10(val);
            }

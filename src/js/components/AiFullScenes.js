@@ -66,7 +66,7 @@ export default class AiFullScenes extends Component {
 						type: "trivia",
 						image: "assets/img/trivia-1.jpg", 
 						title: "General Trivia",
-						subtitle: "Scene 2 — 00:01:03", 
+						subtitle: "Scene 1 — 00:00:00", 
 						quote: 'Throughout the episode, Elliot references "IRC." Standing for Internet Relay Chat, IRC is an application protocol that allows for plaintext communication via a client/server model. A server hosts a "channel" where users can join to discuss various topics. However, "robots" are prevalent on servers. These allow users to communicate with the server itself, and request file transfers. There is a major presence of illegal file transfers facilitated by the use of these robots.',
 						ctas: [[
 						"  Go To Scene",
@@ -142,7 +142,7 @@ export default class AiFullScenes extends Component {
 						type: "trivia",
 						image: "assets/img/trivia-1.jpg", 
 						title: "General Trivia",
-						subtitle: "Scene 2 — 00:01:03", 
+						subtitle: "Scene 1 — 00:00:00", 
 						quote: 'Throughout the episode, Elliot references "IRC." Standing for Internet Relay Chat, IRC is an application protocol that allows for plaintext communication via a client/server model. A server hosts a "channel" where users can join to discuss various topics. However, "robots" are prevalent on servers. These allow users to communicate with the server itself, and request file transfers. There is a major presence of illegal file transfers facilitated by the use of these robots.',
 						ctas: [[
 						"  Go To Scene",
@@ -154,7 +154,7 @@ export default class AiFullScenes extends Component {
 						type: "trivia",
 						image: "assets/img/trivia-2.jpg", 
 						title: "Fun Fact",
-						subtitle: "Scene 2 — 00:01:11", 
+						subtitle: "Scene 2 — 00:00:55", 
 						quote: "Elliot's signature black hoodie is from Rami Malek's own personal wardrobe.",
 						ctas: [[
 						"   Go To Scene",
