@@ -374,7 +374,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) || this.props.isScrubbin
 			val = true;
 			this.props.changeSelectedSrcTriviaGeneral(val);
 			}
-			if((currentTime < 0.000000 || currentTime > 124.000000 && this.props.isScrubbing) || (currentTime < 0.000000 || currentTime > 124.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
+			if((currentTime < 12.000000 || currentTime > 124.000000 && this.props.isScrubbing) || (currentTime < 12.000000 || currentTime > 124.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcTriviaGeneral(val);
 			}
@@ -495,7 +495,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
 			val = true;
 			this.props.changeSelectedSrcTrivia(val);
 			} 
-			if((currentTime < 125.000000 || currentTime > 193.000000 && this.props.isScrubbing) || (currentTime < 125.000000 || currentTime > 193.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
+			if((currentTime < 151.000000 || currentTime > 193.000000 && this.props.isScrubbing) || (currentTime < 151.000000 || currentTime > 193.000000 && !this.props.isScrubbing) || this.props.videoTrigger > 0)  {
 			val = false;
 			this.props.changeSelectedSrcTrivia(val); //trivia scene 3
 			}
