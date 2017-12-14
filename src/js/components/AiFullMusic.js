@@ -18,7 +18,7 @@ export default class AiFullMusic extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling  } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data  } = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
@@ -33,64 +33,37 @@ export default class AiFullMusic extends Component {
 					<div className="list-column"></div>
 					<div className="list-scrolling">
 						<AiFullListItem
+						type={data[4].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						type={"music"}
-						image={"assets/img/sound-and-color-lg.jpg"}
-						title={"Sound and Color"}
-						subtitle={"Alabama Shakes"}
-						ctas={[[
-							"View Song",
-							"iconcss icon-music",
-							"https://open.spotify.com/track/65wx71brAmEQz66GXXF8gI"
-							],
-							[
-							"Go To Scene     ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={()  => addAiStarred({key:1,type:"music",image:"assets/img/sound-and-color-lg.jpg",title:"Sound and Color",subtitle:"Alabama Shakes",ctas:[["View Song","iconcss icon-music","https://open.spotify.com/track/65wx71brAmEQz66GXXF8gI"],["Go To Scene     ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(1)}
-						checkAiStarred={() => checkAiStarred(1)}
+						image={data[4].addAiStarred.image}
+						title={data[4].addAiStarred.title}
+						subtitle={data[4].addAiStarred.subtitle}
+						ctas={data[4].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[4].addAiStarred.key,type:data[4].addAiStarred.type,image:data[4].addAiStarred.image,title:data[4].addAiStarred.title,subtitle:data[4].addAiStarred.subtitle,ctas:data[4].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[4].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[4].addAiStarred.key)}
 						/>
 						<AiFullListItem
-						type={"music"}
+						type={data[10].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						image={"assets/img/world-destruction.jpg"}
-						title={"World Destruction (feat. John Lydon)"}
-						subtitle={"Time Zone feat. John Lydon"}
-						ctas={[[
-							"View Song ",
-							"iconcss icon-music",
-							"https://open.spotify.com/track/3yA4Rwh8tA3jyVkdWXyzCg"
-							],
-							[
-							"Go To Scene      ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={()  => addAiStarred({key:9,type:"music",image:"assets/img/world-destruction.jpg",title:"World Destruction (feat. John Lydon)",subtitle:"Time Zone feat. John Lydon",ctas:[["View Song ","iconcss icon-music","https://open.spotify.com/track/3yA4Rwh8tA3jyVkdWXyzCg"],["Go To Scene      ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(9)}
-						checkAiStarred={() => checkAiStarred(9)}
+						image={data[10].addAiStarred.image}
+						title={data[10].addAiStarred.title}
+						subtitle={data[10].addAiStarred.subtitle}
+						ctas={data[10].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[10].addAiStarred.key,type:data[10].addAiStarred.type,image:data[10].addAiStarred.image,title:data[10].addAiStarred.title,subtitle:data[10].addAiStarred.subtitle,ctas:data[10].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[10].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[10].addAiStarred.key)}
 						/>
 						<AiFullListItem
-						type={"music"}
+						type={data[19].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						image={"assets/img/people-who-died.jpg"}
-						title={"People Who Died"}
-						subtitle={"The Jim Caroll Band"}
-						ctas={[[
-							"View Song  ",
-							"iconcss icon-music",
-							"https://open.spotify.com/track/6taFIgW5YE94x1icBh5vTg"
-							],
-							[
-							"Go To Scene       ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={()  => addAiStarred({key:10,type:"music",image:"assets/img/people-who-died.jpg",title:"People Who Died",subtitle:"The Jim Caroll Band",ctas:[["View Song  ","iconcss icon-music","https://open.spotify.com/track/6taFIgW5YE94x1icBh5vTg"],["Go To Scene       ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(10)}
-						checkAiStarred={() => checkAiStarred(10)}
+						image={data[19].addAiStarred.image}
+						title={data[19].addAiStarred.title}
+						subtitle={data[19].addAiStarred.subtitle}
+						ctas={data[19].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[19].addAiStarred.key,type:data[19].addAiStarred.type,image:data[19].addAiStarred.image,title:data[19].addAiStarred.title,subtitle:data[19].addAiStarred.subtitle,ctas:data[19].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[19].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[19].addAiStarred.key)}
 						/>
 
 					</div>

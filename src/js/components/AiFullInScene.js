@@ -53,6 +53,8 @@ export default class AiFullScenes extends Component {
 
 		const { show, currentTime, fullAiCardShow, data, click, jumpToScene, addStar, removeStar, checkAiStarred, starredData, starredForScrolling } = this.props;
 
+	
+
 		const products = data
 			.filter((obj) =>
 				obj.type == 'product'

@@ -40,7 +40,7 @@ export default class AiSceneCard extends Component {
 
 	render() {
 
-		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, showInScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow } = this.props;
+		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, showInScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, data } = this.props;
 
 		const classnames = classNames({
  			'ai-preview-list-item': true,

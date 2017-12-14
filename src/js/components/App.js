@@ -13,6 +13,8 @@ import AdRollOverlay from './AdRollOverlay';
 import AiPreview  from './AiPreview';
 import AiFull  from './AiFull';
 import data from './data.json';
+import peopleData from './peopleData.json';
+import sceneData from './sceneData.json';
 import base from './base';
 import { vpModeLive, vpModeVOD, maxLiveReplayTime } from '../constants';
 
@@ -109,6 +111,8 @@ export default class App extends Component {
 			finalArray: [],
 			currentItem: [],
 			data: data.data,
+			peopleData: peopleData.peopleData,
+			sceneData: sceneData.sceneData,
 			glasses: false,
 			trivia: false,
 			triviaGeneral: false,
@@ -144,6 +148,8 @@ export default class App extends Component {
 
 	componentWillMount() {
 
+
+	
 
 
 		
@@ -751,6 +757,8 @@ export default class App extends Component {
 				pauseCardSrc,
 				currentItem,
 				data,
+				peopleData,
+				sceneData,
 				glasses,
 				trivia,
 				triviaGeneral,
@@ -1104,6 +1112,9 @@ export default class App extends Component {
 			checkAiStarred ={this.checkAiStarred}
 			currentTime={currentTime}
 			jumpToScene={this.jumpToScene}
+			data={data}
+			peopleData={peopleData}
+			sceneData={sceneData}
 			/>
 			</div>
 			)

@@ -41,7 +41,7 @@ export default class AiFullListItem extends Component {
 
 	render() {
 
-		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow } = this.props;
+		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData, sceneData } = this.props;
 
 
 		const classnames = classNames({

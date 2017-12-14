@@ -43,8 +43,7 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling } = this.props;
-
+		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData } = this.props;
 
 
  		const classnames = classNames({
@@ -79,7 +78,9 @@ export default class AiFull extends Component {
 							<i className="iconcss icon-close"></i>
 						</div>
 					</div>
-					<AiFullScenes 
+					<AiFullScenes
+					sceneData={sceneData}
+					data={data} 
 					isFullScreen={ isFullScreen }
 					starredForScrolling={starredForScrolling}
 					starredData={starredData}
@@ -93,7 +94,9 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					{
-					<AiFullInScene 
+					<AiFullInScene
+					sceneData={sceneData}
+					data={data} 
 					fullAiCardShow={fullAiCardShow}
 					starredForScrolling={starredForScrolling}
 					starredData={starredData}
@@ -109,6 +112,8 @@ export default class AiFull extends Component {
 					/>
 					}
 					<AiFullPeople
+					peopleData={peopleData}
+					data={data}
 					isFullScreen={ isFullScreen }
 					show={ showing == 'people' }
 					click={ goToPage }
@@ -118,7 +123,9 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					{ personData != null ? (
-					<AiFullCharacter 
+					<AiFullCharacter
+					peopleData={peopleData}
+					data={data} 
 					show={ showing == 'character' }
 					click={ () => goToPage('people') }
 					person={ personData }
@@ -128,7 +135,8 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					) : null }
-					<AiFullMusic 
+					<AiFullMusic
+					data={data} 
 					starredForScrolling={starredForScrolling}
 					show={ showing == 'music' }
 					jumpToScene={this.props.jumpToScene}
@@ -137,7 +145,8 @@ export default class AiFull extends Component {
 					checkAiStarred={checkAiStarred}
 					removeAiStarred={removeAiStarred}
 					/>
-					<AiFullStarred 
+					<AiFullStarred
+					data={data} 
 					fullAiCardShow={fullAiCardShow}
 					isFullScreen={this.props.isFullScreen}
 					show={ showing == 'starred' }
@@ -149,7 +158,8 @@ export default class AiFull extends Component {
 					jumpToScene={this.props.jumpToScene}
 				
 					/>
-					<AiFullTrivia 
+					<AiFullTrivia
+					data={data} 
 					starredForScrolling={starredForScrolling}
 					show={ showing == 'trivia' }
 					jumpToScene={this.props.jumpToScene}
@@ -158,7 +168,8 @@ export default class AiFull extends Component {
 					checkAiStarred={checkAiStarred}
 					removeAiStarred={removeAiStarred}
 					/>
-					<AiFullProducts 
+					<AiFullProducts
+					data={data} 
 					starredForScrolling={starredForScrolling}
 					show={ showing == 'products' }
 					currentTime={currentTime}

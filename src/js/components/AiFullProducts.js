@@ -19,7 +19,8 @@ export default class AiFullProducts extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data } = this.props;
+
 
 		const classnames = classNames({
 			'list-container': true,
@@ -34,85 +35,49 @@ export default class AiFullProducts extends Component {
 					<div className="list-column"></div>
 					<div className="list-scrolling">
 						<AiFullListItem
-						type={"product"}
+						type={data[0].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						image={"assets/img/floral-heart-sunglasses-lg.jpg"}
-						title={"Floral Heart Glasses"}
-						subtitle={"Torrid Fashion"}
-						ctas={[[
-							"View Product",
-							"iconcss icon-product",
-							"http://www.torrid.com/product/floral-heart-sunglasses/10265338.html"
-							],
-							[
-							"Go To Scene  ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={()  => addAiStarred({key:0,type:"product",image:"assets/img/floral-heart-sunglasses-lg.jpg",title:"Floral Heart Glasses",subtitle:"Torrid Fashion",ctas:[["View Product","iconcss icon-product","http://www.torrid.com/product/floral-heart-sunglasses/10265338.html"],["Go To Scene  ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(0)}
-						checkAiStarred={() => checkAiStarred(0)}
+						image={data[0].addAiStarred.image}
+						title={data[0].addAiStarred.title}
+						subtitle={data[0].addAiStarred.subtitle}
+						ctas={data[0].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[0].addAiStarred.key,type:data[0].addAiStarred.type,image:data[0].addAiStarred.image,title:data[0].addAiStarred.title,subtitle:data[0].addAiStarred.subtitle,ctas:data[0].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[0].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[0].addAiStarred.key)}
 						/>
 						<AiFullListItem
-						type={"product"}
+						type={data[2].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						image={"assets/img/cadillac-escalade-lg.jpg"}
-						title={"2017 Cadillac Escalade SUV"}
-						subtitle={"Cadillac"}
-						ctas={[[
-							"View Product ",
-							"iconcss icon-product",
-							"http://www.cadillac.com/preceding-year/escalade-suv.html"
-							],
-							[
-							"Go To Scene   ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={()  => addAiStarred({key:3,type:"product",image:"assets/img/cadillac-escalade-lg.jpg",title:"2017 Cadillac Escalade SUV",subtitle:"Cadillac",ctas:[["View Product ","iconcss icon-product","http://www.cadillac.com/preceding-year/escalade-suv.html"],["Go To Scene   ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(3)}
-						checkAiStarred={() => checkAiStarred(3)}
+						image={data[2].addAiStarred.image}
+						title={data[2].addAiStarred.title}
+						subtitle={data[2].addAiStarred.subtitle}
+						ctas={data[2].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[2].addAiStarred.key,type:data[2].addAiStarred.type,image:data[2].addAiStarred.image,title:data[2].addAiStarred.title,subtitle:data[2].addAiStarred.subtitle,ctas:data[2].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[2].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[2].addAiStarred.key)}
 						/>
 						<AiFullListItem
-						type={"product"}
+						type={data[9].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						image={"assets/img/flash-drive-lg.jpg"}
-						title={"DUO 32GB Micro USB Flash Drive"}
-						subtitle={"Samsung at BestBuy"}
-						ctas={[[
-							"View Product  ",
-							"iconcss icon-product",
-							"https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"
-							],
-							[
-							"Go To Scene    ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={()  => addAiStarred({key:11,type:"product",image:"assets/img/flash-drive-lg.jpg",title:"DUO 32GB Micro USB Flash Drive",subtitle:"Samsung at BestBuy",ctas:[["View Product  ","iconcss icon-product","https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"],["Go To Scene    ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(11)}
-						checkAiStarred={() => checkAiStarred(11)}
+						image={data[9].addAiStarred.image}
+						title={data[9].addAiStarred.title}
+						subtitle={data[9].addAiStarred.subtitle}
+						ctas={data[9].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[9].addAiStarred.key,type:data[9].addAiStarred.type,image:data[9].addAiStarred.image,title:data[9].addAiStarred.title,subtitle:data[9].addAiStarred.subtitle,ctas:data[9].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[9].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[9].addAiStarred.key)}
 						/>
 
 						<AiFullListItem
-						type={"product"}
+						type={data[15].addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
-						image={"assets/img/shoes-lg.jpg"}
-						title={"Floret Patent Leather Pump"}
-						subtitle={"L.K. Bennett"}
-						ctas={[[
-							"View Product   ",
-							"iconcss icon-product",
-							"https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"
-							],
-							[
-							"    Go To Scene    ",
-							"iconcss icon-play-outline"
-							]
-						]}
-						addAiStarred={() => addAiStarred({key:24,type:"product",image:"assets/img/shoes-lg.jpg",title:"Floret Patent Leather Pump",subtitle:"L.K. Bennett",ctas:[["View Product   ","iconcss icon-product","https://www.bestbuy.com/site/samsung-duo-32gb-usb-3-0-micro-usb-flash-drive/5512800.p"],["    Go To Scene    ","iconcss icon-play-outline"]]})}
-						removeAiStarred={() => removeAiStarred(24)}
-						checkAiStarred={() => checkAiStarred(24)}
+						image={data[15].addAiStarred.image}
+						title={data[15].addAiStarred.title}
+						subtitle={data[15].addAiStarred.subtitle}
+						ctas={data[15].addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:data[15].addAiStarred.key,type:data[15].addAiStarred.type,image:data[15].addAiStarred.image,title:data[15].addAiStarred.title,subtitle:data[15].addAiStarred.subtitle,ctas:data[15].addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(data[15].addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(data[15].addAiStarred.key)}
 						/>
 					</div>
 					<div className="list-column"></div>
