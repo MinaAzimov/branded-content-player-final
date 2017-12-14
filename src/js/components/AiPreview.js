@@ -197,7 +197,7 @@ export default class AiPreview extends Component {
 		return (
 			<div>
 				<div className={classnames} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
-					<div className="ai-more" onClick={ () => fullAiCardShow('starred') }>
+					<div className="ai-more" onClick={ () => fullAiCardShow('scenes') }>
 						<div className="divider"></div>
 						<span>More</span>
 						<div className="ellipsis"></div>

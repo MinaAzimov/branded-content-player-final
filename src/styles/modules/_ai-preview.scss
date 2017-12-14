@@ -116,7 +116,7 @@
 
       .mask {
         width: 84px;
-        border-radius: ($border-radius - 2px);
+        border-radius: $border-radius;
         transition: border-color 0.3s $easing2;
         overflow: hidden;
 
