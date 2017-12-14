@@ -260,6 +260,21 @@ export default class AiPreview extends Component {
 							/>
 						</div>
 
+						 {/* Seller */}
+
+						<div className={item8ClassName}>
+						   <AiPreviewListItem
+							type={data[20].type}
+							image={data[20].src}
+							title={data[20].title}
+							subtitle={data[20].subtitle}
+							onclick={() => fullAiCardShow(data[20].fullAiCardShowType, data[20].fullAiCardShow)}
+							addStar={() => addAiStarred({key:data[20].addAiStarred.key,type:data[20].addAiStarred.type,image:data[20].addAiStarred.image,title:data[20].addAiStarred.title,subtitle:data[20].addAiStarred.subtitle,ctas:data[20].addAiStarred.ctas})}
+							removeStar={() => removeAiStarred(data[20].addAiStarred.key)}
+							isStarred={() => checkAiStarred(data[20].addAiStarred.key)}
+							/>
+						</div>
+
 					    {/* Shoes*/}
 
 						<div className={item15ClassName}>

@@ -109,7 +109,13 @@ export default class AiFullCtas extends Component {
 
 		if(e.currentTarget.firstChild.nextSibling.innerHTML == "   Go To Bio") {
 
-			this.props.fullAiCardShow('character', {characterName:"Whiterose",actorName:"BD Wong",characterImage:"assets/img/whiterose-2.jpg",actorImage:"assets/img/bd-wong.jpg",characterBio: 'Whiterose is the leader of the Dark Army, a Chinese hacker group. She is a transgender woman masquerading as the male Minister Zhi Zhang, the Chinese Minister of State Security.',actorBio: 'Bradley Darryl Wong, is an American actor. Wong appeared in Dr. George Huong for eleven seasons on Law and Order: SVU. He has acted in T.V. series, videogames, movies, and theatrical plays. Some of his works were playing Professor Hugo Strange in the series Gotham, Henry Wu in Jurassic Park, Kiki in And the Band Played On for HBO, and Captain Li Shang in the animated film Mulan, a role he reprised in the video game Kingdom Hearts: II. He is an activist in the LGBT+ community, and often dedicates time and money for the cause.',otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]});
+			this.props.fullAiCardShow('character', {characterName:"Salesman",
+				actorName:"Eric Martin Brown",
+				characterImage:"assets/img/salesman-lg.jpg",
+				actorImage:"assets/img/eric-martin-brown-lg.jpg",
+				characterBio: 'Eric Martin Brown was born on May 20, 1968 in Syracuse, New York, USA. He is an actor, known for The First Wives Club (1996), One Life to Live (1968) and 30 Rock (2006).',
+				actorBio: 'A shoe salesman who is appalled by Angela’s choice to come in to buy shoes following the E-Corp EVP of Technology committing suicide on live TV. He expresses further disgust for Angela\'s willingness to keep her job working for E-Corp following the Fsociety hack fallout.',
+				otherWorks:[{image:"assets/img/busters-mal-heart.jpg",link:"https://www.rottentomatoes.com/m/busters_mal_heart/"},{image:"assets/img/short-term-12.jpg",link:"https://www.rottentomatoes.com/m/short_term_12_2013"},{image:"assets/img/aint-them-bodies-saints.jpg",link:"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},{image:"assets/img/da-sweet-blood-of-jesus.jpg",link:"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},{image:"assets/img/mr-robot-extra.jpg",link:"https://www.rottentomatoes.com/tv/mr_robot"}]});
 			
 		}
 		

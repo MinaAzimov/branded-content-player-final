@@ -904,6 +904,50 @@
                                 ]
                         }           
     },
+    {
+      "key1": "woman",
+      "key2": "girl",
+      "key3": "indoors",
+      "key4": "room",
+      "key5": "furniture",
+      "key6": "placeholder",
+      "key7": "placeholder",
+      "startTime": "03:16",
+      "endTime": "05:01",
+      "src": "assets/img/salesman-sm.jpg",
+      "title": "Salesman",
+      "subtitle": "Eric Martin Brown",
+      "type": "person",
+      "fullAiCardShowType": "character",
+      "fullAiCardShow": {
+                         "characterName": "Salesman",
+                         "actorName": "Eric Martin Brown",
+                         "characterImage" :"assets/img/salesman-lg.jpg",
+                         "actorImage":"assets/img/eric-martin-brown-lg.jpg",
+                         "characterBio": "Eric Martin Brown was born on May 20, 1968 in Syracuse, New York, USA. He is an actor, known for The First Wives Club (1996), One Life to Live (1968) and 30 Rock (2006).",
+                         "actorBio": "A shoe salesman who is appalled by Angela’s choice to come in to buy shoes following the E-Corp EVP of Technology committing suicide on live TV. He expresses further disgust for Angela's willingness to keep her job working for E-Corp following the Fsociety hack fallout.",
+                          "otherWorks": [
+                                           {"image":"assets/img/busters-mal-heart.jpg","link":"https://www.rottentomatoes.com/m/busters_mal_heart/"},
+                                           {"image": "assets/img/short-term-12.jpg","link":"https://www.rottentomatoes.com/m/short_term_12_2013"},
+                                           {"image":"assets/img/aint-them-bodies-saints.jpg","link":"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},
+                                           {"image":"assets/img/da-sweet-blood-of-jesus.jpg","link":"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},
+                                           {"image":"assets/img/mr-robot-extra.jpg","link":"https://www.rottentomatoes.com/tv/mr_robot"}
+
+                                        ]
+                        },
+      "addAiStarred":   {
+                        "key":"35",
+                        "type":"person",
+                        "image":"assets/img/salesman-lg.jpg",
+                        "title":"Salesman",
+                        "subtitle":"Eric Martin Brown",
+                        "jsonFunction": "() => fullAiCardShow(data[20].fullAiCardShowType, data[20].fullAiCardShow)",
+                        "ctas": [
+                                   ["   Go To Bio","iconcss icon-person","","data[20].addAiStarred.jsonFunction"],
+                                   [" Go To Scene    ","iconcss icon-play-outline"]
+                                ]
+                        }               
+    }
   ]
  
 }
