@@ -28,57 +28,30 @@ export default class AiFullProducts extends Component {
 			'list-container--products': true,
 			'list-container--needs-scroll': this.props.starredForScrolling.length > 2
 		});
+
+		const products = data.filter((obj) => obj.type == 'product').map((product, index, key, type, image, title, subtitle, ctas) =>
+			<div key={index} >
+				<AiFullListItem
+				        type={product.addAiStarred.type}
+						jumpToScene={this.props.jumpToScene}
+						image={product.addAiStarred.image}
+						title={product.addAiStarred.title}
+						subtitle={product.addAiStarred.subtitle}
+						ctas={product.addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:product.addAiStarred.key,type:product.addAiStarred.type,image:product.addAiStarred.image,title:product.addAiStarred.title,subtitle:product.addAiStarred.subtitle,ctas:product.addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(product.addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(product.addAiStarred.key)}
+				/>
+					<div className="list-column-inner"></div>
+			</div>
+			)
  		
 		return (
 			<div>
 				<div className={classnames}>
 					<div className="list-column"></div>
 					<div className="list-scrolling">
-						<AiFullListItem
-						type={data[0].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[0].addAiStarred.image}
-						title={data[0].addAiStarred.title}
-						subtitle={data[0].addAiStarred.subtitle}
-						ctas={data[0].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[0].addAiStarred.key,type:data[0].addAiStarred.type,image:data[0].addAiStarred.image,title:data[0].addAiStarred.title,subtitle:data[0].addAiStarred.subtitle,ctas:data[0].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[0].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[0].addAiStarred.key)}
-						/>
-						<AiFullListItem
-						type={data[2].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[2].addAiStarred.image}
-						title={data[2].addAiStarred.title}
-						subtitle={data[2].addAiStarred.subtitle}
-						ctas={data[2].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[2].addAiStarred.key,type:data[2].addAiStarred.type,image:data[2].addAiStarred.image,title:data[2].addAiStarred.title,subtitle:data[2].addAiStarred.subtitle,ctas:data[2].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[2].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[2].addAiStarred.key)}
-						/>
-						<AiFullListItem
-						type={data[9].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[9].addAiStarred.image}
-						title={data[9].addAiStarred.title}
-						subtitle={data[9].addAiStarred.subtitle}
-						ctas={data[9].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[9].addAiStarred.key,type:data[9].addAiStarred.type,image:data[9].addAiStarred.image,title:data[9].addAiStarred.title,subtitle:data[9].addAiStarred.subtitle,ctas:data[9].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[9].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[9].addAiStarred.key)}
-						/>
-
-						<AiFullListItem
-						type={data[15].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[15].addAiStarred.image}
-						title={data[15].addAiStarred.title}
-						subtitle={data[15].addAiStarred.subtitle}
-						ctas={data[15].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[15].addAiStarred.key,type:data[15].addAiStarred.type,image:data[15].addAiStarred.image,title:data[15].addAiStarred.title,subtitle:data[15].addAiStarred.subtitle,ctas:data[15].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[15].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[15].addAiStarred.key)}
-						/>
+						{products}
 					</div>
 					<div className="list-column"></div>
 				</div>

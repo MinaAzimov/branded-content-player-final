@@ -1,6 +1,23 @@
 {
 "sceneData": [
+
 				[
+          {
+
+          "type":"scene",
+          "image": "assets/img/scene-1-lg.jpg",
+          "title":"Elliot looks for a clue",
+          "subtitle":"00:00:02 — 00:00:54",
+          "ctas": [
+                [
+                "Go To Scene",
+                "iconcss icon-play-outline"
+                ]
+              ],
+          "key": "5",
+          
+            },
+
 					{ 
                         "key":"4",
                         "type":"person",
@@ -70,8 +87,23 @@
 					},
 
 																
-				]
-				, [
+				],
+         [
+          {
+
+          "type":"scene",
+          "image": "assets/img/scene-2-lg.jpg",
+          "title":"Elliot learns more about what happened",
+          "subtitle":"00:00:55 — 00:02:05",
+          "ctas": [
+                [
+                "Go To Scene ",
+                "iconcss icon-play-outline"
+                ]
+              ],
+          "key": "6",
+          
+            },
 					{ 
                         "key":"4",
                         "type":"person",
@@ -161,6 +193,22 @@
 					},
 				],
   [
+
+    {
+
+          "type":"scene",
+          "image": "assets/img/scene-3-lg.jpg",
+          "title":"Darlene and Fsociety take the final step",
+          "subtitle":"00:02:06 — 00:03:19",
+          "ctas": [
+                [
+                " Go To Scene",
+                "iconcss icon-play-outline"
+                ]
+              ],
+          "key": "7",
+          
+            },
 					{ 
                         "key":"2",
                         "type":"person",
@@ -342,6 +390,22 @@
 
 				],
 				[
+           {
+
+          "type":"scene",
+          "image": "assets/img/scene-4-lg.jpg",
+          "title":"Angela goes to buy shoes",
+          "subtitle":"00:03:14 — 00:05:00",
+          "ctas": [
+                [
+                " Go To Scene ",
+                "iconcss icon-play-outline"
+                ]
+              ],
+          "key": "8",
+          
+            },
+           
 					 { 
                         "key":"13",
                         "type":"person",
@@ -439,6 +503,21 @@
 
 				],
 				[
+        {
+
+          "type":"scene",
+          "image": "assets/img/scene-5-lg.jpg",
+          "title":"Elliot tests his limits",
+          "subtitle":"00:05:00 — 00:06:48",
+          "ctas": [
+                [
+                "    Go To Scene",
+                "iconcss icon-play-outline"
+                ]
+              ],
+          "key": "25",
+          
+            },
                   { 
                         "key":"4",
                         "type":"person",

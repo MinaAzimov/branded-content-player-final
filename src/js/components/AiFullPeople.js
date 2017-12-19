@@ -30,6 +30,8 @@ export default class AiFullPeople extends Component {
 			'list-container--people-5-column': is5Column
 		});
 
+		
+
 		const people = peopleData.map((person, index, key, type, image, title, subtitle, ctas) =>
 			<div key={index} >
 				<AiFullListItem

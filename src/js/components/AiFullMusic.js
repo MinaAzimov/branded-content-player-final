@@ -26,46 +26,31 @@ export default class AiFullMusic extends Component {
 			'list-container--music': true,
 			'list-container--needs-scroll': this.props.starredForScrolling.length > 2
 		});
- 		
+
+
+			const music = data.filter((obj) => obj.type == 'music').map((music, index, key, type, image, title, subtitle, ctas) =>
+			<div key={index} >
+				<AiFullListItem
+				        type={music.addAiStarred.type}
+						jumpToScene={this.props.jumpToScene}
+						image={music.addAiStarred.image}
+						title={music.addAiStarred.title}
+						subtitle={music.addAiStarred.subtitle}
+						ctas={music.addAiStarred.ctas}
+						addAiStarred={() => addAiStarred({key:music.addAiStarred.key,type:music.addAiStarred.type,image:music.addAiStarred.image,title:music.addAiStarred.title,subtitle:music.addAiStarred.subtitle,ctas:music.addAiStarred.ctas})}
+						removeAiStarred={() => removeAiStarred(music.addAiStarred.key)}
+						checkAiStarred={() => checkAiStarred(music.addAiStarred.key)}
+				/>
+					<div className="list-column-inner"></div>
+			</div>
+			)
+
 		return (
 			<div>
 				<div className={classnames}>
 					<div className="list-column"></div>
 					<div className="list-scrolling">
-						<AiFullListItem
-						type={data[4].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[4].addAiStarred.image}
-						title={data[4].addAiStarred.title}
-						subtitle={data[4].addAiStarred.subtitle}
-						ctas={data[4].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[4].addAiStarred.key,type:data[4].addAiStarred.type,image:data[4].addAiStarred.image,title:data[4].addAiStarred.title,subtitle:data[4].addAiStarred.subtitle,ctas:data[4].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[4].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[4].addAiStarred.key)}
-						/>
-						<AiFullListItem
-						type={data[10].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[10].addAiStarred.image}
-						title={data[10].addAiStarred.title}
-						subtitle={data[10].addAiStarred.subtitle}
-						ctas={data[10].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[10].addAiStarred.key,type:data[10].addAiStarred.type,image:data[10].addAiStarred.image,title:data[10].addAiStarred.title,subtitle:data[10].addAiStarred.subtitle,ctas:data[10].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[10].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[10].addAiStarred.key)}
-						/>
-						<AiFullListItem
-						type={data[19].addAiStarred.type}
-						jumpToScene={this.props.jumpToScene}
-						image={data[19].addAiStarred.image}
-						title={data[19].addAiStarred.title}
-						subtitle={data[19].addAiStarred.subtitle}
-						ctas={data[19].addAiStarred.ctas}
-						addAiStarred={() => addAiStarred({key:data[19].addAiStarred.key,type:data[19].addAiStarred.type,image:data[19].addAiStarred.image,title:data[19].addAiStarred.title,subtitle:data[19].addAiStarred.subtitle,ctas:data[19].addAiStarred.ctas})}
-						removeAiStarred={() => removeAiStarred(data[19].addAiStarred.key)}
-						checkAiStarred={() => checkAiStarred(data[19].addAiStarred.key)}
-						/>
-
+						{music}
 					</div>
 					<div className="list-column"></div>
 				</div>
