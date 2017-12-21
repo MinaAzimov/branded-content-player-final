@@ -399,7 +399,7 @@ if((currentTime > 0.000000 && currentTime < 125.000000) || this.props.isScrubbin
 			}
 
 
-			if ((this.props.currentItem.indexOf(this.props.data[7].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[7].startTime && toHHMMSS(currentTime) <= this.props.data[7].endTime) {
+			if ((this.props.currentItem.indexOf(this.props.data[6].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key7) !== -1) && toHHMMSS(currentTime) >= this.props.data[6].startTime && toHHMMSS(currentTime) <= this.props.data[6].endTime) {
 			val = true;
 			this.props.changeSelectedSrcTriviaFun(val);
 			} 
@@ -491,7 +491,7 @@ if((currentTime > 125.00 && currentTime < 194.00) && !this.props.isScrubbing || 
             this.props.changeSelectedSrcitem14(val);
            }
 
-            if ((this.props.currentItem.indexOf(this.props.data[6].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[6].key7) !== -1)) {
+            if ((this.props.currentItem.indexOf(this.props.data[7].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[7].key7) !== -1)) {
 			val = true;
 			this.props.changeSelectedSrcTrivia(val);
 			} 

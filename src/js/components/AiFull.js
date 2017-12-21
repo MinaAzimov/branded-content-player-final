@@ -133,6 +133,7 @@ export default class AiFull extends Component {
 					addAiStarred={addAiStarred}
 					checkAiStarred={checkAiStarred}
 					removeAiStarred={removeAiStarred}
+					fullAiCardShow={fullAiCardShow}
 					/>
 					) : null }
 					<AiFullMusic

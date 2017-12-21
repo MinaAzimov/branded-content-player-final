@@ -1101,6 +1101,44 @@
 			}
 		}
 		&--character {
+
+			  .starred {
+						position: absolute;
+				    	left: 90%;
+				    	top: 16.7%;
+
+				    	.circles {
+				          border-radius: 50%;
+				          display: block;
+				          height: 0.66667em;
+				          width: 0.66667em;
+				          z-index: -1;
+				          transform: translateY(-10px) translateX(1px) scale(0.32);
+				          transform-origin: right top;
+			            }
+                        .icon-star {
+                          display: none;
+                          font-size: 20px;
+                        }
+                        .icon-star-fill {
+                        	 font-size: 20px;
+                        }
+                      }
+
+                      &:hover {
+			              .starred {
+
+                              .icon-star {
+                                display: block;
+                                font-size: 20px;
+                                       }
+                             .icon-star-fill {
+                        	    font-size: 20px;
+                                         }
+                                  }
+                             }
+			
+
 			.col {
 				flex-direction: column;
 				display: flex;
@@ -1183,10 +1221,14 @@
 					}
 				}
 
+
+
 				.row {
 					width: calc(100% - 37px);
 					padding: 30px 0;
 					background: rgba(darken($color-black, 10%), .55);
+
+				  
 
 
 

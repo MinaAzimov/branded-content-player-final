@@ -81,7 +81,7 @@ export default class AiPreview extends Component {
 		const { show, isFullScreen, currentTime, endCardShow, pauseCardSrc, data, glasses, actor, actress, sound, trivia, triviaGeneral, triviaFun, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, fullAiCardShow, showFullAiCard, addAiStarred, removeAiStarred, checkAiStarred} = this.props;
 		const { isHovering } = this.state;
 	
-
+		
  		const classnames = classNames({
  			'ai-preview': true,
  			'ai-preview--show': show || (isHovering && currentTime != 0 && !showFullAiCard && endCardShow),
@@ -335,14 +335,14 @@ export default class AiPreview extends Component {
 						 {/* Trivia Scene 3*/}
 						<div className={itemTrivia}>
 							<AiPreviewListItem
-							type={data[6].type}
-							image={data[6].src}
-							title={data[6].title}
-							subtitle={data[6].subtitle}
-							onclick={() => fullAiCardShow(data[6].fullAiCardShowType, data[6].fullAiCardShow)}
-							addStar={() => addAiStarred({key:data[6].addAiStarred.key,type:data[6].addAiStarred.type,image:data[6].addAiStarred.image,title:data[6].addAiStarred.title,subtitle:data[6].addAiStarred.subtitle,ctas:data[6].addAiStarred.ctas})}
-							removeStar={() => removeAiStarred(data[6].addAiStarred.key)}
-							isStarred={() => checkAiStarred(data[6].addAiStarred.key)}
+							type={data[7].type}
+							image={data[7].src}
+							title={data[7].title}
+							subtitle={data[7].subtitle}
+							onclick={() => fullAiCardShow(data[7].fullAiCardShowType, data[7].fullAiCardShow)}
+							addStar={() => addAiStarred({key:data[7].addAiStarred.key,type:data[7].addAiStarred.type,image:data[7].addAiStarred.image,title:data[7].addAiStarred.title,subtitle:data[7].addAiStarred.subtitle,ctas:data[7].addAiStarred.ctas})}
+							removeStar={() => removeAiStarred(data[7].addAiStarred.key)}
+							isStarred={() => checkAiStarred(data[7].addAiStarred.key)}
 							/>
 						</div>
 
@@ -436,14 +436,14 @@ export default class AiPreview extends Component {
 						{/* Trivia Scene 2*/}
 						<div className={itemTriviaFun}>
 							<AiPreviewListItem
-							type={data[7].type}
-							image={data[7].src}
-							title={data[7].title}
-							subtitle={data[7].subtitle}
-							onclick={() => fullAiCardShow(data[7].fullAiCardShowType, data[7].fullAiCardShow)}
-							addStar={() => addAiStarred({key:data[7].addAiStarred.key,type:data[7].addAiStarred.type,image:data[7].addAiStarred.image,title:data[7].addAiStarred.title,subtitle:data[7].addAiStarred.subtitle,ctas:data[7].addAiStarred.ctas})}
-							removeStar={() => removeAiStarred(data[7].addAiStarred.key)}
-							isStarred={() => checkAiStarred(data[7].addAiStarred.key)}
+							type={data[6].type}
+							image={data[6].src}
+							title={data[6].title}
+							subtitle={data[6].subtitle}
+							onclick={() => fullAiCardShow(data[6].fullAiCardShowType, data[6].fullAiCardShow)}
+							addStar={() => addAiStarred({key:data[6].addAiStarred.key,type:data[6].addAiStarred.type,image:data[6].addAiStarred.image,title:data[6].addAiStarred.title,subtitle:data[6].addAiStarred.subtitle,ctas:data[6].addAiStarred.ctas})}
+							removeStar={() => removeAiStarred(data[6].addAiStarred.key)}
+							isStarred={() => checkAiStarred(data[6].addAiStarred.key)}
 							/>
 						</div>
 

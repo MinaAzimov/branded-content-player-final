@@ -16,7 +16,7 @@
       "type": "product",
       "fullAiCardShowType": "products",
       "fullAiCardShow": { 
-        
+                         "key":"0",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -64,6 +64,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"4",
                          "characterName": "Elliot Alderson",
                          "actorName": "Rami Malek",
                          "characterImage" :"assets/img/elliot-alderson-lg.jpg",
@@ -108,7 +109,7 @@
       "type": "product",
       "fullAiCardShowType": "products",
       "fullAiCardShow": { 
-        
+                         "key":"3",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -155,6 +156,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"2",
                          "characterName": "Darlene Alderson",
                          "actorName": "Carly Chaikin",
                          "characterImage" :"assets/img/darlene-alderson-lg.jpg",
@@ -199,7 +201,7 @@
       "type": "music",
       "fullAiCardShowType": "music",
       "fullAiCardShow": { 
-
+                         "key":"1",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -245,6 +247,7 @@
       "type": "trivia",
       "fullAiCardShowType": "trivia",
       "fullAiCardShow": {
+                         "key":"28",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -274,50 +277,6 @@
                                 ]
                         }        
     },
-     {
-      "key1": "girl",
-      "key2": "restaurant",
-      "key3": "woman",
-      "key4": "adult",
-      "key5": "man",
-      "key6": "placeholder",
-      "key7": "placeholder",
-      "startTime": "02:31",
-      "endTime": "03:14",
-      "title": "Fun Fact",
-      "subtitle": "Carly Chaikin auditioned for the roles of both Angela and Darlene.",
-      "type": "trivia",
-      "fullAiCardShowType": "trivia",
-      "fullAiCardShow": {
-                         "characterName": "",
-                         "actorName": "",
-                         "characterImage" :"",
-                         "actorImage":"",
-                         "characterBio": "",
-                         "actorBio": "",
-                          "otherWorks": [
-                                           {"image":"assets/img/busters-mal-heart.jpg","link":"https://www.rottentomatoes.com/m/busters_mal_heart/"},
-                                           {"image": "assets/img/short-term-12.jpg","link":"https://www.rottentomatoes.com/m/short_term_12_2013"},
-                                           {"image":"assets/img/aint-them-bodies-saints.jpg","link":"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},
-                                           {"image":"assets/img/da-sweet-blood-of-jesus.jpg","link":"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},
-                                           {"image":"assets/img/mr-robot-extra.jpg","link":"https://www.rottentomatoes.com/tv/mr_robot"}
-
-                                        ]
-                        },
-      "addAiStarred":   {
-                        "key":"29",
-                        "type":"trivia",
-                        "image":"assets/img/trivia-3.jpg",
-                        "title":"Fun Fact",
-                        "subtitle":"Scene 3 — 00:02:05",
-                        "quote": "Carly Chaikin auditioned for the roles of both Angela and Darlene.",
-                        "jsonFunction": "",
-                        "ctas": [
-                                    ["       Go To Scene ",  "iconcss icon-play-outline"]
-                          
-                                ]
-                        }        
-    },
     {
       "key1": "vehicle",
       "key2": "car",
@@ -333,6 +292,8 @@
       "type": "trivia",
       "fullAiCardShowType": "trivia",
       "fullAiCardShow": {
+
+                         "key":"30",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -362,6 +323,52 @@
                                 ]
                         }        
     },
+     {
+      "key1": "girl",
+      "key2": "restaurant",
+      "key3": "woman",
+      "key4": "adult",
+      "key5": "man",
+      "key6": "placeholder",
+      "key7": "placeholder",
+      "startTime": "02:31",
+      "endTime": "03:14",
+      "title": "Fun Fact",
+      "subtitle": "Carly Chaikin auditioned for the roles of both Angela and Darlene.",
+      "type": "trivia",
+      "fullAiCardShowType": "trivia",
+      "fullAiCardShow": {
+                         "key":"29",
+                         "characterName": "",
+                         "actorName": "",
+                         "characterImage" :"",
+                         "actorImage":"",
+                         "characterBio": "",
+                         "actorBio": "",
+                          "otherWorks": [
+                                           {"image":"assets/img/busters-mal-heart.jpg","link":"https://www.rottentomatoes.com/m/busters_mal_heart/"},
+                                           {"image": "assets/img/short-term-12.jpg","link":"https://www.rottentomatoes.com/m/short_term_12_2013"},
+                                           {"image":"assets/img/aint-them-bodies-saints.jpg","link":"https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"},
+                                           {"image":"assets/img/da-sweet-blood-of-jesus.jpg","link":"https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"},
+                                           {"image":"assets/img/mr-robot-extra.jpg","link":"https://www.rottentomatoes.com/tv/mr_robot"}
+
+                                        ]
+                        },
+      "addAiStarred":   {
+                        "key":"29",
+                        "type":"trivia",
+                        "image":"assets/img/trivia-3.jpg",
+                        "title":"Fun Fact",
+                        "subtitle":"Scene 3 — 00:02:05",
+                        "quote": "Carly Chaikin auditioned for the roles of both Angela and Darlene.",
+                        "jsonFunction": "",
+                        "ctas": [
+                                    ["       Go To Scene ",  "iconcss icon-play-outline"]
+                          
+                                ]
+                        }        
+    },
+    
     {
       "key1": "woman",
       "key2": "girl",
@@ -378,6 +385,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"13",
                          "characterName": "Angela Moss",
                          "actorName": "Portia Doubleday",
                          "characterImage" :"assets/img/angela-moss.jpg",
@@ -422,7 +430,7 @@
       "type": "product",
       "fullAiCardShowType": "products",
       "fullAiCardShow": { 
-        
+                         "key":"11",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -469,7 +477,7 @@
       "type": "music",
       "fullAiCardShowType": "music",
       "fullAiCardShow": { 
-
+                         "key":"9",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -515,6 +523,7 @@
       "type": "trivia",
       "fullAiCardShowType": "trivia",
       "fullAiCardShow": {
+                         "key":"32",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -560,6 +569,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"14",
                          "characterName": "Trenton",
                          "actorName": "Sunita Mani",
                          "characterImage" :"assets/img/trenton-lg.jpg",
@@ -604,6 +614,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"15",
                          "characterName": "Mobley",
                          "actorName": "Azhar Khan",
                          "characterImage" :"assets/img/mobley-lg.jpg",
@@ -648,6 +659,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"16",
                          "characterName": "Romero",
                          "actorName": "Ron Cephas Jones",
                          "characterImage" :"assets/img/romero-lg.jpg",
@@ -692,7 +704,7 @@
       "type": "product",
       "fullAiCardShowType": "products",
       "fullAiCardShow": { 
-
+                         "key":"24",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -740,6 +752,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"12",
                          "characterName": "Mr. Robot",
                          "actorName": "Christian Slater",
                          "characterImage" :"assets/img/mr-robot.jpg",
@@ -784,6 +797,7 @@
       "type": "trivia",
       "fullAiCardShowType": "trivia",
       "fullAiCardShow": {
+                         "key":"31",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -829,6 +843,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"4",
                          "characterName": "Elliot Alderson",
                          "actorName": "Rami Malek",
                          "characterImage" :"assets/img/elliot-alderson-lg.jpg",
@@ -873,7 +888,7 @@
       "type": "music",
       "fullAiCardShowType": "music",
       "fullAiCardShow": { 
-
+                         "key":"10",
                          "characterName": "",
                          "actorName": "",
                          "characterImage" :"",
@@ -920,6 +935,7 @@
       "type": "person",
       "fullAiCardShowType": "character",
       "fullAiCardShow": {
+                         "key":"35",
                          "characterName": "Salesman",
                          "actorName": "Eric Martin Brown",
                          "characterImage" :"assets/img/salesman-lg.jpg",

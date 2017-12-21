@@ -39,7 +39,7 @@
         { 
           "key":"12",
           "type":"person",
-          "image":"assets/img/christain-slater.jpg",
+          "image":"assets/img/mr-robot.jpg",
           "title":"Mr. Robot",
           "subtitle":"Christian Slater",
           "ctas":[["Go To Bio  ","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],

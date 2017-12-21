@@ -4,6 +4,9 @@ import AiFullExpandingText from './AiFullExpandingText';
 import AiCardFlip from './AiCardFlip';
 import AiFullSlider from './AiFullSlider';
 import TextTruncate from 'react-text-truncate';
+import AiFullCtas from './AiFullCtas';
+import AiPreviewStar from './AiPreviewStar';
+import AiListStar from './AiListStar';
 import classNames from "classnames";
 
 export default class AiFullCharacter extends Component {
@@ -27,10 +30,12 @@ export default class AiFullCharacter extends Component {
 	    });		
 	}
 
+
+
 	render() {
 
-		const { show, click, person } = this.props;
-
+		let { show, click, person, addAiStarred, checkAiStarred, removeAiStarred, data,  ctas, addS, removeS, jumpToScene, fullAiCardShow } = this.props;
+		
 		const classnames = classNames({
 			'list-container': true,
 			'list-container--show': show,
@@ -51,17 +56,31 @@ export default class AiFullCharacter extends Component {
 					flipped={this.state.flipped}
 					flip={this.flip}
 					/>
+					
+					
+					
+				
 				</div>
 				<div className="list-scrolling">
 					<div className="col">
 						<div className="row">
-							<h2>{this.state.flipped ? person.actorName : person.characterName}</h2>
+							<h2>{this.state.flipped ? person.actorName : person.characterName}
+								<AiPreviewStar
+					            add={()  => addAiStarred({key: person.key, type: person.type, image: person.image, title: person.title, subtitle:person.subtitle, ctas:person.ctas})}
+				                remove={() => removeAiStarred(person.key)}
+				                starred={() => checkAiStarred(person.key)}
+					            />
+					        </h2>
+
 							<h3>
 								<span>{this.state.flipped ? 'As' : 'By'}</span> 
 								<a onClick={this.flip}>
 									{this.state.flipped ? person.characterName : person.actorName}
 								</a>								
 								<i className="iconcss icon-swap"></i>
+								
+								
+							
 							</h3>
 						</div>
 						<div className="row">
