@@ -51,6 +51,16 @@ export default class AiFullCharacter extends Component {
 						<span>All People</span>
 					</a>
 					<AiCardFlip
+					person={person}
+					addAiStarred={addAiStarred}
+					checkAiStarred={checkAiStarred}
+					removeAiStarred={removeAiStarred}
+					data={data}
+					ctas={ctas}
+					addS={addS}
+					removeS={removeS}
+					jumpToScene={jumpToScene}
+					fullAiCardShow={fullAiCardShow}
 					frontImg={person.characterImage}
 					backImg={person.actorImage}
 					flipped={this.state.flipped}
@@ -65,11 +75,7 @@ export default class AiFullCharacter extends Component {
 					<div className="col">
 						<div className="row">
 							<h2>{this.state.flipped ? person.actorName : person.characterName}
-								<AiPreviewStar
-					            add={()  => addAiStarred({key: person.key, type: person.type, image: person.image, title: person.title, subtitle:person.subtitle, ctas:person.ctas})}
-				                remove={() => removeAiStarred(person.key)}
-				                starred={() => checkAiStarred(person.key)}
-					            />
+								
 					        </h2>
 
 							<h3>

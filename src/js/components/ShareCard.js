@@ -1,5 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import {
+  ShareButtons,
+  ShareCounts,
+  generateShareIcon
+} from 'react-share';
 
 export default class ShareDialog extends Component {
 
@@ -38,6 +43,51 @@ export default class ShareDialog extends Component {
 
 		let { show, allowEmbed, sharePlatforms } = this.props;
 
+		const {
+  FacebookShareButton,
+  GooglePlusShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  WhatsappShareButton,
+  PinterestShareButton,
+  VKShareButton,
+  OKShareButton,
+  RedditShareButton,
+  TumblrShareButton,
+  LivejournalShareButton,
+  EmailShareButton,
+} = ShareButtons;
+
+const {
+  FacebookShareCount,
+  GooglePlusShareCount,
+  LinkedinShareCount,
+  PinterestShareCount,
+  VKShareCount,
+  OKShareCount,
+  RedditShareCount,
+  TumblrShareCount,
+} = ShareCounts;
+
+const FacebookIcon = generateShareIcon('facebook');
+const TwitterIcon = generateShareIcon('twitter');
+const TelegramIcon = generateShareIcon('telegram');
+const WhatsappIcon = generateShareIcon('whatsapp');
+const GooglePlusIcon = generateShareIcon('google');
+const LinkedinIcon = generateShareIcon('linkedin');
+const PinterestIcon = generateShareIcon('pinterest');
+const VKIcon = generateShareIcon('vk');
+const OKIcon = generateShareIcon('ok');
+const RedditIcon = generateShareIcon('reddit');
+const TumblrIcon = generateShareIcon('tumblr');
+const LivejournalIcon = generateShareIcon('livejournal');
+const MailruIcon = generateShareIcon('mailru');
+const EmailIcon = generateShareIcon('email');
+
+const title = 'Scene 1: Elliot looks for a clue';
+let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg"
+
 		const content = show ? (
 			<div className="share-card">
 				<div className="share-card__close" onClick={ this.props.onClose } >
@@ -53,21 +103,35 @@ export default class ShareDialog extends Component {
 											case "facebook": {
 												return (
 													<button className="share-card__button facebook">
-														<i className="iconcss icon-facebook"></i>
+                                                          {/*<FacebookShareButton
+                                                            url={shareUrl}
+                                                            quote={title}
+                                                            className="Demo__some-network__share-button"> */}
+                                                            <i className="iconcss icon-facebook"></i>
+                                                           {/* </FacebookShareButton> */}
 													</button>
 												)
 											}
 											case "twitter": {
 												return (
 													<button className="share-card__button twitter">
-														<i className="iconcss icon-twitter"></i>
+													{/* <TwitterShareButton
+                                                          url={shareUrl}
+                                                          title={title}
+                                                          className="Demo__some-network__share-button">*/}
+                                                          <i className="iconcss icon-twitter"></i>
+                                                       {/*</TwitterShareButton>*/}
 													</button>
 												)
 											}
 											case "googleplus": {
 												return (
 													<button className="share-card__button google-plus">
-														<i className="iconcss icon-google-plus"></i>
+													 {/*<GooglePlusShareButton
+                                                            url={shareUrl}
+                                                           className="Demo__some-network__share-button">*/}
+                                                           <i className="iconcss icon-google-plus"></i>
+                                                        {/* </GooglePlusShareButton>*/}
 													</button>
 												)
 											}

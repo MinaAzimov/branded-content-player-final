@@ -1102,10 +1102,14 @@
 		}
 		&--character {
 
+		
+
 			  .starred {
-						position: absolute;
-				    	left: 90%;
-				    	top: 16.7%;
+					
+				    	position: absolute;
+				    	top: 20px;
+				    	left: 80%;
+				    	z-index: 999999999999;
 
 				    	.circles {
 				          border-radius: 50%;
@@ -1117,10 +1121,12 @@
 				          transform-origin: right top;
 			            }
                         .icon-star {
+                        	
                           display: none;
                           font-size: 20px;
                         }
                         .icon-star-fill {
+                        	
                         	 font-size: 20px;
                         }
                       }
@@ -1129,10 +1135,12 @@
 			              .starred {
 
                               .icon-star {
+                              
                                 display: block;
                                 font-size: 20px;
                                        }
                              .icon-star-fill {
+                             
                         	    font-size: 20px;
                                          }
                                   }
