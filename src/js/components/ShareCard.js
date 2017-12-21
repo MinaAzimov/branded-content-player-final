@@ -86,7 +86,8 @@ const MailruIcon = generateShareIcon('mailru');
 const EmailIcon = generateShareIcon('email');
 
 const title = 'Scene 1: Elliot looks for a clue';
-let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg"
+let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg";
+let exampleImage = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg";
 
 		const content = show ? (
 			<div className="share-card">
@@ -106,6 +107,8 @@ let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/s
                                                           {/*<FacebookShareButton
                                                             url={shareUrl}
                                                             quote={title}
+                                                            windowWidth={1000}
+                                                            windowHeight={730}
                                                             className="Demo__some-network__share-button"> */}
                                                             <i className="iconcss icon-facebook"></i>
                                                            {/* </FacebookShareButton> */}
@@ -118,9 +121,25 @@ let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/s
 													{/* <TwitterShareButton
                                                           url={shareUrl}
                                                           title={title}
+                                                           windowWidth={1000}
+                                                           windowHeight={730}
                                                           className="Demo__some-network__share-button">*/}
                                                           <i className="iconcss icon-twitter"></i>
                                                        {/*</TwitterShareButton>*/}
+													</button>
+												)
+											}
+												case "pinterest": {
+												return (
+													<button className="share-card__button mail">
+													{/*<PinterestShareButton
+                                                      url={String(window.location)}
+                                                      media={`${String(window.location)}/${exampleImage}`}
+                                                      windowWidth={1000}
+                                                      windowHeight={730}
+                                                      className="Demo__some-network__share-button">*/}
+                                                      <PinterestIcon size={36}  />
+                                                   {/* </PinterestShareButton>*/}
 													</button>
 												)
 											}
@@ -129,6 +148,8 @@ let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/s
 													<button className="share-card__button google-plus">
 													 {/*<GooglePlusShareButton
                                                             url={shareUrl}
+                                                            windowWidth={1000}
+                                                            windowHeight={730}
                                                            className="Demo__some-network__share-button">*/}
                                                            <i className="iconcss icon-google-plus"></i>
                                                         {/* </GooglePlusShareButton>*/}
