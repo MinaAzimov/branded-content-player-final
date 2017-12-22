@@ -104,55 +104,55 @@ let exampleImage = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/i
 											case "facebook": {
 												return (
 													<button className="share-card__button facebook">
-                                                          {/*<FacebookShareButton
+                                                         <FacebookShareButton
                                                             url={shareUrl}
                                                             quote={title}
                                                             windowWidth={1000}
                                                             windowHeight={730}
-                                                            className="Demo__some-network__share-button"> */}
+                                                            className="Demo__some-network__share-button">
                                                             <i className="iconcss icon-facebook"></i>
-                                                           {/* </FacebookShareButton> */}
+                                                           </FacebookShareButton> 
 													</button>
 												)
 											}
 											case "twitter": {
 												return (
 													<button className="share-card__button twitter">
-													{/* <TwitterShareButton
+													<TwitterShareButton
                                                           url={shareUrl}
                                                           title={title}
                                                            windowWidth={1000}
                                                            windowHeight={730}
-                                                          className="Demo__some-network__share-button">*/}
+                                                          className="Demo__some-network__share-button">
                                                           <i className="iconcss icon-twitter"></i>
-                                                       {/*</TwitterShareButton>*/}
+                                                      </TwitterShareButton>
 													</button>
 												)
 											}
 												case "pinterest": {
 												return (
 													<button className="share-card__button mail">
-													{/*<PinterestShareButton
+													<PinterestShareButton
                                                       url={String(window.location)}
                                                       media={`${String(window.location)}/${exampleImage}`}
                                                       windowWidth={1000}
                                                       windowHeight={730}
-                                                      className="Demo__some-network__share-button">*/}
+                                                      className="Demo__some-network__share-button">
                                                       <PinterestIcon size={36}  />
-                                                   {/* </PinterestShareButton>*/}
+                                                    </PinterestShareButton>
 													</button>
 												)
 											}
 											case "googleplus": {
 												return (
 													<button className="share-card__button google-plus">
-													 {/*<GooglePlusShareButton
+													<GooglePlusShareButton
                                                             url={shareUrl}
                                                             windowWidth={1000}
                                                             windowHeight={730}
-                                                           className="Demo__some-network__share-button">*/}
+                                                           className="Demo__some-network__share-button">
                                                            <i className="iconcss icon-google-plus"></i>
-                                                        {/* </GooglePlusShareButton>*/}
+                                                        </GooglePlusShareButton>
 													</button>
 												)
 											}
