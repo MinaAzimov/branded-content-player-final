@@ -19,7 +19,7 @@ export default class AiFullProducts extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, addShareData, fullAiShared, shareUrl } = this.props;
 
 
 		const classnames = classNames({
@@ -32,6 +32,9 @@ export default class AiFullProducts extends Component {
 		const products = data.filter((obj) => obj.type == 'product').map((product, index, key, type, image, title, subtitle, ctas) =>
 			<div key={index} >
 				<AiFullListItem
+				        data={data}
+				        shareUrl={shareUrl}
+				        fullAiShared={fullAiShared}
 				        type={product.addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
 						image={product.addAiStarred.image}
@@ -39,6 +42,7 @@ export default class AiFullProducts extends Component {
 						subtitle={product.addAiStarred.subtitle}
 						ctas={product.addAiStarred.ctas}
 						addAiStarred={() => addAiStarred({key:product.addAiStarred.key,type:product.addAiStarred.type,image:product.addAiStarred.image,title:product.addAiStarred.title,subtitle:product.addAiStarred.subtitle,ctas:product.addAiStarred.ctas})}
+						addShareData={() => addShareData({key:product.addAiStarred.key,type:product.addAiStarred.type,image:product.addAiStarred.image,title:product.addAiStarred.title,subtitle:product.addAiStarred.subtitle,ctas:product.addAiStarred.ctas})}
 						removeAiStarred={() => removeAiStarred(product.addAiStarred.key)}
 						checkAiStarred={() => checkAiStarred(product.addAiStarred.key)}
 				/>

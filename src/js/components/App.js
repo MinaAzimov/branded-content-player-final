@@ -17,6 +17,7 @@ import peopleData from './peopleData.json';
 import sceneData from './sceneData.json';
 import base from './base';
 import { vpModeLive, vpModeVOD, maxLiveReplayTime } from '../constants';
+import fs from 'fs';
 
 const bpXlarge = 1800;
 const bpLarge = 1400;
@@ -135,9 +136,12 @@ export default class App extends Component {
 			item20: false,
 			finalDataArray: [],
 			fullAiCardStarred: [],
+			fullAiShared: [],
+			shareUrl: [],
 			fullAiCardInScene: [],
 			starredForScrolling: [1, 2, 3, 4],
 			videoTrigger: 0,
+			imdb: [],
 			window: {
 				width: 0,
 				height: 0
@@ -147,18 +151,10 @@ export default class App extends Component {
 
 
 	componentWillMount() {
-
-
 	
-
-
-		
-			
 		var ref = base.database().ref("messages/-L06Cv1Q_nFtkzQ-VBoz");
 		ref.on("value", (snapshot)=>{
 			var counterSet = snapshot.val();
-
-
 
 			this.setState({
 				counter: counterSet
@@ -201,12 +197,35 @@ export default class App extends Component {
 	
 	componentDidMount() {
 	//this.doPredict(this.state.inputValue)
+	
+
+    fetch('https://api.themoviedb.org/3/tv/62560/season/1?api_key=4e3c3044296ad8e1af5f873b7376dbf3')
+                .then(response => {
+                    if (!response.ok) {
+                        throw Error('Network request failed.')
+                    }
+                    return response;
+                })
+                .then(data => data.json())
+                .then(data => {
+                    this.setState({
+                        imdb: data
+                });
+                    console.log('parsed json', this.state.imdb);
+                }).then(data => {
+                function downloadJson (code, name, type){
+                var a = document.createElement("a");
+                var file = new File([code], {type: type});
+                a.href = URL.createObjectURL(file);
+                a.download = name;
+                a.click();
+                }
+                //downloadJson(JSON.stringify((this.state.imdb.episodes[9].guest_stars),null,2), 'tmdb.json', 'text/plain');
+                })
 	}
 
 	
 		
-
-	
 	componentWillUnmount() {
 		window.removeEventListener("resize", this.onWindowResize);
 	}
@@ -567,7 +586,28 @@ export default class App extends Component {
 			this.setState({
 				fullAiCardStarred: starred
 			});
-			// console.log(this.state.fullAiCardStarred);
+			 //console.log(this.state.fullAiCardStarred);
+		}
+
+
+		addShareData = (o) => {
+			var shared = this.state.fullAiShared;
+			var url = this.state.shareUrl;
+			shared.unshift(o);
+			url.unshift(o)
+		
+			
+			this.setState({
+    fullAiShared: shared,
+    shareUrl: url
+    });
+
+
+		
+
+			console.log(this.state.shareUrl)
+			console.log(this.state.fullAiShared)
+			
 		}
 
 		removeAiStarred = (key) => {
@@ -785,7 +825,9 @@ export default class App extends Component {
 				fullAiCardStarred,
 				showFullAiCard,
 				videoTrigger,
-				starredForScrolling
+				starredForScrolling,
+				fullAiShared,
+				shareUrl
 
 
 
@@ -1106,8 +1148,11 @@ export default class App extends Component {
 			showInScene={this.fullAiCardShowInScene}
 			personData={fullAiCardPerson}
 			starredData={fullAiCardStarred}
+			fullAiShared={fullAiShared}
+			shareUrl={shareUrl}
 			inSceneData={fullAiCardInScene}
 			addAiStarred={this.addAiStarred}
+			addShareData={this.addShareData}
 			removeAiStarred={this.removeAiStarred}
 			checkAiStarred ={this.checkAiStarred}
 			currentTime={currentTime}

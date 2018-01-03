@@ -18,7 +18,7 @@ export default class AiFullPeople extends Component {
 	render() {
 
 		const { show, click, isFullScreen, addAiStarred, checkAiStarred, removeAiStarred, data, peopleData  } = this.props;
-
+			
 
 		const numPeople = peopleData.length;
 		const is5Column = isFullScreen || ((numPeople % 4 != 0) && ((numPeople % 4) < (numPeople % 5)));

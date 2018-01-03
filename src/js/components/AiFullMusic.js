@@ -18,7 +18,7 @@ export default class AiFullMusic extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data  } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, addShareData, fullAiShared, shareUrl  } = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
@@ -31,6 +31,8 @@ export default class AiFullMusic extends Component {
 			const music = data.filter((obj) => obj.type == 'music').map((music, index, key, type, image, title, subtitle, ctas) =>
 			<div key={index} >
 				<AiFullListItem
+						shareUrl={shareUrl}
+				        fullAiShared={fullAiShared}
 				        type={music.addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
 						image={music.addAiStarred.image}
@@ -38,6 +40,7 @@ export default class AiFullMusic extends Component {
 						subtitle={music.addAiStarred.subtitle}
 						ctas={music.addAiStarred.ctas}
 						addAiStarred={() => addAiStarred({key:music.addAiStarred.key,type:music.addAiStarred.type,image:music.addAiStarred.image,title:music.addAiStarred.title,subtitle:music.addAiStarred.subtitle,ctas:music.addAiStarred.ctas})}
+						addShareData={() => addShareData({key:music.addAiStarred.key,type:music.addAiStarred.type,image:music.addAiStarred.image,title:music.addAiStarred.title,subtitle:music.addAiStarred.subtitle,ctas:music.addAiStarred.ctas})}
 						removeAiStarred={() => removeAiStarred(music.addAiStarred.key)}
 						checkAiStarred={() => checkAiStarred(music.addAiStarred.key)}
 				/>

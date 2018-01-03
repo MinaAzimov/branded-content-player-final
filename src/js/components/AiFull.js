@@ -43,7 +43,7 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData } = this.props;
+		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData, addShareData, fullAiShared, shareUrl } = this.props;
 
 
  		const classnames = classNames({
@@ -138,6 +138,9 @@ export default class AiFull extends Component {
 					) : null }
 					<AiFullMusic
 					data={data} 
+					shareUrl={shareUrl}
+					fullAiShared={fullAiShared}
+					addShareData={addShareData}
 					starredForScrolling={starredForScrolling}
 					show={ showing == 'music' }
 					jumpToScene={this.props.jumpToScene}
@@ -148,6 +151,9 @@ export default class AiFull extends Component {
 					/>
 					<AiFullStarred
 					data={data} 
+					shareUrl={shareUrl}
+					fullAiShared={fullAiShared}
+					addShareData={addShareData}
 					fullAiCardShow={fullAiCardShow}
 					isFullScreen={this.props.isFullScreen}
 					show={ showing == 'starred' }
@@ -170,6 +176,9 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullProducts
+					shareUrl={shareUrl}
+					fullAiShared={fullAiShared}
+					addShareData={addShareData}
 					data={data} 
 					starredForScrolling={starredForScrolling}
 					show={ showing == 'products' }

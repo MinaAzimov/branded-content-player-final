@@ -44,50 +44,23 @@ export default class ShareDialog extends Component {
 		let { show, allowEmbed, sharePlatforms } = this.props;
 
 		const {
-  FacebookShareButton,
-  GooglePlusShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  TelegramShareButton,
-  WhatsappShareButton,
-  PinterestShareButton,
-  VKShareButton,
-  OKShareButton,
-  RedditShareButton,
-  TumblrShareButton,
-  LivejournalShareButton,
-  EmailShareButton,
-} = ShareButtons;
+              FacebookShareButton,
+              GooglePlusShareButton,
+              TwitterShareButton,
+              PinterestShareButton,
+            } = ShareButtons;
 
-const {
-  FacebookShareCount,
-  GooglePlusShareCount,
-  LinkedinShareCount,
-  PinterestShareCount,
-  VKShareCount,
-  OKShareCount,
-  RedditShareCount,
-  TumblrShareCount,
-} = ShareCounts;
+       
 
-const FacebookIcon = generateShareIcon('facebook');
-const TwitterIcon = generateShareIcon('twitter');
-const TelegramIcon = generateShareIcon('telegram');
-const WhatsappIcon = generateShareIcon('whatsapp');
-const GooglePlusIcon = generateShareIcon('google');
-const LinkedinIcon = generateShareIcon('linkedin');
-const PinterestIcon = generateShareIcon('pinterest');
-const VKIcon = generateShareIcon('vk');
-const OKIcon = generateShareIcon('ok');
-const RedditIcon = generateShareIcon('reddit');
-const TumblrIcon = generateShareIcon('tumblr');
-const LivejournalIcon = generateShareIcon('livejournal');
-const MailruIcon = generateShareIcon('mailru');
-const EmailIcon = generateShareIcon('email');
+        const FacebookIcon = generateShareIcon('facebook');
+        const TwitterIcon = generateShareIcon('twitter');
+        const GooglePlusIcon = generateShareIcon('google');
+        const PinterestIcon = generateShareIcon('pinterest');
+   
 
 const title = 'Scene 1: Elliot looks for a clue';
 let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg";
-let exampleImage = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg";
+let exampleImage = "assets/img/scene-1-lg.jpg";
 
 		const content = show ? (
 			<div className="share-card">
@@ -129,20 +102,7 @@ let exampleImage = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/i
 													</button>
 												)
 											}
-												case "pinterest": {
-												return (
-													<button className="share-card__button mail">
-													<PinterestShareButton
-                                                      url={String(window.location)}
-                                                      media={`${String(window.location)}/${exampleImage}`}
-                                                      windowWidth={1000}
-                                                      windowHeight={730}
-                                                      className="Demo__some-network__share-button">
-                                                      <PinterestIcon size={36}  />
-                                                    </PinterestShareButton>
-													</button>
-												)
-											}
+								
 											case "googleplus": {
 												return (
 													<button className="share-card__button google-plus">

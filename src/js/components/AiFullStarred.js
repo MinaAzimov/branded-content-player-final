@@ -21,10 +21,10 @@ export default class AiFullStarred extends Component {
 
 	render() {
 
-		const { show, isFullScreen, data, addStar, removeStar, checkAiStarred, jumpToScene, fullAiCardShow } = this.props;
+		const { show, isFullScreen, data, addStar, removeStar, checkAiStarred, jumpToScene, fullAiCardShow, addShareData, fullAiShared, shareUrl } = this.props;
 
 		let starredList;
-
+		console.log(data)
 	
 
 		if (this.props.data.length > 0) {
@@ -32,6 +32,8 @@ export default class AiFullStarred extends Component {
 				<div key={index}>
 					<AiFullListItem
 					fullAiCardShow={fullAiCardShow}
+					shareUrl={shareUrl}
+				    fullAiShared={fullAiShared}
 					type={starredItem.type}
 					image={starredItem.image}
 					title={starredItem.title}
@@ -40,6 +42,7 @@ export default class AiFullStarred extends Component {
 					addS={() => addStar(starredItem)}
 					removeS={() => removeStar(starredItem.key)}
 					checkAiStarred={this.props.checkAiStarred}
+					addShareData={() => addShareData({key:starredItem.key,type:starredItem.type,image:starredItem.image,title:starredItem.title,subtitle:starredItem.subtitle,ctas:starredItem.ctas})}
 					jumpToScene={this.props.jumpToScene}
 					/>
 				</div>

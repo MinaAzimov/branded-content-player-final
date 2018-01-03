@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import AiFullCtas from './AiFullCtas';
 import AiFullStar from './AiFullStar';
 import AiListStar from './AiListStar';
+import ShareItemCard from './ShareItemCard';
 import AiFullExpandingText from './AiFullExpandingText';
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import classNames from "classnames";
@@ -41,7 +42,7 @@ export default class AiFullListItem extends Component {
 
 	render() {
 
-		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData } = this.props;
+		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData, data, addShareData, fullAiShared, shareUrl } = this.props;
 
 
 		const classnames = classNames({
@@ -95,6 +96,18 @@ export default class AiFullListItem extends Component {
 					jumpToScene={this.props.jumpToScene}
 					ctas={ctas}
 					/>
+					<ShareItemCard
+					data={data}
+					shareUrl={shareUrl}
+					fullAiShared={fullAiShared}
+					addShareData={addShareData}
+					checkAiStarred={checkAiStarred}
+					addAiStarred={addAiStarred}
+					removeAiStarred={removeAiStarred }
+					currentTime={currentTime} 
+					fullAiCardShow={fullAiCardShow}
+					jumpToScene={this.props.jumpToScene}
+					ctas={ctas}/>
 				</div>
 			) 
 			:

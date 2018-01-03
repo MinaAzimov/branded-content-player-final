@@ -67,9 +67,6 @@ export default class AiFullCharacter extends Component {
 					flip={this.flip}
 					/>
 					
-					
-					
-				
 				</div>
 				<div className="list-scrolling">
 					<div className="col">

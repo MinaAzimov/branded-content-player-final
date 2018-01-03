@@ -477,6 +477,10 @@
 				}
 				&--person {
 
+				.share-item-card {
+					display: none;
+				}
+
 			 
 					.mask {
 
@@ -515,9 +519,15 @@
 						}
 					}
 				}
+				&--scene {
+					.share-item-card {
+					display: none;
+				}
+				}
 			}
 		}
 		&--in-scene {
+
 			height: auto;
 
 			.list-scrolling, .list-column {
@@ -619,6 +629,7 @@
 					}
 				}
 				&--person {       
+
 					.mask {
 
 						height: 292px;
@@ -938,6 +949,7 @@
 						}
 					}
 					 &--person {
+
 						.mask {
 						 height: 270px;
 
@@ -1033,6 +1045,10 @@
 					}
 
 					&--person {
+						.share-item-card {
+						display: none;
+					}
+
 						.text {
 							margin-left: 18px;
 							margin-top: 24px;
