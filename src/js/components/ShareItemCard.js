@@ -195,7 +195,7 @@ export default class ShareItemCard extends Component {
          <button className="share-card__button pinterest">
 			  <PinterestShareButton
                    url={String(this.state.url)}
-                   media={`${String(window.location)}${this.state.exampleImage}`}
+                   media={`${String(this.state.url)}`}
                    windowWidth={1000}
                    windowHeight={730}
                    className="Demo__some-network__share-button">
