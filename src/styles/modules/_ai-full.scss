@@ -681,6 +681,7 @@
 					&:after {
 						width: 160px;
 					}
+
 				}
 				&--music {
 					.mask {
@@ -690,11 +691,21 @@
 							transform: translateY(-160px);
 							height: 160px;
 						}
+						
 					}
 				}
+				       &:hover {
+			                      .icon-share-outline {
+		                         visibility: visible;
+		                         
+	                           }
+			             }
 			}
+
 		}
 		&--products {
+
+			
 			.ai-preview-list-item {
 
 				.text{
@@ -722,6 +733,11 @@
 							height: 192px;
 						}
 					}
+						&:hover {
+			          .icon-share-outline {
+		                  visibility: visible;
+	                  }
+			        }
 				}
 			}
 		}
@@ -948,6 +964,14 @@
 							}
 						}
 					}
+					&--music{
+
+						&:hover {
+			                      .icon-share-outline {
+		                         visibility: visible;
+	                           }
+			             }
+					}
 					 &--person {
 
 						.mask {
@@ -967,7 +991,13 @@
 								transform: translateY(144px);
 								height: 144px;
 							}
+
 						}
+						&:hover {
+			                      .icon-share-outline {
+		                         visibility: visible;
+	                           }
+			             }
 					}
 
 						 &--music{

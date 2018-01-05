@@ -100,6 +100,7 @@ export default class App extends Component {
 			endCardOpen: false,
 			squeezeCardOpen: false,
 			showShareCard: false,
+			showButtons: false,
 			isMobile: false,
 			isTouch: false,
 			justClickedPlay: false,
@@ -142,6 +143,9 @@ export default class App extends Component {
 			starredForScrolling: [1, 2, 3, 4],
 			videoTrigger: 0,
 			imdb: [],
+			titleShare: 'first',
+			urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg',
+			exampleImage: 'assets/img/scene-1-lg.jpg',
 			window: {
 				width: 0,
 				height: 0
@@ -542,12 +546,64 @@ export default class App extends Component {
 
 		shareCardShow = () => {
 			this.setState({
-				showShareCard: true
+				showShareCard: true,
 			})
+		 if(this.state.currentTime >= 0 && this.state.currentTime <= 55.00) {
+		 	this.setState({
+				titleShare: this.state.sceneData[0][0].title,
+				urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg',
+				exampleImage: this.state.sceneData[0][0].image
+			})
+		 	 
+		 }
+		 if(this.state.currentTime >= 55.00 && this.state.currentTime <= 125.00) {
+		 	this.setState({
+				titleShare: this.state.sceneData[1][0].title,
+				urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-2-lg.jpg',
+				exampleImage: this.state.sceneData[1][0].image
+			})
+		 	 
+		 }
+		 if(this.state.currentTime >= 125.00 && this.state.currentTime <= 194.00) {
+		 	this.setState({
+				titleShare: this.state.sceneData[2][0].title,
+				urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-3-lg.jpg',
+				exampleImage: this.state.sceneData[2][0].image
+			})
+		 	 
+		 }
+		 if(this.state.currentTime >= 194.00 && this.state.currentTime <= 304.00) {
+		 	this.setState({
+				titleShare: this.state.sceneData[3][0].title,
+				urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-4-lg.jpg',
+				exampleImage: this.state.sceneData[3][0].image
+			})
+		 	 
+		 }
+		 if(this.state.currentTime >= 304.00 && this.state.currentTime <= 405.00) {
+		 	this.setState({
+				titleShare: this.state.sceneData[4][0].title,
+				urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-5-lg.jpg',
+				exampleImage: this.state.sceneData[4][0].image
+			})
+		 	 
+		 }
 		}
 		shareCardHide = () => {
 			this.setState({
 				showShareCard: false
+			})
+		}
+
+		shareButtonsShow = (val) => {
+			this.setState({
+				showButtons: val
+			})
+			console.log(this.state.showButtons)
+		}
+		shareButtonsHide = (val) => {
+			this.setState({
+				showButtons: false
 			})
 		}
 
@@ -598,9 +654,9 @@ export default class App extends Component {
 		
 			
 			this.setState({
-    fullAiShared: shared,
-    shareUrl: url
-    });
+            fullAiShared: shared,
+            shareUrl: url
+            });
 
 
 		
@@ -784,6 +840,7 @@ export default class App extends Component {
 				showCCSettings,
 				isWaiting,
 				showShareCard,
+				showButtons,
 				squeezeCardOpen,
 				isMobile,
 				isTouch,
@@ -827,7 +884,10 @@ export default class App extends Component {
 				videoTrigger,
 				starredForScrolling,
 				fullAiShared,
-				shareUrl
+				shareUrl,
+				urlMainShareCard,
+				titleShare,
+				exampleImage
 
 
 
@@ -1095,6 +1155,10 @@ export default class App extends Component {
 			onClose={this.shareCardHide}
 			allowEmbed={allowEmbed}
 			sharePlatforms={sharePlatforms}
+			currentTime={currentTime}
+			exampleImage={exampleImage}
+			urlMainShareCard={urlMainShareCard}
+			titleShare={titleShare}
 			/>
 			<ShareTrigger
 			show={showShareTrigger}
@@ -1138,6 +1202,9 @@ export default class App extends Component {
 			/>
 
 			<AiFull
+			showButtons={showButtons}
+			shareButtonsShow={(val) => this.shareButtonsShow(val)}
+			shareButtonsHide={this.shareButtonsHide}
 			starredForScrolling={starredForScrolling}
 			fullAiCardShow={this.fullAiCardShow}
 			isFullScreen={isFullScreen}

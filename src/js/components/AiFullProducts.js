@@ -19,7 +19,7 @@ export default class AiFullProducts extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, addShareData, fullAiShared, shareUrl } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, addShareData, fullAiShared, shareUrl, shareButtonsHide, shareButtonsShow, showButtons } = this.props;
 
 
 		const classnames = classNames({
@@ -35,6 +35,9 @@ export default class AiFullProducts extends Component {
 				        data={data}
 				        shareUrl={shareUrl}
 				        fullAiShared={fullAiShared}
+				        showButtons={showButtons}
+			            shareButtonsShow={(val) => this.props.shareButtonsShow(val)}
+			            shareButtonsHide={shareButtonsHide}
 				        type={product.addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}
 						image={product.addAiStarred.image}

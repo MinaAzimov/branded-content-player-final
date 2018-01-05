@@ -43,7 +43,7 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData, addShareData, fullAiShared, shareUrl } = this.props;
+		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData, addShareData, fullAiShared, shareUrl, showButtons, shareButtonsShow, shareButtonsHide } = this.props;
 
 
  		const classnames = classNames({
@@ -176,6 +176,9 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullProducts
+					showButtons={showButtons}
+			        shareButtonsShow={(val) => this.props.shareButtonsShow(val)}
+			        shareButtonsHide={shareButtonsHide}
 					shareUrl={shareUrl}
 					fullAiShared={fullAiShared}
 					addShareData={addShareData}

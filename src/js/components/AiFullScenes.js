@@ -24,6 +24,7 @@ export default class AiFullScenes extends Component {
 		const { show, isFullScreen, showInScene, currentTime, jumpToScene, addAiStarred, checkAiStarred, removeAiStarred, starredData, starredForScrolling, data, sceneData } = this.props;
 
 
+
 		const classnames = classNames({
 			'list-container': true,
 			'list-container--show': show,

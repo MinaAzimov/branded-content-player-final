@@ -425,7 +425,7 @@
       "startTime": "01:27",
       "endTime": "01:37",
       "src": "assets/img/flash-drive-sm.jpg",
-      "title": "DUO 32GB Micro USB Flash Drive",
+      "title": "DUO 32GB Micro USB FD",
       "subtitle": "Samsung at BestBuy",
       "type": "product",
       "fullAiCardShowType": "products",
@@ -452,7 +452,7 @@
                         "key":"11",
                         "type":"product",
                         "image":"assets/img/flash-drive-lg.jpg",
-                        "title":"DUO 32GB Micro USB Flash Drive",
+                        "title":"DUO 32GB Micro USB FD",
                         "subtitle":"Samsung at BestBuy",
                         "jsonFunction": "() => fullAiCardShow(data[9].fullAiCardShowType, data[9].fullAiCardShow)",
                         "ctas": [

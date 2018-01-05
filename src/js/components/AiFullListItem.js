@@ -42,7 +42,7 @@ export default class AiFullListItem extends Component {
 
 	render() {
 
-		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData, data, addShareData, fullAiShared, shareUrl } = this.props;
+		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData, data, addShareData, fullAiShared, shareUrl, showButtons, shareButtonsShow, shareButtonsHide } = this.props;
 
 
 		const classnames = classNames({
@@ -90,17 +90,14 @@ export default class AiFullListItem extends Component {
 					addAiStarred={addAiStarred}
 					removeAiStarred={removeAiStarred }
 					/>
-					<AiFullCtas
-					currentTime={currentTime} 
-					fullAiCardShow={fullAiCardShow}
-					jumpToScene={this.props.jumpToScene}
-					ctas={ctas}
-					/>
 					<ShareItemCard
 					data={data}
 					shareUrl={shareUrl}
 					fullAiShared={fullAiShared}
 					addShareData={addShareData}
+					showButtons={showButtons}
+			        shareButtonsShow={(val) => this.props.shareButtonsShow(val)}
+			        shareButtonsHide={shareButtonsHide}
 					checkAiStarred={checkAiStarred}
 					addAiStarred={addAiStarred}
 					removeAiStarred={removeAiStarred }
@@ -108,6 +105,14 @@ export default class AiFullListItem extends Component {
 					fullAiCardShow={fullAiCardShow}
 					jumpToScene={this.props.jumpToScene}
 					ctas={ctas}/>
+
+					<AiFullCtas
+					currentTime={currentTime} 
+					fullAiCardShow={fullAiCardShow}
+					jumpToScene={this.props.jumpToScene}
+					ctas={ctas}
+					/>
+					
 				</div>
 			) 
 			:
@@ -127,6 +132,7 @@ export default class AiFullListItem extends Component {
 						numLines={ 3 }
 						/>
 					</div>
+					
 					<AiFullCtas 
 					ctas={ctas}
 					currentTime={currentTime}

@@ -41,7 +41,7 @@ export default class ShareDialog extends Component {
 
 	render() {
 
-		let { show, allowEmbed, sharePlatforms } = this.props;
+		let { show, allowEmbed, sharePlatforms, exampleImage, urlMainShareCard, titleShare } = this.props;
 
 		const {
               FacebookShareButton,
@@ -50,7 +50,6 @@ export default class ShareDialog extends Component {
               PinterestShareButton,
             } = ShareButtons;
 
-       
 
         const FacebookIcon = generateShareIcon('facebook');
         const TwitterIcon = generateShareIcon('twitter');
@@ -58,9 +57,7 @@ export default class ShareDialog extends Component {
         const PinterestIcon = generateShareIcon('pinterest');
    
 
-const title = 'Scene 1: Elliot looks for a clue';
-let shareUrl = "http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg";
-let exampleImage = "assets/img/scene-1-lg.jpg";
+
 
 		const content = show ? (
 			<div className="share-card">
@@ -78,8 +75,8 @@ let exampleImage = "assets/img/scene-1-lg.jpg";
 												return (
 													<button className="share-card__button facebook">
                                                          <FacebookShareButton
-                                                            url={shareUrl}
-                                                            quote={title}
+                                                            url={urlMainShareCard}
+                                                            quote={titleShare}
                                                             windowWidth={1000}
                                                             windowHeight={730}
                                                             className="Demo__some-network__share-button">
@@ -92,8 +89,8 @@ let exampleImage = "assets/img/scene-1-lg.jpg";
 												return (
 													<button className="share-card__button twitter">
 													<TwitterShareButton
-                                                          url={shareUrl}
-                                                          title={title}
+                                                          url={urlMainShareCard}
+                                                          title={titleShare}
                                                            windowWidth={1000}
                                                            windowHeight={730}
                                                           className="Demo__some-network__share-button">
@@ -107,7 +104,7 @@ let exampleImage = "assets/img/scene-1-lg.jpg";
 												return (
 													<button className="share-card__button google-plus">
 													<GooglePlusShareButton
-                                                            url={shareUrl}
+                                                            url={urlMainShareCard}
                                                             windowWidth={1000}
                                                             windowHeight={730}
                                                            className="Demo__some-network__share-button">

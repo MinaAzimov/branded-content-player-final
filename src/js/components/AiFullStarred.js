@@ -24,7 +24,7 @@ export default class AiFullStarred extends Component {
 		const { show, isFullScreen, data, addStar, removeStar, checkAiStarred, jumpToScene, fullAiCardShow, addShareData, fullAiShared, shareUrl } = this.props;
 
 		let starredList;
-		console.log(data)
+		
 	
 
 		if (this.props.data.length > 0) {

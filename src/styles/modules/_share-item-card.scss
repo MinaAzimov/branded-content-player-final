@@ -1,15 +1,111 @@
 .share-item-card {
-	form {
-	background-color: #000000;
-    color: #ffffff;
-    left: 0%;
-    margin-top: 0px;
-    position: absolute;
+
+*:focus {outline:none !important}
+	.share-item-buttons {
+		visibility: hidden;
+		&--show {
+			visibility: visible;
+		}
+		
+		display: flex;
+		flex-direction: row;
+		margin-top: -40px;
+		margin-left: 15%;
+	}
+	
+	.icon-share-outline {
+		visibility: hidden;
+		
+		color: rgba($color-white, .55);
+		position: relative;
+		top: -20px;
+		left: -10px;
+
+	}
+	&:hover {
+				.icon-share-outline {
+				
+					color: darken($color-yellow, 10%);
+				}
+			}
+
+	button {
+		border: 1px solid rgba(white,0.6);
+		position: relative;
+		color: rgba(white,0.6);
+		font-family: $font-stack;
+		background: transparent;
+		text-transform: uppercase;
+		align-items: center;
+		display: inline;
+		font-weight: 400;
+		margin-right: 10px;
+		margin-bottom: -15px;
+		cursor: pointer;
+		outline: none;
+		transition: $basic-transition;
+		border-radius: 50%;
+		&.facebook {
+        padding: 10px 15px;
+		}
+		&.twitter {
+        padding: 10px 8px;
+		}
+		&.pinterest {
+        padding: 10px 10px;
+		}
+		&.google-plus {
+        padding: 10px 6px;
+		}
+		
+		@media screen and (max-width: $bp-small) {
+			margin-bottom: 15px;
+		}
+		
+		&:hover {
+			&.facebook {
+				color: white;
+				background: $color-facebook;
+				border-color: $color-facebook;
+			}
+			&.twitter {
+				color: white;
+				background: $color-twitter;
+				border-color: $color-twitter;
+			}
+			&.google-plus {
+				color: white;
+				background: $color-google-plus;
+				border-color: $color-google-plus;
+			}
+			&.pinterest {
+				color: white;
+				background: $color-mail;
+				border-color: $color-mail;
+			}
+		}
+		span {
+			@media screen and (max-width: $bp-small) {
+					display: none;
+			}
+		}
 	}
 
-	img {
-		height: 60px;
-		width: 60px;
+	i {
+		font-size: 21px;
+		outline: none;
+		@media screen and (max-width: $bp-medium) {
+			font-size: 24px;
+			margin: 0;
+		}
+		@media screen and (max-width: $bp-small) {
+			font-size: 16px;
+			margin: 0;
+		}
 	}
+
+	
+
+
 
 }
