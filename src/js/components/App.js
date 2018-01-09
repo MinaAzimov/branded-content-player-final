@@ -203,7 +203,7 @@ export default class App extends Component {
 	//this.doPredict(this.state.inputValue)
 	
 
-    fetch('https://api.themoviedb.org/3/tv/62560/season/1?api_key=4e3c3044296ad8e1af5f873b7376dbf3')
+    {/*fetch('https://api.themoviedb.org/3/tv/62560/season/1?api_key=4e3c3044296ad8e1af5f873b7376dbf3')
                 .then(response => {
                     if (!response.ok) {
                         throw Error('Network request failed.')
@@ -225,6 +225,33 @@ export default class App extends Component {
                 a.click();
                 }
                 //downloadJson(JSON.stringify((this.state.imdb.episodes[9].guest_stars),null,2), 'tmdb.json', 'text/plain');
+                })
+*/}
+
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+targetUrl = 'http://black-mirror.wikia.com/api/v1/Articles/List?expand=1&abstract=500&limit=10000'
+fetch(proxyUrl + targetUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw Error('Network request failed.')
+                    }
+                    return response;
+                })
+                .then(data => data.json())
+                .then(data => {
+                    this.setState({
+                        imdb: data
+                });
+                    console.log('parsed json', this.state.imdb);
+                }).then(data => {
+                function downloadJson (code, name, type){
+                var a = document.createElement("a");
+                var file = new File([code], {type: type});
+                a.href = URL.createObjectURL(file);
+                a.download = name;
+                a.click();
+                }
+                //downloadJson(JSON.stringify((this.state.imdb.items),null,2), 'wikia.json', 'text/plain');
                 })
 	}
 

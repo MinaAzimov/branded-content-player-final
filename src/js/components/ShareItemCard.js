@@ -23,11 +23,12 @@ export default class ShareItemCard extends Component {
   }
 
   handleChange = () => {
+    console.log(this.props.fullAiShared[0].ctas[0][2])
 
   if(this.props.fullAiShared[0].key == 0 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
+  	 this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+  	                url: this.props.fullAiShared[0].ctas[0][2],
+  	                exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
   	                show: true
   	                 });
   }
@@ -38,12 +39,12 @@ export default class ShareItemCard extends Component {
   	                show: false
   	                 });
   }
-  if(this.props.fullAiShared[0].key == 3 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
-  	                show: true
-  	                 });
+   if(this.props.fullAiShared[0].key == 3 && !this.state.show){
+     this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+                    url: this.props.fullAiShared[0].ctas[0][2],
+                     exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
+                    show: true
+                     });
   }
   if(this.props.fullAiShared[0].key == 3 && this.state.show){
   	this.setState({title: '',
@@ -52,12 +53,12 @@ export default class ShareItemCard extends Component {
   	                show: false
   	                 });
   }
-  if(this.props.fullAiShared[0].key == 11 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
-  	                show: true
-  	                 });
+   if(this.props.fullAiShared[0].key == 11 && !this.state.show){
+     this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+                    url: this.props.fullAiShared[0].ctas[0][2],
+                     exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
+                    show: true
+                     });
   }
   if(this.props.fullAiShared[0].key == 11 && this.state.show){
   	this.setState({title: '',
@@ -66,12 +67,12 @@ export default class ShareItemCard extends Component {
   	                show: false
   	                 });
   }
-  if(this.props.fullAiShared[0].key == 24 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
-  	                show: true
-  	                 });
+   if(this.props.fullAiShared[0].key == 24 && !this.state.show){
+     this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+                    url: this.props.fullAiShared[0].ctas[0][2],
+                     exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
+                    show: true
+                     });
   }
   if(this.props.fullAiShared[0].key == 24 && this.state.show){
   	this.setState({title: '',
@@ -80,12 +81,12 @@ export default class ShareItemCard extends Component {
   	                show: false
   	                 });
   }
-  if(this.props.fullAiShared[0].key == 1 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
-  	                show: true
-  	                 });
+   if(this.props.fullAiShared[0].key == 1 && !this.state.show){
+     this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+                    url: this.props.fullAiShared[0].ctas[0][2],
+                    exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
+                    show: true
+                     });
   }
   if(this.props.fullAiShared[0].key == 1 && this.state.show){
   	this.setState({title: '',
@@ -95,25 +96,25 @@ export default class ShareItemCard extends Component {
   	                 });
   }
   if(this.props.fullAiShared[0].key == 9 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
-  	                show: true
-  	                 });
+     this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+                    url: this.props.fullAiShared[0].ctas[0][2],
+                    exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
+                    show: true
+                     });
   }
   if(this.props.fullAiShared[0].key == 9 && this.state.show){
   	this.setState({title: '',
   	                url: 'http://brandedcontent.nbcuxlab.com/player-staging-2/',
-  	                exampleImage: '',
+  	                exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
   	                show: false
   	                 });
   }
-  if(this.props.fullAiShared[0].key == 10 && !this.state.show){
-  	 this.setState({title: this.props.fullAiShared[0].title,
-  	                url: this.state.url+this.props.fullAiShared[0].image,
-  	                exampleImage: this.props.fullAiShared[0].image,
-  	                show: true
-  	                 });
+   if(this.props.fullAiShared[0].key == 10 && !this.state.show){
+     this.setState({title: this.props.fullAiShared[0].title + " " + "from Mr Robot • S01 E10",
+                    url: this.props.fullAiShared[0].ctas[0][2],
+                    exampleImage: 'http://brandedcontent.nbcuxlab.com/player-staging-2/' + this.props.fullAiShared[0].image,
+                    show: true
+                     });
   }
   if(this.props.fullAiShared[0].key == 10 && this.state.show){
   	this.setState({title: '',
@@ -176,6 +177,7 @@ export default class ShareItemCard extends Component {
 		     <TwitterShareButton
                    url={this.state.url}
                    title={this.state.title}
+                   media={exampleImage}
                    windowWidth={1000}
                    windowHeight={730}
                    className="Demo__some-network__share-button">
@@ -195,7 +197,8 @@ export default class ShareItemCard extends Component {
          <button className="share-card__button pinterest">
 			  <PinterestShareButton
                    url={String(this.state.url)}
-                   media={`${String(this.state.url)}`}
+                   media={`${String(this.state.exampleImage)}`}
+                   description={this.state.title}
                    windowWidth={1000}
                    windowHeight={730}
                    className="Demo__some-network__share-button">

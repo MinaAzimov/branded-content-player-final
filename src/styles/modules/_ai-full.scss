@@ -695,10 +695,15 @@
 					}
 				}
 				       &:hover {
-			                      .icon-share-outline {
-		                         visibility: visible;
-		                         
-	                           }
+			             .icon-share-outline {
+		                  visibility: visible;
+	                  }
+	                  .share-item-buttons {
+							
+							 &--show {
+	                  	visibility: visible;
+	                  }
+	                  }
 			             }
 			}
 
@@ -737,6 +742,13 @@
 			          .icon-share-outline {
 		                  visibility: visible;
 	                  }
+	                  .share-item-buttons {
+							
+							 &--show {
+	                  	visibility: visible;
+	                  }
+	                  }
+	                 
 			        }
 				}
 			}
@@ -967,9 +979,15 @@
 					&--music{
 
 						&:hover {
-			                      .icon-share-outline {
-		                         visibility: visible;
-	                           }
+			                        .icon-share-outline {
+		                  visibility: visible;
+	                  }
+	                  .share-item-buttons {
+							
+							 &--show {
+	                  	visibility: visible;
+	                  }
+	                  }
 			             }
 					}
 					 &--person {
@@ -994,9 +1012,15 @@
 
 						}
 						&:hover {
-			                      .icon-share-outline {
-		                         visibility: visible;
-	                           }
+			                        .icon-share-outline {
+		                  visibility: visible;
+	                  }
+	                  .share-item-buttons {
+							
+							 &--show {
+	                  	visibility: visible;
+	                  }
+	                  }
 			             }
 					}
 

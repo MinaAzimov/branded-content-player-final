@@ -227,7 +227,7 @@
                         "subtitle":"Alabama Shakes",
                         "jsonFunction": "() => fullAiCardShow(data[4].fullAiCardShowType, data[4].fullAiCardShow)",
                         "ctas": [
-                                   ["View Song","iconcss icon-music","https://open.spotify.com/track/3yA4Rwh8tA3jyVkdWXyzCg"],
+                                   ["View Song","iconcss icon-music","https://open.spotify.com/track/65wx71brAmEQz66GXXF8gI"],
                                    [" Go To Scene  ","iconcss icon-play-outline"]
                                 ]
                         }               
