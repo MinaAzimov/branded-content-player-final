@@ -115,6 +115,9 @@ export default class App extends Component {
 			data: data.data,
 			peopleData: peopleData.peopleData,
 			sceneData: sceneData.sceneData,
+			wikia: [],
+			wikiaCharacters: [],
+			wikiaActors: [],
 			glasses: false,
 			trivia: false,
 			triviaGeneral: false,
@@ -142,7 +145,6 @@ export default class App extends Component {
 			fullAiCardInScene: [],
 			starredForScrolling: [1, 2, 3, 4],
 			videoTrigger: 0,
-			imdb: [],
 			titleShare: 'first',
 			urlMainShareCard: 'http://brandedcontent.nbcuxlab.com/player-staging-2/assets/img/scene-1-lg.jpg',
 			exampleImage: 'assets/img/scene-1-lg.jpg',
@@ -192,17 +194,235 @@ export default class App extends Component {
 		}, function (error) {
 			console.log("Error: " + error.code);
 		});
+
+
+	            var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+                targetUrl = 'http://mrrobot.wikia.com/api/v1/Articles/List?expand=1&abstract=500&limit=10000'
+                fetch(proxyUrl + targetUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw Error('Network request failed.')
+                    }
+                    return response;
+                })
+                .then(data => data.json())
+                .then(data => {
+                this.setState({
+                	wikia: data.items
+                })
+               
+                    console.log('parsed json', this.state.wikia);
+                }).then(data => {
+                this.state.wikia.map((elem, index)=>{
+                	if(elem.title == "Elliot Alderson"){
+                		elem = {
+                            key: peopleData.peopleData[0].key,
+                            type: peopleData.peopleData[0].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[152].title,
+                            ctas: peopleData.peopleData[0].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[152].title,
+                            characterImage: peopleData.peopleData[0].characterImage,
+                            actorImage: peopleData.peopleData[0].actorImage,
+                            characterBio: peopleData.peopleData[0].characterBio,
+                            actorBio: peopleData.peopleData[0].actorBio,
+                            otherWorks: peopleData.peopleData[0].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		
+                	}
+                	if(elem.title == "Mr. Robot"){
+                		elem = {
+                            key: peopleData.peopleData[1].key,
+                            type: peopleData.peopleData[1].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[18].title,
+                            ctas: peopleData.peopleData[1].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[18].title,
+                            characterImage: peopleData.peopleData[1].characterImage,
+                            actorImage: peopleData.peopleData[1].actorImage,
+                            characterBio: peopleData.peopleData[1].characterBio,
+                            actorBio: peopleData.peopleData[1].actorBio,
+                            otherWorks: peopleData.peopleData[1].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		
+                	}
+
+                		if(elem.title == "Darlene Alderson"){
+                		elem = {
+                            key: peopleData.peopleData[2].key,
+                            type: peopleData.peopleData[2].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[16].title,
+                            ctas: peopleData.peopleData[2].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[16].title,
+                            characterImage: peopleData.peopleData[2].characterImage,
+                            actorImage: peopleData.peopleData[2].actorImage,
+                            characterBio: peopleData.peopleData[2].characterBio,
+                            actorBio: peopleData.peopleData[2].actorBio,
+                            otherWorks: peopleData.peopleData[2].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		console.log(this.state.wikiaCharacters)
+                	}
+
+                		if(elem.title == "Angela Moss"){
+                		elem = {
+                            key: peopleData.peopleData[3].key,
+                            type: peopleData.peopleData[3].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[149].title,
+                            ctas: peopleData.peopleData[3].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[149].title,
+                            characterImage: peopleData.peopleData[3].characterImage,
+                            actorImage: peopleData.peopleData[3].actorImage,
+                            characterBio: peopleData.peopleData[3].characterBio,
+                            actorBio: peopleData.peopleData[3].actorBio,
+                            otherWorks: peopleData.peopleData[3].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		console.log(this.state.wikiaCharacters)
+                	}
+
+                		if(elem.title == "Trenton"){
+                		elem = {
+                            key: peopleData.peopleData[4].key,
+                            type: peopleData.peopleData[4].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[181].title,
+                            ctas: peopleData.peopleData[4].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[181].title,
+                            characterImage: peopleData.peopleData[4].characterImage,
+                            actorImage: peopleData.peopleData[4].actorImage,
+                            characterBio: peopleData.peopleData[4].characterBio,
+                            actorBio: peopleData.peopleData[4].actorBio,
+                            otherWorks: peopleData.peopleData[4].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		console.log(this.state.wikiaCharacters)
+                	}
+
+                		if(elem.title == "Mobley"){
+                		elem = {
+                            key: peopleData.peopleData[5].key,
+                            type: peopleData.peopleData[5].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[9].title,
+                            ctas: peopleData.peopleData[5].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[9].title,
+                            characterImage: peopleData.peopleData[5].characterImage,
+                            actorImage: peopleData.peopleData[5].actorImage,
+                            characterBio: peopleData.peopleData[5].characterBio,
+                            actorBio: peopleData.peopleData[5].actorBio,
+                            otherWorks: peopleData.peopleData[5].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		console.log(this.state.wikiaCharacters)
+                	}
+
+                		if(elem.title == "Romero"){
+                		elem = {
+                            key: peopleData.peopleData[6].key,
+                            type: peopleData.peopleData[6].type,
+                            image: elem.thumbnail,
+                            title: elem.title,
+                            subtitle: this.state.wikia[160].title,
+                            ctas: peopleData.peopleData[6].ctas,
+                            characterName: elem.title,
+                            actorName: this.state.wikia[160].title,
+                            characterImage: peopleData.peopleData[6].characterImage,
+                            actorImage: peopleData.peopleData[6].actorImage,
+                            characterBio: peopleData.peopleData[6].characterBio,
+                            actorBio: peopleData.peopleData[6].actorBio,
+                            otherWorks: peopleData.peopleData[6].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		console.log(this.state.wikiaCharacters)
+                	}
+
+                		if(elem.title == "Whiterose"){
+                		elem = {
+                            key: peopleData.peopleData[7].key,
+                            type: peopleData.peopleData[7].type,
+                            image: peopleData.peopleData[7].image,
+                            title: peopleData.peopleData[7].title,
+                            subtitle: peopleData.peopleData[7].subtitle,
+                            ctas: peopleData.peopleData[7].ctas,
+                            characterName: peopleData.peopleData[7].title,
+                            actorName: peopleData.peopleData[7].actorName,
+                            characterImage: peopleData.peopleData[7].characterImage,
+                            actorImage: peopleData.peopleData[7].actorImage,
+                            characterBio: peopleData.peopleData[7].characterBio,
+                            actorBio: peopleData.peopleData[7].actorBio,
+                            otherWorks: peopleData.peopleData[7].otherWorks
+
+                        };
+                		this.setState({
+                	        wikiaCharacters: this.state.wikiaCharacters.concat([elem])
+                        })
+                		console.log(this.state.wikiaCharacters)
+                	}
+                
+                })
+                })
+                .then(data => {
+                function downloadJson (code, name, type){
+
+                var a = document.createElement("a");
+                var file = new File([code], {type: type});
+                a.href = URL.createObjectURL(file);
+                a.download = name;
+                a.click();
+                }
+                //downloadJson(JSON.stringify((this.state.imdb.items),null,2), 'wikia.json', 'text/plain');
+                })
+
+                   
 	}
 	
 	getChildContext() {
 		return { theme: this.props.theme };
 	}
 
+
 	
 	componentDidMount() {
 	//this.doPredict(this.state.inputValue)
 	
-
     {/*fetch('https://api.themoviedb.org/3/tv/62560/season/1?api_key=4e3c3044296ad8e1af5f873b7376dbf3')
                 .then(response => {
                     if (!response.ok) {
@@ -228,31 +448,6 @@ export default class App extends Component {
                 })
 */}
 
-var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-targetUrl = 'http://black-mirror.wikia.com/api/v1/Articles/List?expand=1&abstract=500&limit=10000'
-fetch(proxyUrl + targetUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw Error('Network request failed.')
-                    }
-                    return response;
-                })
-                .then(data => data.json())
-                .then(data => {
-                    this.setState({
-                        imdb: data
-                });
-                    console.log('parsed json', this.state.imdb);
-                }).then(data => {
-                function downloadJson (code, name, type){
-                var a = document.createElement("a");
-                var file = new File([code], {type: type});
-                a.href = URL.createObjectURL(file);
-                a.download = name;
-                a.click();
-                }
-                //downloadJson(JSON.stringify((this.state.imdb.items),null,2), 'wikia.json', 'text/plain');
-                })
 	}
 
 	
@@ -263,8 +458,13 @@ fetch(proxyUrl + targetUrl)
 
 
 
-
-
+	getTitles =()=> {
+		for(let i = 0; i<this.state.wikia.length; i++) {
+                    	if(this.state.wikia.title[i] == "Elliot"){
+                    			console.log(true)
+                    	}
+                    }
+	}
 
 	onWindowResize = (e) => {
 		var w = window,
@@ -914,7 +1114,8 @@ fetch(proxyUrl + targetUrl)
 				shareUrl,
 				urlMainShareCard,
 				titleShare,
-				exampleImage
+				exampleImage, 
+				wikiaCharacters
 
 
 
@@ -1117,6 +1318,7 @@ fetch(proxyUrl + targetUrl)
 			/>
 
 			<AiPreview
+			wikiaCharacters={wikiaCharacters}
 			show={AiPreviewShow}
 			currentTime={currentTime}
 			pauseCardSrc={pauseCardSrc}
@@ -1229,6 +1431,7 @@ fetch(proxyUrl + targetUrl)
 			/>
 
 			<AiFull
+			wikiaCharacters={wikiaCharacters}
 			showButtons={showButtons}
 			shareButtonsShow={(val) => this.shareButtonsShow(val)}
 			shareButtonsHide={this.shareButtonsHide}

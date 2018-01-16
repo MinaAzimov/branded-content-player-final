@@ -89,6 +89,21 @@
     transform: rotateY(180deg);
   }
   &:hover {
+    .starred {
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: radial-gradient(circle at 100% 0%, rgba(darken($color-black, 10%),0.55), rgba(darken($color-black, 10%),0) 48%);
+    height: 100px;
+    width: 100px;
+    transform: translate(20px,-20px);
+    display: block;
+    z-index: -1;
+    right: 0;
+    top: 0;
+  }
+  }
     .mask {
       &:after {
         opacity: 0.33;
@@ -101,4 +116,5 @@
     }
   }
 }
+
 

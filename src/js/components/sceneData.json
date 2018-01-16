@@ -21,7 +21,7 @@
 					{ 
                         "key":"4",
                         "type":"person",
-                        "image":"assets/img/elliot-alderson-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/3/3e/Elliot.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/345/window-height/345?cb=20150810201239",
                         "title":"Elliot Alderson",
                         "subtitle":"Rami Malek",
                         "ctas":[["Go To Bio","iconcss icon-person"],["  Go To Scene  ","iconcss icon-play-outline"]],
@@ -107,7 +107,7 @@
 					{ 
                         "key":"4",
                         "type":"person",
-                        "image":"assets/img/elliot-alderson-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/3/3e/Elliot.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/345/window-height/345?cb=20150810201239",
                         "title":"Elliot Alderson",
                         "subtitle":"Rami Malek",
                         "ctas":[["Go To Bio","iconcss icon-person"],["  Go To Scene  ","iconcss icon-play-outline"]],
@@ -212,7 +212,7 @@
 					{ 
                         "key":"2",
                         "type":"person",
-                        "image":"assets/img/darlene-alderson-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/1/11/Darlene.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/347/window-height/347?cb=20150810195444",
                         "title":"Darlene Alderson",
                         "subtitle":"Carly Chaikin",
                         "ctas":[["Go To Bio ","iconcss icon-person"], ["  Go To Scene ","iconcss icon-play-outline"]],
@@ -249,7 +249,7 @@
 					{ 
                         "key":"14",
                         "type":"person",
-                        "image":"assets/img/trenton-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/1/1e/Trenton.png/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/265/window-height/265?cb=20150810142611",
                         "title":"Trenton",
                         "subtitle":"Sunita Mani",
                         "ctas":[["Go To Bio    ","iconcss icon-person"], ["  Go To Scene    ","iconcss icon-play-outline"]],
@@ -286,7 +286,7 @@
 				{ 
                         "key":"15",
                         "type":"person",
-                        "image":"assets/img/mobley-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/6/6d/Mobley.png/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/244/window-height/244?cb=20150826004026",
                         "title":"Mobley",
                         "subtitle":"Azhar Khan",
                         "ctas":[[" Go To Bio","iconcss icon-person"], ["  Go To Scene ","iconcss icon-play-outline"]],
@@ -323,7 +323,7 @@
                 { 
                         "key":"16",
                         "type":"person",
-                        "image":"assets/img/romero-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/2/2b/Romero.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/453/window-height/453?cb=20150807160301",
                         "title":"Romero",
                         "subtitle":"Ron Cephas Jones",
                         "ctas":[["  Go To Bio","iconcss icon-person"], ["   Go To Scene    ","iconcss icon-play-outline"]],
@@ -409,7 +409,7 @@
 					 { 
                         "key":"13",
                         "type":"person",
-                        "image":"assets/img/angela-moss.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/d/d1/AMoss.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/629/window-height/629?cb=20150809224155",
                         "title":"Angela Moss",
                         "subtitle":"Portia Doubleday",
                         "ctas":[["Go To Bio   ","iconcss icon-person"], [" Go To Scene    ","iconcss icon-play-outline"]],
@@ -521,7 +521,7 @@
                   { 
                         "key":"4",
                         "type":"person",
-                        "image":"assets/img/elliot-alderson-lg.jpg",
+                        "image":"https://vignette.wikia.nocookie.net/mrrobot/images/3/3e/Elliot.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/345/window-height/345?cb=20150810201239",
                         "title":"Elliot Alderson",
                         "subtitle":"Rami Malek",
                         "ctas":[["Go To Bio","iconcss icon-person"],["  Go To Scene  ","iconcss icon-play-outline"]],
@@ -557,7 +557,7 @@
 				   { 
                           "key":"12",
                           "type":"person",
-                          "image":"assets/img/christain-slater.jpg",
+                          "image": "https://vignette.wikia.nocookie.net/mrrobot/images/0/0f/MrRobot.jpg/revision/latest/window-crop/width/451/x-offset/0/y-offset/0/window-width/1004/window-height/1004?cb=20150810201043",
                           "title":"Mr. Robot",
                           "subtitle":"Christian Slater",
                           "ctas":[["Go To Bio  ","iconcss icon-person"], ["  Go To Scene        ","iconcss icon-play-outline"]],

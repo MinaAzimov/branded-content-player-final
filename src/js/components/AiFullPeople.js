@@ -17,7 +17,7 @@ export default class AiFullPeople extends Component {
 
 	render() {
 
-		const { show, click, isFullScreen, addAiStarred, checkAiStarred, removeAiStarred, data, peopleData  } = this.props;
+		const { show, click, isFullScreen, addAiStarred, checkAiStarred, removeAiStarred, data, peopleData, wikiaCharacters } = this.props;
 			
 
 		const numPeople = peopleData.length;
@@ -32,10 +32,11 @@ export default class AiFullPeople extends Component {
 
 		
 
-		const people = peopleData.map((person, index, key, type, image, title, subtitle, ctas) =>
+		const people = wikiaCharacters.map((person, index, key, type, image, title, subtitle, ctas) =>
 			<div key={index} >
 				<AiFullListItem
 				peopleData={peopleData}
+				wikiaCharacters={wikiaCharacters}
 				type={"person"}
 				click={() => click('character', person)}
 				image={person.characterImage}

@@ -18,7 +18,7 @@ export default class AiFullTrivia extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data} = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, wikiaCharacters} = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
@@ -31,6 +31,7 @@ export default class AiFullTrivia extends Component {
 			<div key={index} >
 				<AiFullListItem
 				        type={trivia.addAiStarred.type}
+				        wikiaCharacters={wikiaCharacters}
 						jumpToScene={this.props.jumpToScene}
 						image={trivia.addAiStarred.image}
 						title={trivia.addAiStarred.title}

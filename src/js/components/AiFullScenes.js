@@ -21,7 +21,7 @@ export default class AiFullScenes extends Component {
 
 	render() {
 
-		const { show, isFullScreen, showInScene, currentTime, jumpToScene, addAiStarred, checkAiStarred, removeAiStarred, starredData, starredForScrolling, data, sceneData } = this.props;
+		const { show, isFullScreen, showInScene, currentTime, jumpToScene, addAiStarred, checkAiStarred, removeAiStarred, starredData, starredForScrolling, data, sceneData, wikiaCharacters } = this.props;
 
 
 
@@ -39,6 +39,7 @@ export default class AiFullScenes extends Component {
 			<AiSceneCard
 							data={data}
 							sceneData={sceneData}
+							wikiaCharacters={wikiaCharacters}
 							currentTime={currentTime}
 							showInScene={ () => showInScene(this.props.sceneData[index])}
 							jumpToScene={this.props.jumpToScene}

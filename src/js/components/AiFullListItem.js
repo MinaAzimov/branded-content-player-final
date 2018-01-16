@@ -42,7 +42,7 @@ export default class AiFullListItem extends Component {
 
 	render() {
 
-		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData, data, addShareData, fullAiShared, shareUrl, showButtons, shareButtonsShow, shareButtonsHide } = this.props;
+		const { type, image, title, subtitle, quote, ctas, addS, removeS, jumpToScene, resetStarredItemState, currentTime, starredData, addAiStarred, checkAiStarred, removeAiStarred, click, fullAiCardShow, peopleData, data, addShareData, fullAiShared, shareUrl, showButtons, shareButtonsShow, shareButtonsHide, wikiaCharacters } = this.props;
 
 
 		const classnames = classNames({
@@ -107,6 +107,7 @@ export default class AiFullListItem extends Component {
 					ctas={ctas}/>
 
 					<AiFullCtas
+					wikiaCharacters={wikiaCharacters}
 					currentTime={currentTime} 
 					fullAiCardShow={fullAiCardShow}
 					jumpToScene={this.props.jumpToScene}
@@ -135,6 +136,7 @@ export default class AiFullListItem extends Component {
 					
 					<AiFullCtas 
 					ctas={ctas}
+					wikiaCharacters={wikiaCharacters}
 					currentTime={currentTime}
 					fullAiCardShow={fullAiCardShow}
 					jumpToScene={this.props.jumpToScene}

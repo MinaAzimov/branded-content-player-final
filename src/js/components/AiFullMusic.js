@@ -18,7 +18,7 @@ export default class AiFullMusic extends Component {
 
 	render() {
 
-		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, addShareData, fullAiShared, shareUrl  } = this.props;
+		const { show, jumpToScene, starredData, addAiStarred, checkAiStarred, removeAiStarred, starredForScrolling, data, addShareData, fullAiShared, shareUrl, wikiaCharacters  } = this.props;
 
 		const classnames = classNames({
 			'list-container': true,
@@ -32,6 +32,7 @@ export default class AiFullMusic extends Component {
 			<div key={index} >
 				<AiFullListItem
 						shareUrl={shareUrl}
+						wikiaCharacters={wikiaCharacters}
 				        fullAiShared={fullAiShared}
 				        type={music.addAiStarred.type}
 						jumpToScene={this.props.jumpToScene}

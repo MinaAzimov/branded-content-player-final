@@ -78,9 +78,9 @@ export default class AiPreview extends Component {
         }
 
 
-		const { show, isFullScreen, currentTime, endCardShow, pauseCardSrc, data, glasses, actor, actress, sound, trivia, triviaGeneral, triviaFun, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, fullAiCardShow, showFullAiCard, addAiStarred, removeAiStarred, checkAiStarred} = this.props;
+		const { show, isFullScreen, currentTime, endCardShow, pauseCardSrc, data, glasses, actor, actress, sound, trivia, triviaGeneral, triviaFun, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, fullAiCardShow, showFullAiCard, addAiStarred, removeAiStarred, checkAiStarred, wikiaCharacters} = this.props;
 		const { isHovering } = this.state;
-	
+		
 		
  		const classnames = classNames({
  			'ai-preview': true,

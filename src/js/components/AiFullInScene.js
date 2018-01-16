@@ -51,7 +51,7 @@ export default class AiFullScenes extends Component {
 
 	render() {
 
-		const { show, currentTime, fullAiCardShow, data, click, jumpToScene, addStar, removeStar, checkAiStarred, starredData, starredForScrolling } = this.props;
+		const { show, currentTime, fullAiCardShow, data, click, jumpToScene, addStar, removeStar, checkAiStarred, starredData, starredForScrolling, wikiaCharacters } = this.props;
 
 	
 
@@ -62,6 +62,7 @@ export default class AiFullScenes extends Component {
 			.map((sceneItem, index, key,type,image,title,subtitle,ctas) =>
 				<div key={index}>
 					<AiFullListItem
+					wikiaCharacters={wikiaCharacters}
 					fullAiCardShow={fullAiCardShow}
 					type={sceneItem.type}
 					image={sceneItem.image}
@@ -86,6 +87,7 @@ export default class AiFullScenes extends Component {
 			.map((sceneItem, index, key,type,image,title,subtitle,ctas) =>
 				<div key={index}>
 					<AiFullListItem
+					wikiaCharacters={wikiaCharacters}
 					fullAiCardShow={fullAiCardShow}
 					type={sceneItem.type}
 					image={sceneItem.image}

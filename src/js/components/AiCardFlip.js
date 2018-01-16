@@ -20,7 +20,6 @@ export default class AiCardFlip extends Component {
 
 	render() {
 		const { frontImg, backImg, flipped, flip, show, click, person, addAiStarred, checkAiStarred, removeAiStarred, data,  ctas, addS, removeS, jumpToScene, fullAiCardShow } = this.props;
-		console.log(person)
 		const classnames = classNames({
 			'flip-container': true,
 			'flip-container--flipped': flipped

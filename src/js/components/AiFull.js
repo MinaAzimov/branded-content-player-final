@@ -43,7 +43,7 @@ export default class AiFull extends Component {
 
 	render() {
 
-		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData, addShareData, fullAiShared, shareUrl, showButtons, shareButtonsShow, shareButtonsHide } = this.props;
+		const { show, close, isFullScreen, showing, goToPage, showInScene, personData, starredData, inSceneData, addAiStarred, resetStarredItemState, checkAiStarred, removeAiStarred, currentTime, jumpToScene, fullAiCardShow, starredForScrolling, data, peopleData, sceneData, addShareData, fullAiShared, shareUrl, showButtons, shareButtonsShow, shareButtonsHide, wikiaCharacters } = this.props;
 
 
  		const classnames = classNames({
@@ -79,6 +79,7 @@ export default class AiFull extends Component {
 						</div>
 					</div>
 					<AiFullScenes
+					wikiaCharacters={wikiaCharacters}
 					sceneData={sceneData}
 					data={data} 
 					isFullScreen={ isFullScreen }
@@ -95,6 +96,7 @@ export default class AiFull extends Component {
 					/>
 					{
 					<AiFullInScene
+					wikiaCharacters={wikiaCharacters}
 					sceneData={sceneData}
 					data={data} 
 					fullAiCardShow={fullAiCardShow}
@@ -112,6 +114,7 @@ export default class AiFull extends Component {
 					/>
 					}
 					<AiFullPeople
+					wikiaCharacters={wikiaCharacters}
 					peopleData={peopleData}
 					data={data}
 					isFullScreen={ isFullScreen }
@@ -124,6 +127,7 @@ export default class AiFull extends Component {
 					/>
 					{ personData != null ? (
 					<AiFullCharacter
+					wikiaCharacters={wikiaCharacters}
 					peopleData={peopleData}
 					data={data} 
 					show={ showing == 'character' }
@@ -138,6 +142,7 @@ export default class AiFull extends Component {
 					) : null }
 					<AiFullMusic
 					data={data} 
+					wikiaCharacters={wikiaCharacters}
 					shareUrl={shareUrl}
 					fullAiShared={fullAiShared}
 					addShareData={addShareData}
@@ -151,6 +156,7 @@ export default class AiFull extends Component {
 					/>
 					<AiFullStarred
 					data={data} 
+					wikiaCharacters={wikiaCharacters}
 					shareUrl={shareUrl}
 					fullAiShared={fullAiShared}
 					addShareData={addShareData}
@@ -166,6 +172,7 @@ export default class AiFull extends Component {
 				
 					/>
 					<AiFullTrivia
+					wikiaCharacters={wikiaCharacters}
 					data={data} 
 					starredForScrolling={starredForScrolling}
 					show={ showing == 'trivia' }
@@ -176,6 +183,7 @@ export default class AiFull extends Component {
 					removeAiStarred={removeAiStarred}
 					/>
 					<AiFullProducts
+					wikiaCharacters={wikiaCharacters}
 					showButtons={showButtons}
 			        shareButtonsShow={(val) => this.props.shareButtonsShow(val)}
 			        shareButtonsHide={shareButtonsHide}

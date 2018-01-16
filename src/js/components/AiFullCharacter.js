@@ -34,7 +34,7 @@ export default class AiFullCharacter extends Component {
 
 	render() {
 
-		let { show, click, person, addAiStarred, checkAiStarred, removeAiStarred, data,  ctas, addS, removeS, jumpToScene, fullAiCardShow } = this.props;
+		let { show, click, person, addAiStarred, checkAiStarred, removeAiStarred, data,  ctas, addS, removeS, jumpToScene, fullAiCardShow, wikiaCharacters } = this.props;
 		
 		const classnames = classNames({
 			'list-container': true,
@@ -51,6 +51,7 @@ export default class AiFullCharacter extends Component {
 						<span>All People</span>
 					</a>
 					<AiCardFlip
+					wikiaCharacters={wikiaCharacters}
 					person={person}
 					addAiStarred={addAiStarred}
 					checkAiStarred={checkAiStarred}

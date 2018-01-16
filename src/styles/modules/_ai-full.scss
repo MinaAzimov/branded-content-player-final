@@ -481,8 +481,9 @@
 					display: none;
 				}
 
-			 
+			 		
 					.mask {
+						
 
 						height: 229px;
 
@@ -631,6 +632,11 @@
 				&--person {       
 
 					.mask {
+						img {
+							width: 230px;
+                            height: 292px;
+                            object-fit: cover;
+						}
 
 						height: 292px;
 
@@ -1124,6 +1130,11 @@
 								height: 325px;
 							}
 						}
+						img {
+							 object-fit: cover;
+                             width:256px;
+                             height:325px;
+						}
 					}
 				}
 			}
@@ -1172,6 +1183,15 @@
 		}
 		&--character {
 
+		.flipper {
+			img {
+				width: 355px;
+				height: 451;
+			    object-fit: cover;
+			}
+
+		}
+			
 		
 
 			  .starred {
@@ -1203,6 +1223,7 @@
 
                       &:hover {
 			              .starred {
+			              	
 
                               .icon-star {
                               

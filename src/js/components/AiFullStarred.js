@@ -21,7 +21,7 @@ export default class AiFullStarred extends Component {
 
 	render() {
 
-		const { show, isFullScreen, data, addStar, removeStar, checkAiStarred, jumpToScene, fullAiCardShow, addShareData, fullAiShared, shareUrl } = this.props;
+		const { show, isFullScreen, data, addStar, removeStar, checkAiStarred, jumpToScene, fullAiCardShow, addShareData, fullAiShared, shareUrl, wikiaCharacters } = this.props;
 
 		let starredList;
 		
@@ -32,6 +32,7 @@ export default class AiFullStarred extends Component {
 				<div key={index}>
 					<AiFullListItem
 					fullAiCardShow={fullAiCardShow}
+					wikiaCharacters={wikiaCharacters}
 					shareUrl={shareUrl}
 				    fullAiShared={fullAiShared}
 					type={starredItem.type}
