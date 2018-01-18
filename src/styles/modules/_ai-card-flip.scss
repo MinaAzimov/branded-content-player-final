@@ -7,12 +7,15 @@
 }
 
 
+
+
 .flip-container, .front, .back {
   width: 320px;
   height: 480px;
 }
 
 .flipper {
+
   transition: 0.9s $easing1;
   transform-style: preserve-3d;
   position: relative;
@@ -28,6 +31,7 @@
       border-radius: $border-radius;
       height: 451px;
       overflow: hidden;
+      
 
       &:after {
         position: absolute;
@@ -89,21 +93,24 @@
     transform: rotateY(180deg);
   }
   &:hover {
+  
     .starred {
-
+  
   &:before {
     position: absolute;
     content: '';
     background-image: radial-gradient(circle at 100% 0%, rgba(darken($color-black, 10%),0.55), rgba(darken($color-black, 10%),0) 48%);
-    height: 100px;
-    width: 100px;
+    height: 170px;
+    width: 170px;
     transform: translate(20px,-20px);
     display: block;
     z-index: -1;
     right: 0;
     top: 0;
-  }
-  }
+
+         }
+ }
+
     .mask {
       &:after {
         opacity: 0.33;

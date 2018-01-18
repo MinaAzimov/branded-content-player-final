@@ -1189,17 +1189,34 @@
 				height: 451;
 			    object-fit: cover;
 			}
+			  &:hover {
+			              .starred {
+			              	
+						
+                              .icon-star {
+
+                              
+                                display: block;
+                                font-size: 20px;
+                                       }
+                             .icon-star-fill {
+                             
+                        	    font-size: 20px;
+                                         }
+                                  }
+                             }
 
 		}
 			
 		
 
 			  .starred {
-					
+						
 				    	position: absolute;
 				    	top: 20px;
 				    	left: 80%;
-				    	z-index: 999999999999;
+				    	z-index: 1;
+
 
 				    	.circles {
 				          border-radius: 50%;
@@ -1209,6 +1226,8 @@
 				          z-index: -1;
 				          transform: translateY(-10px) translateX(1px) scale(0.32);
 				          transform-origin: right top;
+
+
 			            }
                         .icon-star {
                         	
@@ -1221,21 +1240,7 @@
                         }
                       }
 
-                      &:hover {
-			              .starred {
-			              	
-
-                              .icon-star {
-                              
-                                display: block;
-                                font-size: 20px;
-                                       }
-                             .icon-star-fill {
-                             
-                        	    font-size: 20px;
-                                         }
-                                  }
-                             }
+                    
 			
 
 			.col {

@@ -16,23 +16,43 @@
           "otherWorks": [
             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
           ]
         },
@@ -50,25 +70,45 @@
           "characterBio": "Mr. Robot is the co-founder and leader of the hacker group fsociety, a revolutionary prophet who plans to bring down the world's largest conglomerate. Though he is intelligent and charismatic, Mr. Robot is also emotionally manipulative, and can be quick to violence. This has prompted comparisons to the behavior of militant cult leaders.  It eventually becomes clear that Mr. Robot is a construct within Elliot Alderson's mind. (“eps1.8_m1rr0r1ng.qt”) His persona is an idealized representation of Elliot's deceased father, Edward; where Edward was unwilling or unable to take action, Mr. Robot was created to inspire war against E Corp and incite historical change. In some situations, Mr. Robot will take control and act through Elliot, thus explaining his direct interactions with other people. ",
           "actorBio": "Christian Michael Leonard Slater (born August 18, 1969) is an American actor. He made his film debut with a small role in The Postman Always Rings Twice before playing a leading role in the 1985 film The Legend of Billie Jean. He played a monk's apprentice alongside Sean Connery in The Name of the Rose before gaining wider recognition for his breakthrough role in the cult film Heathers.",
           "otherWorks": [
-            {
+             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
 
           ]
@@ -87,27 +127,46 @@
           "characterBio": "Darlene was born on November 5, 1990. She states she was 4 years old when she first saw Susan Jacobs when E Corp was vindicated in the Washington Township trial. Her father, Edward Alderson, died on February 28, 1995. Her mother, Magda, was abusive toward her and her brother. When she was 5, she was kidnapped by a woman during a family trip to an amusement park. She slept at the woman's house, in a pink bedroom, and awoke the next morning to the police. Darlene recalls the experience somewhat fondly. However, in contrast to her story, her father was dead by the time she turned five on November 5, 1995.",
           "actorBio": "Carly Hannah Chaikin (born March 26, 1990) is an American actress. She got her breakout role in the film The Last Song, and starred as Dalia Royce in the sitcom Suburgatory.",
           "otherWorks": [
-            {
+             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
-
           ]
         },
         { 
@@ -124,25 +183,45 @@
           "characterBio": "Angela Moss is a childhood friend of Elliot Alderson. She is portrayed by Portia Doubleday. Angela was born on February 27, 1988, in New Jersey to Phillip Price and Emily Moss, but Emily refused to be with Phillip, instead choosing to marry Donald Moss, who became her adopted father. She is an only child. Her mother died as a result of the Washington Township leak of 1993. In the aftermath, she became friends with Darlene and Elliot Alderson, with whom she shared a love for the book From the Mixed-Up Files of Mrs. Basil E. Frankweiler. Angela fondly remembers wanting to be like Claudia Kincaid, the story's adventurous heroine. She also remembers the Aldersons subjecting her to their favorite movie, The Careful Massacre of the Bourgeoisie, every Halloween.",
           "actorBio": "Angela was born on February 27, 1988, in New Jersey to Phillip Price and Emily Moss, but Emily refused to be with Phillip, instead choosing to marry Donald Moss, who became her adopted father. She is an only child. Her mother died as a result of the Washington Township leak of 1993. In the aftermath, she became friends with Darlene and Elliot Alderson, with whom she shared a love for the book From the Mixed-Up Files of Mrs. Basil E. Frankweiler. Angela fondly remembers wanting to be like Claudia Kincaid, the story's adventurous heroine. She also remembers the Aldersons subjecting her to their favorite movie, The Careful Massacre of the Bourgeoisie, every Halloween.",
           "otherWorks": [
-            {
+             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
 
           ]
@@ -161,25 +240,45 @@
           "characterBio": "Trenton's parents are Iranian immigrants who came to America for freedom. Her father, Arash, works 60-hour weeks to find tax loopholes for a millionaire art dealer. Her mother ran up a five-figure debt earning an online degree. She was born in Mashhad, Iran and later moved to Trenton, NJ where her younger brother Mohammed was born. The family lives together in Brooklyn, and she is a student at NYU. Having grown up in the city, she doesn't know how to drive. She has an uncle who lives in Connecticut. She would often trip when putting on her shoes at the mosque.",
           "actorBio": "Sunita Mani is an american actress and dancer. Her works include improv comedy, commercials, writings, and short ﬁlms. Her most important role in a series has been in Mr. Robot, where she portrays the character Trenton. She has a comedy dance group called Cocoon Central Dance Team and has appeared in many music videos including 'Turn Down for What'",
           "otherWorks": [
-            {
+             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
 
           ]
@@ -200,23 +299,43 @@
           "otherWorks": [
             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
 
           ]
@@ -235,25 +354,45 @@
           "characterBio": "Leslie Romero is a computer criminal, engineer, and biologist, specializing in phone phreaking and marijuana husbandry. He lives with his elderly mother, Nell Romero, and has a history with Sunil 'Mobley' Markesh. He is played by Ron Cephas Jones. Though Romero is highly knowledgeable, his thirst for fame and lack of commitment leads to conflict with other members of fsociety.",
           "actorBio": "Ron Cephas Jones is an American actor who plays Romero in the series Mr. Robot. He has also worked in several movies, his most known works being 'Half Nelson', 'He Got Game', and 'Sweet and Lowdown'.",
           "otherWorks": [
-            {
+             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
 
           ]
@@ -274,23 +413,43 @@
           "otherWorks": [
             {
               "image": "assets/img/busters-mal-heart.jpg",
-              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/"
+              "link": "https://www.rottentomatoes.com/m/busters_mal_heart/",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "55%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "71%"
             },
             {
               "image": "assets/img/short-term-12.jpg",
-              "link": "https://www.rottentomatoes.com/m/short_term_12_2013"
+              "link": "https://www.rottentomatoes.com/m/short_term_12_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "93%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "99%"
             },
             {
               "image": "assets/img/aint-them-bodies-saints.jpg",
-              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013"
+              "link": "https://www.rottentomatoes.com/m/aint_them_bodies_saints_2013",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "61%",
+              "tomatometer": "assets/img/fresh.png",
+              "tomatometerScore": "79%"
             },
             {
               "image": "assets/img/da-sweet-blood-of-jesus.jpg",
-              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus"
+              "link": "https://www.rottentomatoes.com/m/da_sweet_blood_of_jesus",
+              "rottenaudience": "assets/img/greenpopcorn.png",
+              "rottenaudienceScore": "17%",
+              "tomatometer": "assets/img/rotten.png",
+              "tomatometerScore": "44%"
             },
             {
               "image": "assets/img/mr-robot-extra.jpg",
-              "link": "https://www.rottentomatoes.com/tv/mr_robot"
+              "link": "https://www.rottentomatoes.com/tv/mr_robot",
+              "rottenaudience": "assets/img/popcorn.png",
+              "rottenaudienceScore": "92%",
+              "tomatometer": "assets/img/tomato.png",
+              "tomatometerScore": "94%"
             }
           ]
         },
