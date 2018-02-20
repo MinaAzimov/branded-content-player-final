@@ -596,7 +596,7 @@ if((currentTime > 302.000000 && currentTime < 408.000000)  && !this.props.isScru
 
 		return (
 			<div className="video-container">
-				<video className="video" src={inputValue} ref={(el)=> { this.video = el }} onClick={onClick} />
+				<video className="video" src={inputValue} ref={(el)=> { this.video = el }} onClick={onClick} playsInline/>
 				<i className="iconcss icon-replay"></i>
 			</div>
 		)

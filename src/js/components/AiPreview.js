@@ -43,11 +43,12 @@ export default class AiPreview extends Component {
 
 	
 	constructor(props) {
-	super(props);
-	this.state = {
-		isHovering: false
+		super(props);
+		this.state = {
+			isHovering: false
+		}
+		this.detectOrientationChange();
 	}
-}
 
 	onMouseOver = (e) => {
 		clearTimeout(this.mouseMoveTimeout);
@@ -68,6 +69,23 @@ export default class AiPreview extends Component {
 		})
 	}
 
+	isMobile = () => {
+		return !((
+			navigator.userAgent.match(/iPhone/i) || 
+			navigator.userAgent.match(/Android/i) ||
+			navigator.userAgent.match(/webOS/i) || 
+			navigator.userAgent.match(/iPad/i) || 
+			navigator.userAgent.match(/iPod/i) || 
+			navigator.userAgent.match(/BlackBerry/i) || 
+			navigator.userAgent.match(/Windows Phone/i)
+		) == null )
+	}
+
+	detectOrientationChange = () => {
+		window.addEventListener("orientationchange", function() {
+			console.log("onorientationchange");
+        }, false);
+	}
 
 	render() {
 
@@ -77,6 +95,12 @@ export default class AiPreview extends Component {
 	      listHeight = this.refs.list.clientHeight;   
         }
 
+        let isLandscape = false;
+        // screen.orientation.lock('landscape');
+
+		((window.matchMedia('(orientation: landscape)')).matches && this.isMobile()) ? isLandscape = true : null;
+
+		// console.log(isLandscape);
 
 		const { show, isFullScreen, currentTime, endCardShow, pauseCardSrc, data, glasses, actor, actress, sound, trivia, triviaGeneral, triviaFun, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, fullAiCardShow, showFullAiCard, addAiStarred, removeAiStarred, checkAiStarred, wikiaCharacters} = this.props;
 		const { isHovering } = this.state;
@@ -85,7 +109,8 @@ export default class AiPreview extends Component {
  		const classnames = classNames({
  			'ai-preview': true,
  			'ai-preview--show': show || (isHovering && currentTime != 0 && !showFullAiCard && endCardShow),
- 			'ai-preview--needs-scrolling': (isFullScreen && window.innerWidth > 1824) ? listHeight >= 880 : listHeight >= 510
+ 			'ai-preview--needs-scrolling': (isFullScreen && window.innerWidth > 1824) ? listHeight >= 880 : listHeight >= 510,
+ 			'ai-preview--needs-scrolling-touch': isLandscape ? listHeight >= 400 : false
  		});
 
  		const itemCar = classNames({
