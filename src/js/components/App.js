@@ -690,9 +690,10 @@ export default class App extends Component {
 		}
 
 		onVideoWaiting = () => {
-			this.setState({
-				isWaiting: true
-			})
+			console.log('waiting');
+			// this.setState({
+			// 	isWaiting: true
+			// })
 		}
 
 
@@ -977,8 +978,7 @@ export default class App extends Component {
 
 
 		goToNextPlaylistItem = () => {
-
-			const { playlist } = this.props;
+			const { playlist } = this.props;	
 			const { currPlaylistIndex } = this.state;
 
 			if (playlist[currPlaylistIndex + 1] == undefined) {
