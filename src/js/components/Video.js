@@ -74,7 +74,7 @@ export default class Video extends Component {
 	}
 
 	static defaultProps = {
-		updateInterval: 200,
+		updateInterval: 1000,
 		onProgress: () => false,
 		onLoad: () => false,
 		onVideoEnd: () => false,
@@ -84,9 +84,6 @@ export default class Video extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			lastSecond: 0 
-		}
 	}
 
 	componentDidMount() {
@@ -373,8 +370,7 @@ export default class Video extends Component {
 			}).join(":");
 		};
 
-		if(currentSecond !== this.state.lastSecond){
-			//make updates on each new second rather than every onProgress call
+
 			var currentTimeinHHMMSS = toHHMMSS(currentTime);
 			if((currentTime > 0.000000 && currentTime < 125.000000) || this.props.isScrubbing) {
 				if ((this.props.currentItem.indexOf(this.props.data[5].key1) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key2) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key3) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key4) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key5) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key6) !== -1 || this.props.currentItem.indexOf(this.props.data[5].key7) !== -1) && currentTimeinHHMMSS >= this.props.data[5].startTime && currentTimeinHHMMSS <= this.props.data[5].endTime) {
@@ -560,12 +556,6 @@ export default class Video extends Component {
 					this.props.changeSelectedSrcitem18(val);
 				}   
 		    }
-		}
-		if(currentSecond != this.state.lastSecond){
-			this.setState({
-				lastSecond: currentSecond
-			});
-		};
 	}
 
 	onLoad = () => {
